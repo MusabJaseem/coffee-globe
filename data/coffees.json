@@ -1,0 +1,2072 @@
+[
+  {
+    "id": "lakeshore-lantern--el-salvador",
+    "roasterId": "lakeshore-lantern",
+    "name": "El Salvador Honey",
+    "originId": "el-salvador",
+    "process": "honey",
+    "notes": [
+      "red grape",
+      "brown sugar",
+      "nougat"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/lakeshore-lantern/el-salvador",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.8,
+      "body": 0.58,
+      "fruitiness": 0.45,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "lakeshore-lantern--rwanda",
+    "roasterId": "lakeshore-lantern",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/lakeshore-lantern/rwanda",
+    "taste": {
+      "acidity": 0.69,
+      "sweetness": 0.62,
+      "body": 0.41,
+      "fruitiness": 0.5,
+      "roast": 0.26
+    }
+  },
+  {
+    "id": "lakeshore-lantern--guatemala",
+    "roasterId": "lakeshore-lantern",
+    "name": "Guatemala Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "almond"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/lakeshore-lantern/guatemala",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.67,
+      "body": 0.61,
+      "fruitiness": 0.36,
+      "roast": 0.44
+    }
+  },
+  {
+    "id": "lakeshore-lantern--papua-new-guinea",
+    "roasterId": "lakeshore-lantern",
+    "name": "Papua New Guinea Washed",
+    "originId": "papua-new-guinea",
+    "process": "washed",
+    "notes": [
+      "tropical fruit",
+      "molasses",
+      "spice"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/lakeshore-lantern/papua-new-guinea",
+    "taste": {
+      "acidity": 0.51,
+      "sweetness": 0.62,
+      "body": 0.6,
+      "fruitiness": 0.56,
+      "roast": 0.41
+    }
+  },
+  {
+    "id": "lakeshore-lantern--house",
+    "roasterId": "lakeshore-lantern",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/lakeshore-lantern/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "bronte-harbour--kenya",
+    "roasterId": "bronte-harbour",
+    "name": "Kenya Washed",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "blackcurrant",
+      "grapefruit",
+      "tomato"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/bronte-harbour/kenya",
+    "taste": {
+      "acidity": 0.98,
+      "sweetness": 0.55,
+      "body": 0.6,
+      "fruitiness": 0.78,
+      "roast": 0.17
+    }
+  },
+  {
+    "id": "bronte-harbour--peru",
+    "roasterId": "bronte-harbour",
+    "name": "Peru Washed",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "cocoa",
+      "walnut",
+      "mandarin"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/bronte-harbour/peru",
+    "taste": {
+      "acidity": 0.46,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.38,
+      "roast": 0.42
+    }
+  },
+  {
+    "id": "bronte-harbour--burundi",
+    "roasterId": "bronte-harbour",
+    "name": "Burundi Natural",
+    "originId": "burundi",
+    "process": "natural",
+    "notes": [
+      "cranberry",
+      "hibiscus",
+      "cacao nib"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/bronte-harbour/burundi",
+    "taste": {
+      "acidity": 0.66,
+      "sweetness": 0.58,
+      "body": 0.5,
+      "fruitiness": 0.79,
+      "roast": 0.31
+    }
+  },
+  {
+    "id": "bronte-harbour--costa-rica",
+    "roasterId": "bronte-harbour",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/bronte-harbour/costa-rica",
+    "taste": {
+      "acidity": 0.62,
+      "sweetness": 0.86,
+      "body": 0.51,
+      "fruitiness": 0.59,
+      "roast": 0.34
+    }
+  },
+  {
+    "id": "bronte-harbour--house",
+    "roasterId": "bronte-harbour",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/bronte-harbour/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "escarpment-beans--rwanda",
+    "roasterId": "escarpment-beans",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/escarpment-beans/rwanda",
+    "taste": {
+      "acidity": 0.72,
+      "sweetness": 0.71,
+      "body": 0.44,
+      "fruitiness": 0.52,
+      "roast": 0.24
+    }
+  },
+  {
+    "id": "escarpment-beans--ethiopia",
+    "roasterId": "escarpment-beans",
+    "name": "Ethiopia Natural",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "blueberry",
+      "strawberry jam",
+      "cocoa"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/escarpment-beans/ethiopia",
+    "taste": {
+      "acidity": 0.58,
+      "sweetness": 0.81,
+      "body": 0.5,
+      "fruitiness": 0.92,
+      "roast": 0.17
+    }
+  },
+  {
+    "id": "escarpment-beans--panama",
+    "roasterId": "escarpment-beans",
+    "name": "Panama Washed",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "peach",
+      "honeysuckle"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/escarpment-beans/panama",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.75,
+      "body": 0.21,
+      "fruitiness": 0.74,
+      "roast": 0.07
+    }
+  },
+  {
+    "id": "escarpment-beans--indonesia",
+    "roasterId": "escarpment-beans",
+    "name": "Indonesia Wet-Hulled",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "cedar",
+      "dark chocolate",
+      "pipe tobacco"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/escarpment-beans/indonesia",
+    "taste": {
+      "acidity": 0.17,
+      "sweetness": 0.51,
+      "body": 0.97,
+      "fruitiness": 0.14,
+      "roast": 0.77
+    }
+  },
+  {
+    "id": "escarpment-beans--house",
+    "roasterId": "escarpment-beans",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/escarpment-beans/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "rideau-roastworks--colombia",
+    "roasterId": "rideau-roastworks",
+    "name": "Colombia Washed",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "caramel",
+      "red apple",
+      "milk chocolate"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/rideau-roastworks/colombia",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.76,
+      "body": 0.52,
+      "fruitiness": 0.39,
+      "roast": 0.39
+    }
+  },
+  {
+    "id": "rideau-roastworks--burundi",
+    "roasterId": "rideau-roastworks",
+    "name": "Burundi Natural",
+    "originId": "burundi",
+    "process": "natural",
+    "notes": [
+      "cranberry",
+      "hibiscus",
+      "cacao nib"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/rideau-roastworks/burundi",
+    "taste": {
+      "acidity": 0.72,
+      "sweetness": 0.6,
+      "body": 0.46,
+      "fruitiness": 0.82,
+      "roast": 0.2
+    }
+  },
+  {
+    "id": "rideau-roastworks--el-salvador",
+    "roasterId": "rideau-roastworks",
+    "name": "El Salvador Honey",
+    "originId": "el-salvador",
+    "process": "honey",
+    "notes": [
+      "red grape",
+      "brown sugar",
+      "nougat"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/rideau-roastworks/el-salvador",
+    "taste": {
+      "acidity": 0.49,
+      "sweetness": 0.75,
+      "body": 0.62,
+      "fruitiness": 0.45,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "rideau-roastworks--yemen",
+    "roasterId": "rideau-roastworks",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/rideau-roastworks/yemen",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.71,
+      "body": 0.65,
+      "fruitiness": 0.81,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "rideau-roastworks--house",
+    "roasterId": "rideau-roastworks",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/rideau-roastworks/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "plateau-torrefacteur--rwanda",
+    "roasterId": "plateau-torrefacteur",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/plateau-torrefacteur/rwanda",
+    "taste": {
+      "acidity": 0.66,
+      "sweetness": 0.62,
+      "body": 0.38,
+      "fruitiness": 0.53,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "plateau-torrefacteur--indonesia",
+    "roasterId": "plateau-torrefacteur",
+    "name": "Indonesia Wet-Hulled",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "cedar",
+      "dark chocolate",
+      "pipe tobacco"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/plateau-torrefacteur/indonesia",
+    "taste": {
+      "acidity": 0.15,
+      "sweetness": 0.4,
+      "body": 0.9,
+      "fruitiness": 0.13,
+      "roast": 0.82
+    }
+  },
+  {
+    "id": "plateau-torrefacteur--burundi",
+    "roasterId": "plateau-torrefacteur",
+    "name": "Burundi Natural",
+    "originId": "burundi",
+    "process": "natural",
+    "notes": [
+      "cranberry",
+      "hibiscus",
+      "cacao nib"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/plateau-torrefacteur/burundi",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.6,
+      "body": 0.41,
+      "fruitiness": 0.81,
+      "roast": 0.24
+    }
+  },
+  {
+    "id": "plateau-torrefacteur--peru",
+    "roasterId": "plateau-torrefacteur",
+    "name": "Peru Washed",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "cocoa",
+      "walnut",
+      "mandarin"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/plateau-torrefacteur/peru",
+    "taste": {
+      "acidity": 0.47,
+      "sweetness": 0.57,
+      "body": 0.53,
+      "fruitiness": 0.31,
+      "roast": 0.53
+    }
+  },
+  {
+    "id": "plateau-torrefacteur--house",
+    "roasterId": "plateau-torrefacteur",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/plateau-torrefacteur/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.77
+    }
+  },
+  {
+    "id": "halifax-tide--costa-rica",
+    "roasterId": "halifax-tide",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/halifax-tide/costa-rica",
+    "taste": {
+      "acidity": 0.64,
+      "sweetness": 0.89,
+      "body": 0.53,
+      "fruitiness": 0.57,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "halifax-tide--peru",
+    "roasterId": "halifax-tide",
+    "name": "Peru Washed",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "cocoa",
+      "walnut",
+      "mandarin"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/halifax-tide/peru",
+    "taste": {
+      "acidity": 0.48,
+      "sweetness": 0.6,
+      "body": 0.51,
+      "fruitiness": 0.36,
+      "roast": 0.43
+    }
+  },
+  {
+    "id": "halifax-tide--mexico",
+    "roasterId": "halifax-tide",
+    "name": "Mexico Washed",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "cinnamon",
+      "pecan"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/halifax-tide/mexico",
+    "taste": {
+      "acidity": 0.32,
+      "sweetness": 0.57,
+      "body": 0.56,
+      "fruitiness": 0.21,
+      "roast": 0.56
+    }
+  },
+  {
+    "id": "halifax-tide--indonesia",
+    "roasterId": "halifax-tide",
+    "name": "Indonesia Wet-Hulled",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "cedar",
+      "dark chocolate",
+      "pipe tobacco"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/halifax-tide/indonesia",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.43,
+      "body": 0.97,
+      "fruitiness": 0.19,
+      "roast": 0.75
+    }
+  },
+  {
+    "id": "halifax-tide--house",
+    "roasterId": "halifax-tide",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/halifax-tide/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "prairie-oven--papua-new-guinea",
+    "roasterId": "prairie-oven",
+    "name": "Papua New Guinea Washed",
+    "originId": "papua-new-guinea",
+    "process": "washed",
+    "notes": [
+      "tropical fruit",
+      "molasses",
+      "spice"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/prairie-oven/papua-new-guinea",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.65,
+      "body": 0.68,
+      "fruitiness": 0.55,
+      "roast": 0.48
+    }
+  },
+  {
+    "id": "prairie-oven--yemen",
+    "roasterId": "prairie-oven",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/prairie-oven/yemen",
+    "taste": {
+      "acidity": 0.61,
+      "sweetness": 0.64,
+      "body": 0.71,
+      "fruitiness": 0.8,
+      "roast": 0.37
+    }
+  },
+  {
+    "id": "prairie-oven--rwanda",
+    "roasterId": "prairie-oven",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/prairie-oven/rwanda",
+    "taste": {
+      "acidity": 0.66,
+      "sweetness": 0.66,
+      "body": 0.34,
+      "fruitiness": 0.59,
+      "roast": 0.28
+    }
+  },
+  {
+    "id": "prairie-oven--guatemala",
+    "roasterId": "prairie-oven",
+    "name": "Guatemala Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "almond"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/prairie-oven/guatemala",
+    "taste": {
+      "acidity": 0.61,
+      "sweetness": 0.66,
+      "body": 0.64,
+      "fruitiness": 0.34,
+      "roast": 0.42
+    }
+  },
+  {
+    "id": "prairie-oven--house",
+    "roasterId": "prairie-oven",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/prairie-oven/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "bow-river--el-salvador",
+    "roasterId": "bow-river",
+    "name": "El Salvador Honey",
+    "originId": "el-salvador",
+    "process": "honey",
+    "notes": [
+      "red grape",
+      "brown sugar",
+      "nougat"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/bow-river/el-salvador",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.83,
+      "body": 0.65,
+      "fruitiness": 0.52,
+      "roast": 0.39
+    }
+  },
+  {
+    "id": "bow-river--colombia",
+    "roasterId": "bow-river",
+    "name": "Colombia Washed",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "caramel",
+      "red apple",
+      "milk chocolate"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/bow-river/colombia",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.75,
+      "body": 0.49,
+      "fruitiness": 0.44,
+      "roast": 0.36
+    }
+  },
+  {
+    "id": "bow-river--honduras",
+    "roasterId": "bow-river",
+    "name": "Honduras Washed",
+    "originId": "honduras",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "hazelnut",
+      "plum"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/bow-river/honduras",
+    "taste": {
+      "acidity": 0.36,
+      "sweetness": 0.66,
+      "body": 0.55,
+      "fruitiness": 0.3,
+      "roast": 0.52
+    }
+  },
+  {
+    "id": "bow-river--guatemala",
+    "roasterId": "bow-river",
+    "name": "Guatemala Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "almond"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/bow-river/guatemala",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.65,
+      "body": 0.56,
+      "fruitiness": 0.35,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "bow-river--house",
+    "roasterId": "bow-river",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/bow-river/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "granville-grind--rwanda",
+    "roasterId": "granville-grind",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/granville-grind/rwanda",
+    "taste": {
+      "acidity": 0.72,
+      "sweetness": 0.64,
+      "body": 0.4,
+      "fruitiness": 0.55,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "granville-grind--costa-rica",
+    "roasterId": "granville-grind",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/granville-grind/costa-rica",
+    "taste": {
+      "acidity": 0.64,
+      "sweetness": 0.81,
+      "body": 0.45,
+      "fruitiness": 0.59,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "granville-grind--brazil",
+    "roasterId": "granville-grind",
+    "name": "Brazil Natural",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "peanut butter",
+      "dark chocolate",
+      "brown sugar"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/granville-grind/brazil",
+    "taste": {
+      "acidity": 0.17,
+      "sweetness": 0.68,
+      "body": 0.75,
+      "fruitiness": 0.23,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "granville-grind--peru",
+    "roasterId": "granville-grind",
+    "name": "Peru Washed",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "cocoa",
+      "walnut",
+      "mandarin"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://example.com/granville-grind/peru",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.66,
+      "body": 0.52,
+      "fruitiness": 0.4,
+      "roast": 0.44
+    }
+  },
+  {
+    "id": "granville-grind--house",
+    "roasterId": "granville-grind",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://example.com/granville-grind/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "brooklyn-ember--costa-rica",
+    "roasterId": "brooklyn-ember",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/brooklyn-ember/costa-rica",
+    "taste": {
+      "acidity": 0.58,
+      "sweetness": 0.81,
+      "body": 0.48,
+      "fruitiness": 0.63,
+      "roast": 0.24
+    }
+  },
+  {
+    "id": "brooklyn-ember--rwanda",
+    "roasterId": "brooklyn-ember",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/brooklyn-ember/rwanda",
+    "taste": {
+      "acidity": 0.72,
+      "sweetness": 0.64,
+      "body": 0.4,
+      "fruitiness": 0.53,
+      "roast": 0.31
+    }
+  },
+  {
+    "id": "brooklyn-ember--panama",
+    "roasterId": "brooklyn-ember",
+    "name": "Panama Washed",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "peach",
+      "honeysuckle"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/brooklyn-ember/panama",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.72,
+      "body": 0.3,
+      "fruitiness": 0.71,
+      "roast": 0.13
+    }
+  },
+  {
+    "id": "brooklyn-ember--guatemala",
+    "roasterId": "brooklyn-ember",
+    "name": "Guatemala Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "almond"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/brooklyn-ember/guatemala",
+    "taste": {
+      "acidity": 0.51,
+      "sweetness": 0.75,
+      "body": 0.61,
+      "fruitiness": 0.42,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "brooklyn-ember--house",
+    "roasterId": "brooklyn-ember",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/brooklyn-ember/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "pilsen-press--indonesia",
+    "roasterId": "pilsen-press",
+    "name": "Indonesia Wet-Hulled",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "cedar",
+      "dark chocolate",
+      "pipe tobacco"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/pilsen-press/indonesia",
+    "taste": {
+      "acidity": 0.17,
+      "sweetness": 0.49,
+      "body": 0.9,
+      "fruitiness": 0.19,
+      "roast": 0.85
+    }
+  },
+  {
+    "id": "pilsen-press--yemen",
+    "roasterId": "pilsen-press",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/pilsen-press/yemen",
+    "taste": {
+      "acidity": 0.53,
+      "sweetness": 0.71,
+      "body": 0.75,
+      "fruitiness": 0.77,
+      "roast": 0.41
+    }
+  },
+  {
+    "id": "pilsen-press--kenya",
+    "roasterId": "pilsen-press",
+    "name": "Kenya Washed",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "blackcurrant",
+      "grapefruit",
+      "tomato"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/pilsen-press/kenya",
+    "taste": {
+      "acidity": 1,
+      "sweetness": 0.52,
+      "body": 0.51,
+      "fruitiness": 0.85,
+      "roast": 0.32
+    }
+  },
+  {
+    "id": "pilsen-press--colombia",
+    "roasterId": "pilsen-press",
+    "name": "Colombia Anaerobic",
+    "originId": "colombia",
+    "process": "anaerobic",
+    "notes": [
+      "lychee",
+      "rum",
+      "passionfruit"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/pilsen-press/colombia",
+    "taste": {
+      "acidity": 0.59,
+      "sweetness": 0.77,
+      "body": 0.52,
+      "fruitiness": 0.99,
+      "roast": 0.41
+    }
+  },
+  {
+    "id": "pilsen-press--house",
+    "roasterId": "pilsen-press",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/pilsen-press/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.82
+    }
+  },
+  {
+    "id": "rose-city-roast--ethiopia",
+    "roasterId": "rose-city-roast",
+    "name": "Ethiopia Washed",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "bergamot",
+      "lemon"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/rose-city-roast/ethiopia",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.57,
+      "body": 0.24,
+      "fruitiness": 0.72,
+      "roast": 0.09
+    }
+  },
+  {
+    "id": "rose-city-roast--panama",
+    "roasterId": "rose-city-roast",
+    "name": "Panama Washed",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "peach",
+      "honeysuckle"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/rose-city-roast/panama",
+    "taste": {
+      "acidity": 0.82,
+      "sweetness": 0.81,
+      "body": 0.23,
+      "fruitiness": 0.79,
+      "roast": 0.04
+    }
+  },
+  {
+    "id": "rose-city-roast--honduras",
+    "roasterId": "rose-city-roast",
+    "name": "Honduras Washed",
+    "originId": "honduras",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "hazelnut",
+      "plum"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/rose-city-roast/honduras",
+    "taste": {
+      "acidity": 0.46,
+      "sweetness": 0.69,
+      "body": 0.54,
+      "fruitiness": 0.37,
+      "roast": 0.47
+    }
+  },
+  {
+    "id": "rose-city-roast--indonesia",
+    "roasterId": "rose-city-roast",
+    "name": "Indonesia Wet-Hulled",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "cedar",
+      "dark chocolate",
+      "pipe tobacco"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/rose-city-roast/indonesia",
+    "taste": {
+      "acidity": 0.1,
+      "sweetness": 0.49,
+      "body": 0.99,
+      "fruitiness": 0.17,
+      "roast": 0.69
+    }
+  },
+  {
+    "id": "rose-city-roast--house",
+    "roasterId": "rose-city-roast",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/rose-city-roast/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.64
+    }
+  },
+  {
+    "id": "mission-hill--kenya",
+    "roasterId": "mission-hill",
+    "name": "Kenya Washed",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "blackcurrant",
+      "grapefruit",
+      "tomato"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/mission-hill/kenya",
+    "taste": {
+      "acidity": 0.94,
+      "sweetness": 0.52,
+      "body": 0.61,
+      "fruitiness": 0.86,
+      "roast": 0.21
+    }
+  },
+  {
+    "id": "mission-hill--costa-rica",
+    "roasterId": "mission-hill",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/mission-hill/costa-rica",
+    "taste": {
+      "acidity": 0.57,
+      "sweetness": 0.81,
+      "body": 0.48,
+      "fruitiness": 0.55,
+      "roast": 0.27
+    }
+  },
+  {
+    "id": "mission-hill--rwanda",
+    "roasterId": "mission-hill",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 2600,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/mission-hill/rwanda",
+    "taste": {
+      "acidity": 0.65,
+      "sweetness": 0.69,
+      "body": 0.36,
+      "fruitiness": 0.56,
+      "roast": 0.24
+    }
+  },
+  {
+    "id": "mission-hill--indonesia",
+    "roasterId": "mission-hill",
+    "name": "Indonesia Wet-Hulled",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "cedar",
+      "dark chocolate",
+      "pipe tobacco"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/mission-hill/indonesia",
+    "taste": {
+      "acidity": 0.1,
+      "sweetness": 0.5,
+      "body": 0.99,
+      "fruitiness": 0.11,
+      "roast": 0.85
+    }
+  },
+  {
+    "id": "mission-hill--house",
+    "roasterId": "mission-hill",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/mission-hill/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "east-side-kiln--el-salvador",
+    "roasterId": "east-side-kiln",
+    "name": "El Salvador Honey",
+    "originId": "el-salvador",
+    "process": "honey",
+    "notes": [
+      "red grape",
+      "brown sugar",
+      "nougat"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/east-side-kiln/el-salvador",
+    "taste": {
+      "acidity": 0.53,
+      "sweetness": 0.82,
+      "body": 0.55,
+      "fruitiness": 0.54,
+      "roast": 0.55
+    }
+  },
+  {
+    "id": "east-side-kiln--panama",
+    "roasterId": "east-side-kiln",
+    "name": "Panama Washed",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "peach",
+      "honeysuckle"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/east-side-kiln/panama",
+    "taste": {
+      "acidity": 0.84,
+      "sweetness": 0.76,
+      "body": 0.3,
+      "fruitiness": 0.77,
+      "roast": 0.27
+    }
+  },
+  {
+    "id": "east-side-kiln--costa-rica",
+    "roasterId": "east-side-kiln",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/east-side-kiln/costa-rica",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.87,
+      "body": 0.56,
+      "fruitiness": 0.59,
+      "roast": 0.44
+    }
+  },
+  {
+    "id": "east-side-kiln--rwanda",
+    "roasterId": "east-side-kiln",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 250,
+    "url": "https://example.com/east-side-kiln/rwanda",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.59,
+      "body": 0.44,
+      "fruitiness": 0.58,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "east-side-kiln--house",
+    "roasterId": "east-side-kiln",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://example.com/east-side-kiln/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.87
+    }
+  },
+  {
+    "id": "oslo-fjell--rwanda",
+    "roasterId": "oslo-fjell",
+    "name": "Rwanda Washed",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "black tea",
+      "honey"
+    ],
+    "priceCents": 28000,
+    "currency": "NOK",
+    "weightGrams": 340,
+    "url": "https://example.com/oslo-fjell/rwanda",
+    "taste": {
+      "acidity": 0.74,
+      "sweetness": 0.69,
+      "body": 0.37,
+      "fruitiness": 0.58,
+      "roast": 0.1
+    }
+  },
+  {
+    "id": "oslo-fjell--panama",
+    "roasterId": "oslo-fjell",
+    "name": "Panama Washed",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "peach",
+      "honeysuckle"
+    ],
+    "priceCents": 24000,
+    "currency": "NOK",
+    "weightGrams": 250,
+    "url": "https://example.com/oslo-fjell/panama",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.8,
+      "body": 0.22,
+      "fruitiness": 0.7,
+      "roast": 0
+    }
+  },
+  {
+    "id": "oslo-fjell--yemen",
+    "roasterId": "oslo-fjell",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 28000,
+    "currency": "NOK",
+    "weightGrams": 250,
+    "url": "https://example.com/oslo-fjell/yemen",
+    "taste": {
+      "acidity": 0.53,
+      "sweetness": 0.72,
+      "body": 0.72,
+      "fruitiness": 0.81,
+      "roast": 0.19
+    }
+  },
+  {
+    "id": "oslo-fjell--costa-rica",
+    "roasterId": "oslo-fjell",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 32000,
+    "currency": "NOK",
+    "weightGrams": 340,
+    "url": "https://example.com/oslo-fjell/costa-rica",
+    "taste": {
+      "acidity": 0.57,
+      "sweetness": 0.87,
+      "body": 0.52,
+      "fruitiness": 0.62,
+      "roast": 0.15
+    }
+  },
+  {
+    "id": "oslo-fjell--house",
+    "roasterId": "oslo-fjell",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 20000,
+    "currency": "NOK",
+    "weightGrams": 340,
+    "url": "https://example.com/oslo-fjell/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "shoreditch-sack--yemen",
+    "roasterId": "shoreditch-sack",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 2600,
+    "currency": "GBP",
+    "weightGrams": 340,
+    "url": "https://example.com/shoreditch-sack/yemen",
+    "taste": {
+      "acidity": 0.61,
+      "sweetness": 0.71,
+      "body": 0.68,
+      "fruitiness": 0.75,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "shoreditch-sack--costa-rica",
+    "roasterId": "shoreditch-sack",
+    "name": "Costa Rica Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "cane sugar",
+      "cocoa"
+    ],
+    "priceCents": 2400,
+    "currency": "GBP",
+    "weightGrams": 250,
+    "url": "https://example.com/shoreditch-sack/costa-rica",
+    "taste": {
+      "acidity": 0.64,
+      "sweetness": 0.91,
+      "body": 0.49,
+      "fruitiness": 0.57,
+      "roast": 0.27
+    }
+  },
+  {
+    "id": "shoreditch-sack--papua-new-guinea",
+    "roasterId": "shoreditch-sack",
+    "name": "Papua New Guinea Washed",
+    "originId": "papua-new-guinea",
+    "process": "washed",
+    "notes": [
+      "tropical fruit",
+      "molasses",
+      "spice"
+    ],
+    "priceCents": 3200,
+    "currency": "GBP",
+    "weightGrams": 340,
+    "url": "https://example.com/shoreditch-sack/papua-new-guinea",
+    "taste": {
+      "acidity": 0.46,
+      "sweetness": 0.6,
+      "body": 0.7,
+      "fruitiness": 0.51,
+      "roast": 0.49
+    }
+  },
+  {
+    "id": "shoreditch-sack--mexico",
+    "roasterId": "shoreditch-sack",
+    "name": "Mexico Washed",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "cinnamon",
+      "pecan"
+    ],
+    "priceCents": 2200,
+    "currency": "GBP",
+    "weightGrams": 340,
+    "url": "https://example.com/shoreditch-sack/mexico",
+    "taste": {
+      "acidity": 0.37,
+      "sweetness": 0.57,
+      "body": 0.65,
+      "fruitiness": 0.25,
+      "roast": 0.49
+    }
+  },
+  {
+    "id": "shoreditch-sack--house",
+    "roasterId": "shoreditch-sack",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "GBP",
+    "weightGrams": 340,
+    "url": "https://example.com/shoreditch-sack/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  },
+  {
+    "id": "kyoto-kissa--yemen",
+    "roasterId": "kyoto-kissa",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 260000,
+    "currency": "JPY",
+    "weightGrams": 340,
+    "url": "https://example.com/kyoto-kissa/yemen",
+    "taste": {
+      "acidity": 0.54,
+      "sweetness": 0.69,
+      "body": 0.65,
+      "fruitiness": 0.78,
+      "roast": 0.28
+    }
+  },
+  {
+    "id": "kyoto-kissa--guatemala",
+    "roasterId": "kyoto-kissa",
+    "name": "Guatemala Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "almond"
+    ],
+    "priceCents": 220000,
+    "currency": "JPY",
+    "weightGrams": 340,
+    "url": "https://example.com/kyoto-kissa/guatemala",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.66,
+      "body": 0.54,
+      "fruitiness": 0.43,
+      "roast": 0.37
+    }
+  },
+  {
+    "id": "kyoto-kissa--colombia",
+    "roasterId": "kyoto-kissa",
+    "name": "Colombia Anaerobic",
+    "originId": "colombia",
+    "process": "anaerobic",
+    "notes": [
+      "lychee",
+      "rum",
+      "passionfruit"
+    ],
+    "priceCents": 220000,
+    "currency": "JPY",
+    "weightGrams": 340,
+    "url": "https://example.com/kyoto-kissa/colombia",
+    "taste": {
+      "acidity": 0.66,
+      "sweetness": 0.76,
+      "body": 0.53,
+      "fruitiness": 0.94,
+      "roast": 0.17
+    }
+  },
+  {
+    "id": "kyoto-kissa--panama",
+    "roasterId": "kyoto-kissa",
+    "name": "Panama Washed",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "peach",
+      "honeysuckle"
+    ],
+    "priceCents": 280000,
+    "currency": "JPY",
+    "weightGrams": 340,
+    "url": "https://example.com/kyoto-kissa/panama",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.77,
+      "body": 0.27,
+      "fruitiness": 0.71,
+      "roast": 0.11
+    }
+  },
+  {
+    "id": "kyoto-kissa--house",
+    "roasterId": "kyoto-kissa",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 200000,
+    "currency": "JPY",
+    "weightGrams": 340,
+    "url": "https://example.com/kyoto-kissa/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.67
+    }
+  },
+  {
+    "id": "melbourne-laneway--guatemala",
+    "roasterId": "melbourne-laneway",
+    "name": "Guatemala Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "almond"
+    ],
+    "priceCents": 3200,
+    "currency": "AUD",
+    "weightGrams": 250,
+    "url": "https://example.com/melbourne-laneway/guatemala",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.74,
+      "body": 0.62,
+      "fruitiness": 0.45,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "melbourne-laneway--mexico",
+    "roasterId": "melbourne-laneway",
+    "name": "Mexico Washed",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "cinnamon",
+      "pecan"
+    ],
+    "priceCents": 2600,
+    "currency": "AUD",
+    "weightGrams": 340,
+    "url": "https://example.com/melbourne-laneway/mexico",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.63,
+      "body": 0.59,
+      "fruitiness": 0.28,
+      "roast": 0.57
+    }
+  },
+  {
+    "id": "melbourne-laneway--brazil",
+    "roasterId": "melbourne-laneway",
+    "name": "Brazil Natural",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "peanut butter",
+      "dark chocolate",
+      "brown sugar"
+    ],
+    "priceCents": 2600,
+    "currency": "AUD",
+    "weightGrams": 340,
+    "url": "https://example.com/melbourne-laneway/brazil",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.71,
+      "body": 0.76,
+      "fruitiness": 0.19,
+      "roast": 0.62
+    }
+  },
+  {
+    "id": "melbourne-laneway--yemen",
+    "roasterId": "melbourne-laneway",
+    "name": "Yemen Natural",
+    "originId": "yemen",
+    "process": "natural",
+    "notes": [
+      "dried fig",
+      "cardamom",
+      "wine"
+    ],
+    "priceCents": 2400,
+    "currency": "AUD",
+    "weightGrams": 250,
+    "url": "https://example.com/melbourne-laneway/yemen",
+    "taste": {
+      "acidity": 0.57,
+      "sweetness": 0.68,
+      "body": 0.71,
+      "fruitiness": 0.79,
+      "roast": 0.31
+    }
+  },
+  {
+    "id": "melbourne-laneway--house",
+    "roasterId": "melbourne-laneway",
+    "name": "House Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted almond"
+    ],
+    "priceCents": 2000,
+    "currency": "AUD",
+    "weightGrams": 340,
+    "url": "https://example.com/melbourne-laneway/house",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.65,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.72
+    }
+  }
+]

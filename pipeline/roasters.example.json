@@ -1,0 +1,13 @@
+[
+  {
+    "id": "example-roaster",
+    "name": "Example Roaster",
+    "city": "Toronto",
+    "country": "CA",
+    "lat": 43.65,
+    "lng": -79.38,
+    "url": "https://example-roaster.com",
+    "currency": "CAD",
+    "shipsTo": ["CA", "US"]
+  }
+]

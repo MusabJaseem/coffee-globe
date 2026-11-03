@@ -1,0 +1,250 @@
+[
+  {
+    "id": "lakeshore-lantern",
+    "name": "Lakeshore Lantern Roasting",
+    "city": "Toronto",
+    "country": "CA",
+    "lat": 43.65,
+    "lng": -79.38,
+    "url": "https://example.com/lakeshore-lantern",
+    "shipsTo": [
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "bronte-harbour",
+    "name": "Bronte Harbour Coffee",
+    "city": "Oakville",
+    "country": "CA",
+    "lat": 43.39,
+    "lng": -79.71,
+    "url": "https://example.com/bronte-harbour",
+    "shipsTo": [
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "escarpment-beans",
+    "name": "Escarpment Bean Co.",
+    "city": "Hamilton",
+    "country": "CA",
+    "lat": 43.26,
+    "lng": -79.87,
+    "url": "https://example.com/escarpment-beans",
+    "shipsTo": [
+      "CA",
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "rideau-roastworks",
+    "name": "Rideau Roastworks",
+    "city": "Ottawa",
+    "country": "CA",
+    "lat": 45.42,
+    "lng": -75.7,
+    "url": "https://example.com/rideau-roastworks",
+    "shipsTo": [
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "plateau-torrefacteur",
+    "name": "Plateau Torr\u00e9facteur",
+    "city": "Montr\u00e9al",
+    "country": "CA",
+    "lat": 45.52,
+    "lng": -73.58,
+    "url": "https://example.com/plateau-torrefacteur",
+    "shipsTo": [
+      "CA",
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "halifax-tide",
+    "name": "Tidewater Coffee",
+    "city": "Halifax",
+    "country": "CA",
+    "lat": 44.65,
+    "lng": -63.58,
+    "url": "https://example.com/halifax-tide",
+    "shipsTo": [
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "prairie-oven",
+    "name": "Prairie Oven Roasters",
+    "city": "Winnipeg",
+    "country": "CA",
+    "lat": 49.9,
+    "lng": -97.14,
+    "url": "https://example.com/prairie-oven",
+    "shipsTo": [
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "bow-river",
+    "name": "Bow River Roasting",
+    "city": "Calgary",
+    "country": "CA",
+    "lat": 51.05,
+    "lng": -114.07,
+    "url": "https://example.com/bow-river",
+    "shipsTo": [
+      "CA",
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "granville-grind",
+    "name": "Granville Grind",
+    "city": "Vancouver",
+    "country": "CA",
+    "lat": 49.28,
+    "lng": -123.12,
+    "url": "https://example.com/granville-grind",
+    "shipsTo": [
+      "CA",
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "brooklyn-ember",
+    "name": "Ember & Anvil",
+    "city": "Brooklyn",
+    "country": "US",
+    "lat": 40.68,
+    "lng": -73.94,
+    "url": "https://example.com/brooklyn-ember",
+    "shipsTo": [
+      "US",
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "pilsen-press",
+    "name": "Pilsen Press Coffee",
+    "city": "Chicago",
+    "country": "US",
+    "lat": 41.86,
+    "lng": -87.66,
+    "url": "https://example.com/pilsen-press",
+    "shipsTo": [
+      "US",
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "rose-city-roast",
+    "name": "Rose City Roast Lab",
+    "city": "Portland",
+    "country": "US",
+    "lat": 45.52,
+    "lng": -122.68,
+    "url": "https://example.com/rose-city-roast",
+    "shipsTo": [
+      "US",
+      "CA"
+    ],
+    "sample": true
+  },
+  {
+    "id": "mission-hill",
+    "name": "Mission Hill Roasters",
+    "city": "San Francisco",
+    "country": "US",
+    "lat": 37.76,
+    "lng": -122.42,
+    "url": "https://example.com/mission-hill",
+    "shipsTo": [
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "east-side-kiln",
+    "name": "East Side Kiln",
+    "city": "Austin",
+    "country": "US",
+    "lat": 30.26,
+    "lng": -97.74,
+    "url": "https://example.com/east-side-kiln",
+    "shipsTo": [
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "oslo-fjell",
+    "name": "Fjell Kaffebrenneri",
+    "city": "Oslo",
+    "country": "NO",
+    "lat": 59.91,
+    "lng": 10.75,
+    "url": "https://example.com/oslo-fjell",
+    "shipsTo": [
+      "NO",
+      "SE",
+      "DK",
+      "CA",
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "shoreditch-sack",
+    "name": "Sack & Spoon",
+    "city": "London",
+    "country": "GB",
+    "lat": 51.52,
+    "lng": -0.08,
+    "url": "https://example.com/shoreditch-sack",
+    "shipsTo": [
+      "GB",
+      "CA",
+      "US"
+    ],
+    "sample": true
+  },
+  {
+    "id": "kyoto-kissa",
+    "name": "Kissa Hibi",
+    "city": "Kyoto",
+    "country": "JP",
+    "lat": 35.01,
+    "lng": 135.77,
+    "url": "https://example.com/kyoto-kissa",
+    "shipsTo": [
+      "JP"
+    ],
+    "sample": true
+  },
+  {
+    "id": "melbourne-laneway",
+    "name": "Laneway Lab",
+    "city": "Melbourne",
+    "country": "AU",
+    "lat": -37.81,
+    "lng": 144.96,
+    "url": "https://example.com/melbourne-laneway",
+    "shipsTo": [
+      "AU",
+      "NZ"
+    ],
+    "sample": true
+  }
+]

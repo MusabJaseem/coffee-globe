@@ -1,0 +1,16 @@
+{"products": [
+  {"id": 101, "title": "Ethiopia Guji Natural", "handle": "ethiopia-guji-natural", "product_type": "Coffee",
+   "tags": ["single origin", "filter"],
+   "body_html": "<p>Tasting notes: <strong>blueberry, strawberry jam &amp; cocoa</strong></p><p>Process: Natural</p>",
+   "variants": [{"price": "42.00", "grams": 0, "title": "1kg", "available": true},
+                {"price": "24.00", "grams": 0, "title": "340g", "available": true}]},
+  {"id": 102, "title": "Ceramic Mug", "handle": "mug", "product_type": "Merch", "tags": [],
+   "body_html": "A nice mug", "variants": [{"price": "18.00", "grams": 400, "available": true}]},
+  {"id": 103, "title": "House Espresso", "handle": "house-espresso", "product_type": "", "tags": "espresso, blend",
+   "body_html": "<p>Notes of dark chocolate and molasses.</p>",
+   "variants": [{"price": "19.50", "grams": 0, "title": "12 oz", "available": true}]},
+  {"id": 104, "title": "Kenya Nyeri AA", "handle": "kenya-nyeri", "product_type": "Coffee", "tags": [],
+   "body_html": "<p>Blackcurrant, grapefruit</p>", "variants": [{"price": "26.00", "title": "250g", "available": false}]},
+  {"id": 105, "title": "Gift Card", "handle": "gift-card", "product_type": "Gift Card", "tags": [],
+   "body_html": "", "variants": [{"price": "25.00", "available": true}]}
+]}

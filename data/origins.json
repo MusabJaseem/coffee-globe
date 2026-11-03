@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ethiopia",
+    "name": "Ethiopia",
+    "lat": 7.0,
+    "lng": 38.5
+  },
+  {
+    "id": "kenya",
+    "name": "Kenya",
+    "lat": -0.4,
+    "lng": 37.0
+  },
+  {
+    "id": "rwanda",
+    "name": "Rwanda",
+    "lat": -2.0,
+    "lng": 29.9
+  },
+  {
+    "id": "burundi",
+    "name": "Burundi",
+    "lat": -3.4,
+    "lng": 29.9
+  },
+  {
+    "id": "colombia",
+    "name": "Colombia",
+    "lat": 4.6,
+    "lng": -75.6
+  },
+  {
+    "id": "brazil",
+    "name": "Brazil",
+    "lat": -21.0,
+    "lng": -45.5
+  },
+  {
+    "id": "guatemala",
+    "name": "Guatemala",
+    "lat": 14.6,
+    "lng": -90.9
+  },
+  {
+    "id": "costa-rica",
+    "name": "Costa Rica",
+    "lat": 10.0,
+    "lng": -84.1
+  },
+  {
+    "id": "honduras",
+    "name": "Honduras",
+    "lat": 14.6,
+    "lng": -88.0
+  },
+  {
+    "id": "peru",
+    "name": "Peru",
+    "lat": -6.5,
+    "lng": -78.5
+  },
+  {
+    "id": "el-salvador",
+    "name": "El Salvador",
+    "lat": 13.8,
+    "lng": -89.2
+  },
+  {
+    "id": "panama",
+    "name": "Panama",
+    "lat": 8.8,
+    "lng": -82.4
+  },
+  {
+    "id": "mexico",
+    "name": "Mexico",
+    "lat": 16.9,
+    "lng": -96.5
+  },
+  {
+    "id": "indonesia",
+    "name": "Indonesia (Sumatra)",
+    "lat": 3.0,
+    "lng": 98.6
+  },
+  {
+    "id": "yemen",
+    "name": "Yemen",
+    "lat": 15.4,
+    "lng": 44.2
+  },
+  {
+    "id": "papua-new-guinea",
+    "name": "Papua New Guinea",
+    "lat": -6.1,
+    "lng": 145.3
+  }
+]
