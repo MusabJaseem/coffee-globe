@@ -5,7 +5,8 @@ coffee (origin, process, notes, five taste axes), and appends results to
 pipeline/out/extracted.jsonl. Results are cached by a hash of the product
 text, so re-running only pays for new or changed products.
 
-Needs an Anthropic API key (ANTHROPIC_API_KEY, or any credential the anthropic SDK finds).
+Needs an Anthropic API key: COFFEE_GLOBE_API_KEY if set (a name Claude Code cloud
+sessions leave alone), else ANTHROPIC_API_KEY or any credential the anthropic SDK finds.
 Usage: python pipeline/extract.py [--model claude-haiku-5-5] [--limit 20]
 """
 from __future__ import annotations
@@ -138,9 +139,12 @@ def main() -> None:
     args = ap.parse_args()
 
     try:
-        client = anthropic.Anthropic(max_retries=4)
+        # Passing api_key=None lets the SDK fall back to its usual credential lookup.
+        client = anthropic.Anthropic(api_key=os.environ.get("COFFEE_GLOBE_API_KEY") or None, max_retries=4)
     except anthropic.AnthropicError as e:
-        sys.exit(f"No Anthropic credentials found ({e}). Set ANTHROPIC_API_KEY first.")
+        sys.exit(f"Could not set up the Anthropic client: {e}")
+    if not (client.api_key or client.auth_token):
+        sys.exit("No Anthropic API key found. Set COFFEE_GLOBE_API_KEY (or ANTHROPIC_API_KEY) first.")
     names = {r["id"]: r["name"] for r in json.loads(Path(args.roasters).read_text())}
     cache = load_cache()
     done = 0
