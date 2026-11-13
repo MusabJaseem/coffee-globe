@@ -34,16 +34,25 @@ Done:
 - Scraper, extraction and build pipeline
 - Tests: 9 for the taste model, 15 for the pipeline, all passing
 
-Not yet verified (the first build ran in a sandbox with no npm or web access):
-- `npm install` and `npm run build` have never been run, so expect small version or type fixes
-- The WebGL globe has never rendered; only the sheets and quiz were screenshotted
+Verified (Nov 2026):
+- `npm install`, `npm run build`, typecheck and both test suites pass (Next 15.5, React 19, react-globe.gl 2.38)
+- The globe renders and the quiz works end to end in headless Chromium at phone (iPhone 13) and desktop (1440×900) sizes, with no console errors
+- Globe textures are served from `public/textures/` rather than unpkg
+
+Not yet verified:
+- Tapping a pin on a real phone (pin taps can't be driven reliably in a headless WebGL test)
 - The scraper has only run against a fixture, never a live Shopify store
 - `extract.py` has never called the real API
+- `npm audit` flags PostCSS bundled inside Next 15 (build-time only); the fix is the Next 16 upgrade, so do it deliberately rather than via `npm audit fix --force`
 
 ## Next steps
 
-1. `npm install && npm run dev`, then fix whatever breaks and check the globe on a phone.
-2. Add 5–10 real roasters to `pipeline/roasters.json` (copy `roasters.example.json`). Check each store's `/products.json` in a browser and its shipping page for `shipsTo`.
+1. ~~Get the app building and check the globe on phone and desktop.~~ Done; still worth tapping pins on a real phone.
+2. ~~Add 5–10 real roasters to `pipeline/roasters.json`.~~ Done: 9 Canadian roasters (Pilot, Subtext, Detour, Bridgehead, Phil & Sebastian, Monogram, Rogue Wave, 49th Parallel, Pallet). All allow `/products.json` in robots.txt and serve a feed.
+   - `shipsTo` comes from each store's `/meta.json` (`ships_to_countries`, the countries its checkout accepts), which is more reliable than shipping-policy prose. A `*` there means "rest of world"; it's left out, so Phil & Sebastian is recorded as CA + US only.
+   - `lat`/`lng` are city centres (from `/meta.json`'s city), with same-city roasters nudged about 1 km apart so their pins don't overlap.
+   - Scraping these sites needs network access: sessions use the personal `coffee-globe` cloud environment, which allows exactly these hosts. Add new hosts there when adding roasters.
+   - The coffee filter in `scrape.py` needs tuning before step 3: it keeps gift sets, tea, a canister, a cupping event and a test product, and drops some real coffees with a blank product type (e.g. Monogram's Finca Deborah lots).
 3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt.
 4. Scale up to ~100 roasters, then `build_data.py`.
 5. Deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.

@@ -253,11 +253,10 @@ export default function Home() {
             ))}
           </select>
         </label>
+        {isSampleData && (
+          <p className="sample-note">Sample roasters for testing. Run the data pipeline to load real ones.</p>
+        )}
       </nav>
-
-      {isSampleData && (
-        <p className="sample-note">Sample roasters for testing. Run the data pipeline to load real ones.</p>
-      )}
 
       <section className={`sheet${panel === "list" ? " tall" : ""}`} aria-live="polite">
         {sheet}

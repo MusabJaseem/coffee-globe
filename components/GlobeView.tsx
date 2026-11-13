@@ -43,6 +43,8 @@ export default function GlobeView(props: Props) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
+  // onGlobeReady can fire before the ref is attached, so camera setup waits for this flag instead.
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -104,11 +106,16 @@ export default function GlobeView(props: Props) {
     const controls = g.controls();
     controls.autoRotate = !focus && !selectedRoasterId && !selectedOriginId;
     controls.autoRotateSpeed = 0.35;
-  }, [focus, selectedRoasterId, selectedOriginId, size.w]);
+  }, [ready, focus, selectedRoasterId, selectedOriginId, size.w]);
+
+  // Open on North America, where the roasters are.
+  useEffect(() => {
+    if (ready) globeRef.current?.pointOfView({ lat: 45, lng: -85, altitude: 2.3 }, 0);
+  }, [ready]);
 
   useEffect(() => {
-    if (focus) globeRef.current?.pointOfView({ lat: focus.lat, lng: focus.lng, altitude: 1.6 }, 900);
-  }, [focus]);
+    if (ready && focus) globeRef.current?.pointOfView({ lat: focus.lat, lng: focus.lng, altitude: 1.6 }, 900);
+  }, [ready, focus]);
 
   const reduceMotion =
     typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
@@ -121,11 +128,11 @@ export default function GlobeView(props: Props) {
           width={size.w}
           height={size.h}
           backgroundColor="rgba(0,0,0,0)"
-          globeImageUrl="https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-          bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
+          globeImageUrl="/textures/earth-blue-marble.jpg"
+          bumpImageUrl="/textures/earth-topology.png"
           atmosphereColor="#E9B98A"
           atmosphereAltitude={0.16}
-          onGlobeReady={() => globeRef.current?.pointOfView({ lat: 38, lng: -85, altitude: 2.3 }, 0)}
+          onGlobeReady={() => setReady(true)}
           pointsData={pins}
           pointLat="lat"
           pointLng="lng"
