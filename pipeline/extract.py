@@ -5,7 +5,9 @@ coffee (origin, process, notes, five taste axes), and appends results to
 pipeline/out/extracted.jsonl. Results are cached by a hash of the product
 text, so re-running only pays for new or changed products.
 
-Needs an Anthropic API key (ANTHROPIC_API_KEY, or any credential the anthropic SDK finds).
+Needs an Anthropic API key: EXTRACT_API_KEY, else ANTHROPIC_API_KEY or any credential
+the anthropic SDK finds. Use EXTRACT_API_KEY in Claude Code cloud sessions, which strip
+ANTHROPIC_API_KEY and set ANTHROPIC_BASE_URL for their own use.
 Usage: python pipeline/extract.py [--model claude-haiku-5-5] [--limit 20]
 """
 from __future__ import annotations
@@ -130,6 +132,14 @@ def load_cache() -> dict[str, dict]:
     return {row["key"]: row for line in OUT_FILE.read_text().splitlines() if line.strip() for row in [json.loads(line)]}
 
 
+def make_client() -> anthropic.Anthropic:
+    """Prefer EXTRACT_API_KEY, pinned to the public API so an inherited ANTHROPIC_BASE_URL can't redirect it."""
+    key = os.environ.get("EXTRACT_API_KEY")
+    if key:
+        return anthropic.Anthropic(api_key=key, base_url="https://api.anthropic.com", max_retries=4)
+    return anthropic.Anthropic(max_retries=4)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--roasters", default=str(HERE / "roasters.json"))
@@ -138,9 +148,9 @@ def main() -> None:
     args = ap.parse_args()
 
     try:
-        client = anthropic.Anthropic(max_retries=4)
+        client = make_client()
     except anthropic.AnthropicError as e:
-        sys.exit(f"No Anthropic credentials found ({e}). Set ANTHROPIC_API_KEY first.")
+        sys.exit(f"No Anthropic credentials found ({e}). Set EXTRACT_API_KEY or ANTHROPIC_API_KEY first.")
     names = {r["id"]: r["name"] for r in json.loads(Path(args.roasters).read_text())}
     cache = load_cache()
     done = 0
