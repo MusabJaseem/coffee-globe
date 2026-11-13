@@ -48,7 +48,11 @@ Not yet verified:
 ## Next steps
 
 1. ~~Get the app building and check the globe on phone and desktop.~~ Done; still worth tapping pins on a real phone.
-2. Add 5–10 real roasters to `pipeline/roasters.json` (copy `roasters.example.json`). Check each store's `/products.json` in a browser and its shipping page for `shipsTo`.
+2. ~~Add 5–10 real roasters to `pipeline/roasters.json`.~~ Done: 9 Canadian roasters (Pilot, Subtext, Detour, Bridgehead, Phil & Sebastian, Monogram, Rogue Wave, 49th Parallel, Pallet). All allow `/products.json` in robots.txt and serve a feed.
+   - `shipsTo` comes from each store's `/meta.json` (`ships_to_countries`, the countries its checkout accepts), which is more reliable than shipping-policy prose. A `*` there means "rest of world"; it's left out, so Phil & Sebastian is recorded as CA + US only.
+   - `lat`/`lng` are city centres (from `/meta.json`'s city), with same-city roasters nudged about 1 km apart so their pins don't overlap.
+   - Scraping these sites needs network access: sessions use the personal `coffee-globe` cloud environment, which allows exactly these hosts. Add new hosts there when adding roasters.
+   - The coffee filter in `scrape.py` needs tuning before step 3: it keeps gift sets, tea, a canister, a cupping event and a test product, and drops some real coffees with a blank product type (e.g. Monogram's Finca Deborah lots).
 3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt.
 4. Scale up to ~100 roasters, then `build_data.py`.
 5. Deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
