@@ -29,6 +29,31 @@ def test_filters_merch_gift_cards_and_sold_out():
     assert [p["title"] for p in kept()] == ["Ethiopia Guji Natural", "House Espresso"]
 
 
+NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.</p>"
+
+
+@pytest.mark.parametrize("title,ptype,body,expected", [
+    ("Ethiopia Guji Natural", "Coffee", NOTES, True),
+    ("Burundi Kayanza - Washed", "", NOTES, True),            # untyped, but the description reads like coffee
+    ("Ethiopia Sedka", "SOF", NOTES, True),                    # store-specific coffee codes
+    ("Signature Espresso Gift Set", "Bundle", NOTES, False),  # multi-coffee sets
+    ("Honduras Duo", "Bundle", NOTES, False),
+    ("24 Days Of Coffee Advent Calendar", "", NOTES, False),
+    ("Imperial Jasmine", "Tea", NOTES, False),                 # type is trusted over a coffee-ish description
+    ("Fellow Atmos Vacuum Canister", "Coffee brewers & tools", NOTES, False),
+    ("Espresso Brewing", "Workshop", NOTES, False),
+    ("Menu Cupping — November 28th", "", NOTES, False),
+    ("The Physics of Filter Coffee — by Jonathan Gangé", "", NOTES, False),
+    ("Karat Chocolate - Le Cafe Noir", "", NOTES, False),
+    ("Nitro Cold Brew Coffee", "Cold Brew Coffee", NOTES, False),
+    ("This is a Test (Roast)", "Coffee", NOTES, False),
+    ("Kenya - Maganjo | Washed - Archived", "Coffee", NOTES, False),
+    ("Finca Deborah Enigma", "", "", False),                   # nothing for extraction to read
+])
+def test_looks_like_coffee(title, ptype, body, expected):
+    assert scrape.looks_like_coffee({"title": title, "product_type": ptype, "body_html": body, "tags": []}) is expected
+
+
 def test_normalise_picks_smallest_bag_and_cleans_html():
     guji = kept()[0]
     assert guji["priceCents"] == 2400
@@ -45,22 +70,34 @@ def test_comma_string_tags_are_split():
 
 
 def test_parse_response_clamps_and_validates():
-    body = {"content": [
-        {"type": "text", "text": "ok"},
-        {"type": "tool_use", "name": "record_coffee", "input": {
-            "is_coffee": True, "is_blend": False, "origin_country": "Ethiopia", "process": "carbonic",
-            "notes": ["Blueberry", " ", "Cocoa"], "acidity": 1.4, "sweetness": "0.8", "body": -1,
-            "fruitiness": 0.9, "confidence": 0.9}},
-    ]}
-    r = extract.parse_response(body)
+    text = json.dumps({
+        "is_coffee": True, "is_blend": False, "origin_country": "Ethiopia", "process": "carbonic",
+        "notes": ["Blueberry", " ", "Cocoa"], "acidity": 1.4, "sweetness": "0.8", "body": -1,
+        "fruitiness": 0.9, "confidence": 0.9})
+    r = extract.parse_response(text, "end_turn")
     assert r["process"] is None          # not in the allowed list
     assert r["notes"] == ["blueberry", "cocoa"]
     assert (r["acidity"], r["sweetness"], r["body"], r["roast"]) == (1.0, 0.8, 0.0, 0.5)
 
 
-def test_parse_response_without_tool_call_raises():
+@pytest.mark.parametrize("text,stop_reason", [
+    (None, "end_turn"),                 # no text block
+    ("not json", "end_turn"),
+    ('{"is_coffee": true', "max_tokens"),  # cut off mid-answer
+    (None, "refusal"),
+])
+def test_parse_response_without_usable_answer_raises(text, stop_reason):
     with pytest.raises(ValueError):
-        extract.parse_response({"content": [{"type": "text", "text": "hi"}], "stop_reason": "end_turn"})
+        extract.parse_response(text, stop_reason)
+
+
+def test_schema_is_valid_for_structured_outputs():
+    # Structured outputs reject numeric/array constraints and need additionalProperties: false.
+    dumped = json.dumps(extract.SCHEMA)
+    for unsupported in ('"minimum"', '"maximum"', '"maxItems"'):
+        assert unsupported not in dumped
+    assert extract.SCHEMA["additionalProperties"] is False
+    assert set(extract.SCHEMA["required"]) == set(extract.SCHEMA["properties"])
 
 
 def test_cache_key_changes_with_description():

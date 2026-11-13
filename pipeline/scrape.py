@@ -32,7 +32,27 @@ NON_COFFEE = re.compile(
     r"cold brew can|instant|equipment|brewer|aeropress|chemex|v60|loose leaf|matcha)\b",
     re.IGNORECASE,
 )
+# Titles that aren't a single bag of beans: multi-coffee sets (one taste profile can't
+# describe them), events and classes, coffee-flavoured goods, and store housekeeping.
+NOT_A_SINGLE_COFFEE = re.compile(
+    r"\b(gift (set|box|class)|stocking stuffer|advent|bundle|duo|trio|sampler|tasting set|"
+    r"favourites pack|holiday .*\bset|candle|sticker|canister|cold brew|nitro|cascara|"
+    r"cupping|class|course|workshop|tasting with|event|ticket|refractometer|"
+    r"test|wholesale only|with your logo|appointment|payment method|shipping carrier|archived)\b"
+    r"|chocolate( bar| -)| — by ",
+    re.IGNORECASE,
+)
+# When a store sets product_type, trust it: coffee types pass, anything else (tea, books,
+# water, classes, bundles...) doesn't, however much its description talks about coffee.
+COFFEE_TYPE = re.compile(r"\b(coffee|espresso|filter|decaf|whole bean|beans?|soe|sof|single origin|blend)\b", re.IGNORECASE)
+NON_COFFEE_TYPE = re.compile(
+    r"\b(tea|matcha|bundle|cold brew|instant|capsules?|subscription|gift|brewers?|tools|"
+    r"storage|merch(andise)?|equipment|accessor(y|ies))\b",
+    re.IGNORECASE,
+)
 COFFEE_HINT = re.compile(r"\b(coffee|espresso|beans?|single origin|blend|roast)\b", re.IGNORECASE)
+# Extraction works from the description; with less than this there is nothing to read.
+MIN_DESCRIPTION_CHARS = 20
 
 OZ_TO_G = 28.3495
 
@@ -66,13 +86,19 @@ def looks_like_coffee(product: dict) -> bool:
     tags = product.get("tags") or []
     if isinstance(tags, str):
         tags = [t.strip() for t in tags.split(",")]
-    haystack = " ".join([product.get("title", ""), product.get("product_type", ""), " ".join(tags)])
-    if NON_COFFEE.search(haystack):
+    title = product.get("title", "")
+    ptype = (product.get("product_type") or "").strip()
+    haystack = " ".join([title, ptype, " ".join(tags)])
+    if NON_COFFEE.search(haystack) or NOT_A_SINGLE_COFFEE.search(title):
         return False
+    body = strip_html(product.get("body_html"))
+    if len(body) < MIN_DESCRIPTION_CHARS:
+        return False
+    if ptype:
+        return bool(COFFEE_TYPE.search(ptype)) and not NON_COFFEE_TYPE.search(ptype)
     if COFFEE_HINT.search(haystack):
         return True
     # Untyped products: fall back to the description mentioning tasting notes or origin.
-    body = strip_html(product.get("body_html"))
     return bool(re.search(r"tasting notes|notes of|origin|process|altitude|masl|varietal", body, re.IGNORECASE))
 
 
