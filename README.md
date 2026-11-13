@@ -22,7 +22,7 @@ cp pipeline/roasters.example.json pipeline/roasters.json
 # add roasters: id, name, city, country, lat, lng, Shopify store URL, currency, countries they ship to
 
 python pipeline/scrape.py --only <roaster-id>       # try one store first
-export ANTHROPIC_API_KEY=...
+export ANTHROPIC_API_KEY=...   # or EXTRACT_API_KEY (needed in Claude Code cloud sessions)
 python pipeline/extract.py --limit 20                # extract 20, then spot-check pipeline/out/extracted.jsonl
 python pipeline/extract.py                           # the rest (cached, so re-runs only pay for new products)
 python pipeline/build_data.py                        # writes data/roasters.json and data/coffees.json
