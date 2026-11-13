@@ -52,8 +52,12 @@ Not yet verified:
    - `shipsTo` comes from each store's `/meta.json` (`ships_to_countries`, the countries its checkout accepts), which is more reliable than shipping-policy prose. A `*` there means "rest of world"; it's left out, so Phil & Sebastian is recorded as CA + US only.
    - `lat`/`lng` are city centres (from `/meta.json`'s city), with same-city roasters nudged about 1 km apart so their pins don't overlap.
    - Scraping these sites needs network access: sessions use the personal `coffee-globe` cloud environment, which allows exactly these hosts. Add new hosts there when adding roasters.
-   - The coffee filter in `scrape.py` needs tuning before step 3: it keeps gift sets, tea, a canister, a cupping event and a test product, and drops some real coffees with a blank product type (e.g. Monogram's Finca Deborah lots).
-3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt.
+   - The coffee filter has since been tightened (see step 3).
+3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt. In progress on branch `feat/scrape-catalogue`:
+   - Done: the coffee filter trusts a store's product type when it has one and drops multi-coffee sets, events, classes, books, chocolate, archived listings and products with no description. Scraping the 9 stores gives 179 in-stock coffees.
+   - Done: `extract.py` uses the anthropic SDK with structured outputs (forced tool calls skip thinking on Haiku 5.5 and are rejected on Sonnet 5.5 / Opus 5.5), leaves room for thinking, and reports token usage.
+   - Next: in a session on the `coffee-globe` cloud environment (its `EXTRACT_API_KEY` variable and setup script load at session start; cloud sessions strip `ANTHROPIC_API_KEY`, so don't use that name), check out `feat/scrape-catalogue`, run `.venv/bin/python pipeline/scrape.py` (`pipeline/out/` is not committed), then `.venv/bin/python pipeline/extract.py --limit 20` and spot-check all 20.
+   - Some listings have only shipping text as a description (e.g. one Subtext lot); expect low confidence there.
 4. Scale up to ~100 roasters, then `build_data.py`.
-5. Deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
+5. Before deploying, upgrade Next 15 to 16 and re-test on phone and desktop: `npm audit` flags PostCSS bundled in Next 15 (build-time only), and `npm audit fix --force` would do the major upgrade blind. Then deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
 6. Measure quiz completion, buy clicks (`cg.events.v1` in localStorage for now) and return visits, then add real analytics.
