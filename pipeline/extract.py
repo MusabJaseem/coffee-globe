@@ -40,7 +40,11 @@ Score each taste axis from 0 to 1 as an experienced cupper would expect the coff
 
 "Bright", "juicy", "tart" and "citric" mean higher acidity. "Jammy", "winey", "boozy", "fermented" mean high fruitiness. Espresso blends with chocolate and nut notes are usually roast 0.6-0.75 and body 0.7+.
 
-Only use what the listing supports. If the listing is not a bag of roasted coffee beans (merchandise, equipment, gift cards, subscriptions, instant coffee, tea), set is_coffee to false. Copy tasting notes in the roaster's words, lower case, at most five."""
+Only use what the listing supports. If the listing is not a bag of roasted coffee beans (merchandise, equipment, gift cards, subscriptions, instant coffee, tea), set is_coffee to false.
+
+process: give one only when the listing names it ("washed", "natural", "honey", "anaerobic") or describes the steps unambiguously (depulped and fermented in water = washed; dried whole in the cherry = natural; pulped with mucilage left on = honey). Co-ferments, infusions, wet-hulled and other experimental methods are "other". If the listing doesn't say, use null. Don't guess from the origin or from what's typical for a blend.
+
+notes: up to five flavour or aroma notes in the roaster's words, lower case: foods, fruits, flowers, spices, drinks (e.g. "blackcurrant", "milk chocolate", "black tea", "jasmine"). Drop intensity and style words around them ("lingering floral finish" -> "floral", "chocolate truffle richness" -> "chocolate truffle", "sweet lemonade" stays). Leave out anything that describes acidity, body, sweetness, texture or finish rather than a flavour ("bright acidity", "gentle sweetness", "smooth", "creamy", "clean finish"); those go into the axis scores instead."""
 
 # Structured-output schema. Ranges (0-1) and the five-note cap aren't expressible in
 # structured outputs, so the prompt states them and clean_result() enforces them.
@@ -53,8 +57,15 @@ SCHEMA = {
             "anyOf": [{"type": "string"}, {"type": "null"}],
             "description": "Main producing country in English, e.g. 'Ethiopia'. For blends, the largest component if stated, else null.",
         },
-        "process": {"anyOf": [{"type": "string", "enum": PROCESSES}, {"type": "null"}]},
-        "notes": {"type": "array", "items": {"type": "string"}, "description": "At most five, in the roaster's words."},
+        "process": {
+            "anyOf": [{"type": "string", "enum": PROCESSES}, {"type": "null"}],
+            "description": "Null unless the listing states or clearly describes the process.",
+        },
+        "notes": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "At most five flavour or aroma notes in the roaster's words; no acidity, body or texture words.",
+        },
         **{a: {"type": "number", "description": "0 to 1"} for a in AXES},
         "confidence": {
             "type": "number",
@@ -67,10 +78,13 @@ SCHEMA = {
 # Thinking counts toward max_tokens, so leave room for it as well as the JSON answer.
 MAX_TOKENS = 4000
 EFFORT = "medium"
+# Part of every cache key, so changing the prompt or schema re-extracts each product.
+# build_data.py keeps the last row per product, so the new rows replace the old ones.
+PROMPT_VERSION = hashlib.sha256(json.dumps([SYSTEM, SCHEMA], sort_keys=True).encode()).hexdigest()[:8]
 
 
 def product_key(roaster_id: str, product: dict) -> str:
-    text = json.dumps([roaster_id, product["title"], product["description"], product["tags"]], sort_keys=True)
+    text = json.dumps([PROMPT_VERSION, roaster_id, product["title"], product["description"], product["tags"]], sort_keys=True)
     return hashlib.sha256(text.encode()).hexdigest()[:16]
 
 
@@ -145,6 +159,8 @@ def main() -> None:
     ap.add_argument("--roasters", default=str(HERE / "roasters.json"))
     ap.add_argument("--model", default=os.environ.get("EXTRACT_MODEL", DEFAULT_MODEL))
     ap.add_argument("--limit", type=int, default=0, help="stop after this many new extractions (0 = no limit)")
+    ap.add_argument("--per-roaster", type=int, default=0,
+                    help="at most this many new extractions per roaster, for a spot-check sample (0 = no limit)")
     args = ap.parse_args()
 
     try:
@@ -162,10 +178,13 @@ def main() -> None:
     with OUT_FILE.open("a") as out:
         for raw_file in sorted(RAW_DIR.glob("*.json")):
             roaster_id = raw_file.stem
+            done_here = 0
             for product in json.loads(raw_file.read_text()):
                 key = product_key(roaster_id, product)
                 if key in cache:
                     continue
+                if args.per_roaster and done_here >= args.per_roaster:
+                    break
                 if args.limit and done >= args.limit:
                     print(f"Stopped after {done} new extractions (--limit). Tokens: {tokens_in:,} in, {tokens_out:,} out.")
                     return
@@ -185,6 +204,7 @@ def main() -> None:
                 out.write(json.dumps(row, ensure_ascii=False) + "\n")
                 out.flush()
                 done += 1
+                done_here += 1
                 flag = "" if result["is_coffee"] else "  (not coffee)"
                 print(f"  {roaster_id}: {product['title']} -> {result['origin_country']}, {result['process']}{flag}")
     print(f"Done: {done} new extractions. Tokens: {tokens_in:,} in, {tokens_out:,} out.")

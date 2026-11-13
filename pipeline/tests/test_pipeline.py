@@ -105,6 +105,13 @@ def test_cache_key_changes_with_description():
     assert extract.product_key("r", p) != extract.product_key("r", {**p, "description": "new"})
 
 
+def test_cache_key_changes_with_prompt(monkeypatch):
+    p = kept()[0]
+    before = extract.product_key("r", p)
+    monkeypatch.setattr(extract, "PROMPT_VERSION", "different")
+    assert extract.product_key("r", p) != before
+
+
 def test_build_merges_and_resolves_origins(tmp_path):
     (tmp_path / "r1.json").write_text(json.dumps(kept()))
     cfg = [{"id": "r1", "name": "R1", "city": "Toronto", "country": "CA", "lat": 1, "lng": 2,
