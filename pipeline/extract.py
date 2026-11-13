@@ -151,6 +151,9 @@ def main() -> None:
         client = make_client()
     except anthropic.AnthropicError as e:
         sys.exit(f"No Anthropic credentials found ({e}). Set EXTRACT_API_KEY or ANTHROPIC_API_KEY first.")
+    # The SDK only checks credentials on the first request; fail here with a clear message instead.
+    if not (client.api_key or client.auth_token):
+        sys.exit("No Anthropic API key found. Set EXTRACT_API_KEY (or ANTHROPIC_API_KEY) first.")
     names = {r["id"]: r["name"] for r in json.loads(Path(args.roasters).read_text())}
     cache = load_cache()
     done = 0
