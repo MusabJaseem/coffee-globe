@@ -38,7 +38,14 @@ button, select { font: inherit; color: inherit; }
 }
 
 /* ---------- Globe ---------- */
-.globe-wrap { position: absolute; inset: 0; }
+/* Phones: keep the globe above the bottom sheet. Desktop: beside the side sheet. */
+.globe-wrap { position: absolute; inset: 0 0 36vh 0; }
+@media (min-width: 760px) {
+  .globe-wrap { inset: 0; }
+}
+@media (min-width: 1024px) {
+  .globe-wrap { right: 444px; }
+}
 .globe-loading {
   display: grid;
   place-items: center;
@@ -66,10 +73,13 @@ button, select { font: inherit; color: inherit; }
   right: 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 12px;
+  gap: 4px 12px;
   padding: max(14px, env(safe-area-inset-top)) var(--gutter) 14px;
   color: var(--steam);
+  /* fade so the header stays readable where the globe passes under it */
+  background: linear-gradient(var(--roast) 55%, transparent);
   pointer-events: none;
 }
 .topbar > * { pointer-events: auto; }
@@ -78,6 +88,7 @@ button, select { font: inherit; color: inherit; }
   font-weight: 800;
   font-size: 22px;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 .ship {
   display: flex;
@@ -85,6 +96,7 @@ button, select { font: inherit; color: inherit; }
   gap: 8px;
   font-size: 14px;
   color: var(--husk);
+  white-space: nowrap;
 }
 .ship select {
   background: rgba(239, 226, 204, 0.12);
@@ -92,15 +104,13 @@ button, select { font: inherit; color: inherit; }
   border: 1px solid rgba(239, 226, 204, 0.25);
   border-radius: 999px;
   padding: 6px 12px;
+  max-width: 140px;
 }
 .ship select option { color: var(--bean); }
 
 .sample-note {
-  position: absolute;
-  top: 58px;
-  left: var(--gutter);
+  flex: 0 0 100%;
   margin: 0;
-  max-width: 34ch;
   font-size: 13px;
   color: var(--husk);
 }

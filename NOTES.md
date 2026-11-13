@@ -34,15 +34,20 @@ Done:
 - Scraper, extraction and build pipeline
 - Tests: 9 for the taste model, 15 for the pipeline, all passing
 
-Not yet verified (the first build ran in a sandbox with no npm or web access):
-- `npm install` and `npm run build` have never been run, so expect small version or type fixes
-- The WebGL globe has never rendered; only the sheets and quiz were screenshotted
+Verified (Nov 2026):
+- `npm install`, `npm run build`, typecheck and both test suites pass (Next 15.5, React 19, react-globe.gl 2.38)
+- The globe renders and the quiz works end to end in headless Chromium at phone (iPhone 13) and desktop (1440×900) sizes, with no console errors
+- Globe textures are served from `public/textures/` rather than unpkg
+
+Not yet verified:
+- Tapping a pin on a real phone (pin taps can't be driven reliably in a headless WebGL test)
 - The scraper has only run against a fixture, never a live Shopify store
 - `extract.py` has never called the real API
+- `npm audit` flags PostCSS bundled inside Next 15 (build-time only); the fix is the Next 16 upgrade, so do it deliberately rather than via `npm audit fix --force`
 
 ## Next steps
 
-1. `npm install && npm run dev`, then fix whatever breaks and check the globe on a phone.
+1. ~~Get the app building and check the globe on phone and desktop.~~ Done; still worth tapping pins on a real phone.
 2. Add 5–10 real roasters to `pipeline/roasters.json` (copy `roasters.example.json`). Check each store's `/products.json` in a browser and its shipping page for `shipsTo`.
 3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt.
 4. Scale up to ~100 roasters, then `build_data.py`.
