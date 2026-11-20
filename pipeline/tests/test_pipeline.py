@@ -41,6 +41,7 @@ NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.
     ("24 Days Of Coffee Advent Calendar", "", NOTES, False),
     ("Single Origin Tasting Pack", "Coffee", NOTES, False),
     ("Seasonal Sample Box", "Coffee", NOTES, False),
+    ("Lightning Needle Distribution Tool V2 | Black", "Coffee", NOTES, False),
     ("Imperial Jasmine", "Tea", NOTES, False),                 # type is trusted over a coffee-ish description
     ("Fellow Atmos Vacuum Canister", "Coffee brewers & tools", NOTES, False),
     ("Espresso Brewing", "Workshop", NOTES, False),

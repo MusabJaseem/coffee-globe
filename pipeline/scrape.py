@@ -34,7 +34,7 @@ USER_AGENT = "CoffeeGlobeBot/0.1 (catalogue indexer; one request per second)"
 NON_COFFEE = re.compile(
     r"\b(mug|cup|tumbler|grinder|kettle|dripper|filter papers?|scale|gift ?card|"
     r"t-?shirt|hoodie|tote|hat|merch|subscription|sample ?pack|capsules?|pods?|"
-    r"cold brew can|instant|equipment|brewer|aeropress|chemex|v60|loose leaf|matcha)\b",
+    r"cold brew can|instant|equipment|brewer|aeropress|chemex|v60|loose leaf|matcha|tools?|dosing ring|wdt)\b",
     re.IGNORECASE,
 )
 # Titles that aren't a single bag of beans: multi-coffee sets (one taste profile can't
