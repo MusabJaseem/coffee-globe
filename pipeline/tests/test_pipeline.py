@@ -39,6 +39,8 @@ NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.
     ("Signature Espresso Gift Set", "Bundle", NOTES, False),  # multi-coffee sets
     ("Honduras Duo", "Bundle", NOTES, False),
     ("24 Days Of Coffee Advent Calendar", "", NOTES, False),
+    ("Single Origin Tasting Pack", "Coffee", NOTES, False),
+    ("Seasonal Sample Box", "Coffee", NOTES, False),
     ("Imperial Jasmine", "Tea", NOTES, False),                 # type is trusted over a coffee-ish description
     ("Fellow Atmos Vacuum Canister", "Coffee brewers & tools", NOTES, False),
     ("Espresso Brewing", "Workshop", NOTES, False),
@@ -103,6 +105,21 @@ def test_schema_is_valid_for_structured_outputs():
 def test_cache_key_changes_with_description():
     p = kept()[0]
     assert extract.product_key("r", p) != extract.product_key("r", {**p, "description": "new"})
+
+
+def test_page_summary_reads_meta_description():
+    page = '<head><meta name="description" content="Natural Pacamara with notes of bubblegum, dark plum &amp; grape."></head>'
+    assert scrape.page_summary(page) == "Natural Pacamara with notes of bubblegum, dark plum & grape."
+    assert scrape.page_summary("<head></head>") == ""
+
+
+def test_add_summary_skips_duplicates_and_prepends_new_text():
+    coffee = {"title": "X", "description": "Order by Sunday for Wednesday shipment."}
+    added = scrape.add_summary(coffee, "Tasting notes of bubblegum, dark plum and grape.")
+    assert added["description"].startswith("Summary: Tasting notes of bubblegum")
+    assert added["description"].endswith("Wednesday shipment.")
+    long = {"title": "Y", "description": "A long farm story " * 10}
+    assert scrape.add_summary(long, ("A long farm story " * 10)[:160]) == long
 
 
 def test_cache_key_changes_with_prompt(monkeypatch):

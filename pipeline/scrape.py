@@ -5,6 +5,11 @@ Most specialty roasters run on Shopify, which publishes a public catalogue at
 catalogue politely, keeps only things that look like coffee, and writes one
 normalised file per roaster to pipeline/out/raw/<roaster-id>.json.
 
+Some stores keep their tasting notes out of body_html and only show them in the product
+page's meta description. For roasters with "pageSummary": true in roasters.json, the
+scraper also fetches each kept product's page (one request per second, if robots.txt
+allows it) and adds that summary to the description.
+
 Usage: python pipeline/scrape.py [--only roaster-id] [--delay 1.0]
 """
 from __future__ import annotations
@@ -35,7 +40,7 @@ NON_COFFEE = re.compile(
 # Titles that aren't a single bag of beans: multi-coffee sets (one taste profile can't
 # describe them), events and classes, coffee-flavoured goods, and store housekeeping.
 NOT_A_SINGLE_COFFEE = re.compile(
-    r"\b(gift (set|box|class)|stocking stuffer|advent|bundle|duo|trio|sampler|tasting set|"
+    r"\b(gift (set|box|class)|stocking stuffer|advent|bundle|duo|trio|sampler|tasting (set|pack)|sample box|"
     r"favourites pack|holiday .*\bset|candle|sticker|canister|cold brew|nitro|cascara|"
     r"cupping|class|course|workshop|tasting with|event|ticket|refractometer|"
     r"test|wholesale only|with your logo|appointment|payment method|shipping carrier|archived)\b"
@@ -130,16 +135,57 @@ def normalise(product: dict, base_url: str) -> dict | None:
     }
 
 
-def allowed_by_robots(base_url: str, session: requests.Session) -> bool:
+def load_robots(base_url: str, session: requests.Session) -> urllib.robotparser.RobotFileParser:
     rp = urllib.robotparser.RobotFileParser()
     try:
         resp = session.get(urljoin(base_url, "/robots.txt"), timeout=15)
+        text = resp.text if resp.status_code < 400 else ""
     except requests.RequestException:
-        return True  # no robots.txt reachable: treat as allowed
-    if resp.status_code >= 400:
-        return True
-    rp.parse(resp.text.splitlines())
-    return rp.can_fetch(USER_AGENT, urljoin(base_url, "/products.json"))
+        text = ""  # no robots.txt reachable: treat as allowed
+    rp.parse(text.splitlines())
+    return rp
+
+
+def allowed_by_robots(base_url: str, session: requests.Session) -> bool:
+    return load_robots(base_url, session).can_fetch(USER_AGENT, urljoin(base_url, "/products.json"))
+
+
+META_DESCRIPTION = re.compile(
+    r"<meta\s+(?:name|property)=[\"'](?:description|og:description)[\"']\s+content=[\"']([^\"']*)[\"']", re.IGNORECASE
+)
+
+
+def page_summary(page_html: str) -> str:
+    """The product page's meta description, which some stores use for tasting notes."""
+    m = META_DESCRIPTION.search(page_html)
+    return re.sub(r"\s+", " ", html.unescape(m.group(1))).strip() if m else ""
+
+
+def add_summary(coffee: dict, summary: str) -> dict:
+    """Put the page summary ahead of the description unless the description already has it."""
+    desc = coffee["description"]
+    # Meta descriptions are often the first ~160 characters of body_html, so compare a prefix.
+    if len(summary) < MIN_DESCRIPTION_CHARS or summary[:80] in re.sub(r"\s+", " ", desc):
+        return coffee
+    return {**coffee, "description": f"Summary: {summary}\n{desc}"[:4000]}
+
+
+def add_page_summaries(coffees: list[dict], robots, session: requests.Session, delay: float) -> list[dict]:
+    out = []
+    for c in coffees:
+        if not robots.can_fetch(USER_AGENT, c["url"]):
+            out.append(c)
+            continue
+        time.sleep(delay)
+        try:
+            resp = session.get(c["url"], timeout=30)
+            resp.raise_for_status()
+        except requests.RequestException as e:
+            print(f"    no page summary for {c['title']}: {e}", file=sys.stderr)
+            out.append(c)
+            continue
+        out.append(add_summary(c, page_summary(resp.text)))
+    return out
 
 
 def fetch_products(base_url: str, session: requests.Session, delay: float, max_pages: int = 10) -> list[dict]:
@@ -157,12 +203,17 @@ def fetch_products(base_url: str, session: requests.Session, delay: float, max_p
 
 def scrape_roaster(roaster: dict, session: requests.Session, delay: float) -> list[dict]:
     base = roaster["url"]
-    if not allowed_by_robots(base, session):
+    robots = load_robots(base, session)
+    if not robots.can_fetch(USER_AGENT, urljoin(base, "/products.json")):
         print(f"  skip {roaster['id']}: robots.txt disallows /products.json", file=sys.stderr)
         return []
     raw = fetch_products(base, session, delay)
     kept = [n for p in raw if looks_like_coffee(p) and (n := normalise(p, base))]
     print(f"  {roaster['id']}: {len(raw)} products, {len(kept)} coffees in stock")
+    if roaster.get("pageSummary"):
+        kept = add_page_summaries(kept, robots, session, delay)
+        added = sum(c["description"].startswith("Summary: ") for c in kept)
+        print(f"    page summaries added to {added} of {len(kept)}")
     return kept
 
 

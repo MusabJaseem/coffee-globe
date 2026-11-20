@@ -259,7 +259,8 @@
       "ZA",
       "ZM",
       "ZW"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "detour",
@@ -273,7 +274,8 @@
     "shipsTo": [
       "CA",
       "US"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "bridgehead",
