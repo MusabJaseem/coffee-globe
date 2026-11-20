@@ -2,7 +2,7 @@
 
 A satellite globe of specialty roasters that ship to you. Take a seven-question taste quiz and the roasters whose coffees suit you light up in coffee-cherry red. Tap a green origin pin to see arcs to every roaster selling coffee from there.
 
-The checked-in data is **fictional sample roasters** so the app works on day one. The pipeline replaces it with real catalogues.
+The checked-in data is built by the pipeline from real catalogues: currently 9 Canadian roasters and 161 coffees, scraped from their Shopify stores. Rebuild it with the commands below.
 
 ## Run the app
 

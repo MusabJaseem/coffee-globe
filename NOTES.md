@@ -23,7 +23,7 @@ Started from brainstorming coffee software businesses. Two ideas were shortliste
 - **Stack:** Next.js + react-globe.gl, static JSON data (no Supabase yet), Python pipeline, Claude for extraction. Profile in localStorage, no accounts.
 - **Taste model:** five axes with a weighted distance. Simple on purpose; add embeddings on tasting notes only if matching feels off.
 - **Top-match lists are varied:** at most one coffee per roaster and per origin first, so the home sheet doesn't show three near-identical coffees.
-- **Sample data uses fictional roasters only,** so nothing is ever attributed to a real business by mistake.
+- **Real data comes only from the pipeline,** so nothing is attributed to a real business unless their own listing says it. The fictional sample roasters used before the first real build are in git history; hand-made test data stays fictional.
 - **Monetisation later:** affiliate links first (clicks already carry `utm_source=coffeeglobe`), then featured pins or "who matches your coffee" analytics for roasters.
 - **Biggest risk:** extraction quality, not the globe.
 
@@ -63,7 +63,7 @@ Not yet verified:
    - Detour and Subtext keep tasting notes in the product page's meta description, not in `/products.json`. `"pageSummary": true` in `roasters.json` makes `scrape.py` fetch each kept product page (robots.txt checked, 1 req/s) and add that summary. Their coffees went from no notes and confidence 0.2-0.4 to notes and 0.5-0.8.
    - Full run done: 160 extractions, 0 failures, about 334k input and 57k output tokens on Haiku 5.5. `build_data.py` gives 9 roasters and 161 coffees. Tasting packs, sample boxes and espresso tools are now filtered out at scrape time.
    - Known: some coffees are listed more than once (e.g. Subtext's San Antonio Ozolotepec as espresso, filter and dated lots), so they show up as separate coffees.
-   - Decision pending: `data/` still holds the fictional sample; the real build hasn't been committed.
+   - The real build (9 roasters, 161 coffees) replaced the fictional sample in `data/`.
 4. Scale up to ~100 roasters, then `build_data.py`.
 5. Before deploying, upgrade Next 15 to 16 and re-test on phone and desktop: `npm audit` flags PostCSS bundled in Next 15 (build-time only), and `npm audit fix --force` would do the major upgrade blind. Then deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
 6. Measure quiz completion, buy clicks (`cg.events.v1` in localStorage for now) and return visits, then add real analytics.
