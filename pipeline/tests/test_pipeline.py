@@ -158,3 +158,24 @@ def test_origin_aliases():
     assert build_data.resolve_origin("Sumatra", table) == "indonesia"
     assert build_data.resolve_origin("Costa Rica", table) == "costa-rica"
     assert build_data.resolve_origin("Atlantis", table) is None
+
+
+def test_dedupe_keeps_undated_listing_and_separates_espresso():
+    def c(name):
+        return {"roasterId": "r", "name": name}
+    kept = build_data.dedupe([
+        c("San Antonio Ozolotepec, Mexico Washed Field Blend (October 15th, 2026)"),
+        c("San Antonio Ozolotepec,  Mexico Washed Field Blend"),
+        c("San Antonio Ozolotepec Espresso, Mexico Washed Field Blend (Nov. 5th, 2026)"),
+        c("Alirio Ortega, Colombia Washed Aji Roasted: Nov. 16th"),
+        c("Kenya (AA) Washed"),
+        {"roasterId": "other", "name": "Kenya (AA) Washed"},
+    ])
+    names = [(k["roasterId"], k["name"]) for k in kept]
+    assert names == [
+        ("r", "San Antonio Ozolotepec,  Mexico Washed Field Blend"),
+        ("r", "San Antonio Ozolotepec Espresso, Mexico Washed Field Blend (Nov. 5th, 2026)"),
+        ("r", "Alirio Ortega, Colombia Washed Aji Roasted: Nov. 16th"),
+        ("r", "Kenya (AA) Washed"),
+        ("other", "Kenya (AA) Washed"),
+    ]

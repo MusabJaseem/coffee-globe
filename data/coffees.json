@@ -194,9 +194,9 @@
     }
   },
   {
-    "id": "subtext--san-antonio-ozolotepec-espresso-mexico-washed-field-blend-nov-5th-2026",
+    "id": "subtext--san-antonio-ozolotepec-espresso-mexico-washed-field-blend",
     "roasterId": "subtext",
-    "name": "San Antonio Ozolotepec Espresso,  Mexico Washed Field Blend (Nov. 5th, 2026)",
+    "name": "San Antonio Ozolotepec Espresso,  Mexico Washed Field Blend",
     "originId": "mexico",
     "process": "washed",
     "notes": [
@@ -207,12 +207,12 @@
     "priceCents": 2700,
     "currency": "CAD",
     "weightGrams": 250,
-    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-espresso-washed-field-blend-nov-05-2026",
+    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-espresso-washed-field-blend",
     "taste": {
-      "acidity": 0.6,
-      "sweetness": 0.5,
-      "body": 0.5,
-      "fruitiness": 0.6,
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.7,
       "roast": 0.6
     }
   },
@@ -355,9 +355,9 @@
     }
   },
   {
-    "id": "subtext--san-antonio-ozolotepec-mexico-washed-field-blend-october-15th-2026",
+    "id": "subtext--san-antonio-ozolotepec-mexico-washed-field-blend",
     "roasterId": "subtext",
-    "name": "San Antonio Ozolotepec, Mexico Washed Field Blend (October 15th, 2026)",
+    "name": "San Antonio Ozolotepec, Mexico Washed Field Blend",
     "originId": "mexico",
     "process": "washed",
     "notes": [
@@ -368,12 +368,12 @@
     "priceCents": 2700,
     "currency": "CAD",
     "weightGrams": 250,
-    "url": "https://www.subtext.coffee/products/san-antonio-ozolotepec-mexico-washed-field-blend-october-15th-2026",
+    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-washed-field-blend",
     "taste": {
       "acidity": 0.6,
-      "sweetness": 0.6,
-      "body": 0.4,
-      "fruitiness": 0.7,
+      "sweetness": 0.5,
+      "body": 0.45,
+      "fruitiness": 0.6,
       "roast": 0.3
     }
   },
@@ -419,52 +419,6 @@
       "acidity": 0.6,
       "sweetness": 0.5,
       "body": 0.4,
-      "fruitiness": 0.6,
-      "roast": 0.3
-    }
-  },
-  {
-    "id": "subtext--san-antonio-ozolotepec-espresso-mexico-washed-field-blend",
-    "roasterId": "subtext",
-    "name": "San Antonio Ozolotepec Espresso,  Mexico Washed Field Blend",
-    "originId": "mexico",
-    "process": "washed",
-    "notes": [
-      "nectarine",
-      "black cherry",
-      "white fruit"
-    ],
-    "priceCents": 2700,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-espresso-washed-field-blend",
-    "taste": {
-      "acidity": 0.5,
-      "sweetness": 0.6,
-      "body": 0.6,
-      "fruitiness": 0.7,
-      "roast": 0.6
-    }
-  },
-  {
-    "id": "subtext--san-antonio-ozolotepec-mexico-washed-field-blend",
-    "roasterId": "subtext",
-    "name": "San Antonio Ozolotepec, Mexico Washed Field Blend",
-    "originId": "mexico",
-    "process": "washed",
-    "notes": [
-      "nectarine",
-      "black cherry",
-      "white fruit"
-    ],
-    "priceCents": 2700,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-washed-field-blend",
-    "taste": {
-      "acidity": 0.6,
-      "sweetness": 0.5,
-      "body": 0.45,
       "fruitiness": 0.6,
       "roast": 0.3
     }
