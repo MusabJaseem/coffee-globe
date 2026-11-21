@@ -36,13 +36,12 @@ Done:
 
 Verified (Nov 2026):
 - The scraper and `extract.py` against the 9 live stores and the real API; the quiz on the real catalogue lights up roasters and the buy links open roasters' own product pages
-- `npm install`, `npm run build`, typecheck and both test suites pass (Next 15.5, React 19, react-globe.gl 2.38)
+- `npm install`, `npm run build`, typecheck and both test suites pass (Next 16.4, React 19, react-globe.gl 2.38); `npm audit` is clean
 - The globe renders and the quiz works end to end in headless Chromium at phone (iPhone 13) and desktop (1440×900) sizes, with no console errors
 - Globe textures are served from `public/textures/` rather than unpkg
 
 Not yet verified:
 - Tapping a pin on a real phone (pin taps can't be driven reliably in a headless WebGL test)
-- `npm audit` flags PostCSS bundled inside Next 15 (build-time only); the fix is the Next 16 upgrade, so do it deliberately rather than via `npm audit fix --force`
 
 ## Next steps
 
@@ -70,5 +69,5 @@ Not yet verified:
      - Canada: hatchcrafted.com, propellercoffee.com, hellodemello.com, quietlycoffee.com, matchstickcoffee.com, timbertraincoffeeroasters.com, prototypecoffee.ca, nemesis.coffee, revolvercoffee.ca, elysiancoffee.com, bowsandarrowscoffee.com, fernwoodcoffee.com, mojacoffee.com, transcendcoffee.ca, rossocoffeeroasters.com, fratellocoffee.com, sainthenri.ca, dispatchcoffee.ca, cafemyriade.com, smiletiger.ca, balzacs.com, reunionisland.ca, halecoffee.com, happygoat.ca, laughingwhalecoffee.com, samjamescoffeebar.com, crankhousecoffee.com, muskokaroastery.com, thombargen.com, osonegrocoffee.com, kickinghorsecoffee.com, jjbeancoffee.com, september.coffee, kittel.ca, zabcafe.ca, traffic.coffee, paquebotmtl.com, anchoredcoffee.ca, littlevictories.ca, lunacoffee.ca, ethicacoffee.ca, structurecoffee.ca
      - US: onyxcoffeelab.com, seycoffee.com, blackwhiteroasters.com, passengercoffee.com, heartroasters.com, proudmarycoffee.com, vervecoffee.com, ritualcoffee.com, coavacoffee.com, littlewolf.coffee, hydrangea.coffee, flowerchild.coffee, partnerscoffee.com, equatorcoffees.com, stumptowncoffee.com, methodicalcoffee.com, madcapcoffee.com, dogwoodcoffee.com, olympiacoffee.com, rubycoffeeroasters.com, sightglasscoffee.com, georgehowellcoffee.com, tandemcoffee.com, ceremonycoffee.com, dunecoffee.com, getprodigal.com, brandywinecoffeeroasters.com, elmcoffeeroasters.com, kumacoffee.com, templecoffee.com
    - After adding: `scrape.py`, then `extract.py --per-roaster 3` and spot-check (watch for stores that, like Detour and Subtext, need `"pageSummary": true`), then the full `extract.py` and `build_data.py`. Keep the globe under ~200 points.
-5. Before deploying, upgrade Next 15 to 16 and re-test on phone and desktop: `npm audit` flags PostCSS bundled in Next 15 (build-time only), and `npm audit fix --force` would do the major upgrade blind. Then deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
+5. ~~Upgrade Next 15 to 16.~~ Done (16.4.5): audit clean, and the quiz flow re-tested in headless Chromium at phone and desktop sizes with no errors. Next 16 rewrote `tsconfig.json` (`jsx: react-jsx`) and `next-env.d.ts` on first build. Still worth tapping pins on a real phone before launch. Then deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
 6. Measure quiz completion, buy clicks (`cg.events.v1` in localStorage for now) and return visits, then add real analytics.
