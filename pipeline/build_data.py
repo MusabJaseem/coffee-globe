@@ -58,6 +58,31 @@ def load_extractions(path: Path) -> dict[tuple[str, str], dict]:
     return rows
 
 
+MONTH = r"(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\.?"
+# A roast-batch date at the end of a title: "(Oct. 21st, 2026)", "(2026)", "Roasted: Nov. 16th".
+DATE_SUFFIX = re.compile(
+    rf"\s*(\((?=[^)]*\b(19|20)\d\d\b|[^)]*\b{MONTH}\s+\d)[^)]*\)|roasted:?\s+{MONTH}\s+\d+[a-z]{{0,2}})\s*$",
+    re.IGNORECASE,
+)
+
+
+def base_title(title: str) -> str:
+    """The title without a trailing roast-batch date, for spotting repeat listings."""
+    return re.sub(r"\s+", " ", DATE_SUFFIX.sub("", title)).strip().lower()
+
+
+def dedupe(coffees: list[dict]) -> list[dict]:
+    """One coffee per roaster and base title. Roasters often list the same coffee as an
+    ongoing product and as dated batches; keep the undated listing, else the first."""
+    keep: dict[tuple[str, str], dict] = {}
+    for c in coffees:
+        key = (c["roasterId"], base_title(c["name"]))
+        current = keep.get(key)
+        if current is None or (DATE_SUFFIX.search(current["name"]) and not DATE_SUFFIX.search(c["name"])):
+            keep[key] = c
+    return list(keep.values())
+
+
 def build(roasters_cfg: list[dict], raw_dir: Path, extracted: dict, origins: list[dict], min_confidence: float):
     table = origin_lookup(origins)
     coffees, unknown_origins = [], set()
@@ -85,6 +110,7 @@ def build(roasters_cfg: list[dict], raw_dir: Path, extracted: dict, origins: lis
                 "url": p["url"],
                 "taste": {a: ex[a] for a in ("acidity", "sweetness", "body", "fruitiness", "roast")},
             })
+    coffees = dedupe(coffees)
     with_coffee = {c["roasterId"] for c in coffees}
     roasters = [
         {k: r[k] for k in ("id", "name", "city", "country", "lat", "lng", "url", "shipsTo")}
