@@ -23,7 +23,7 @@ Started from brainstorming coffee software businesses. Two ideas were shortliste
 - **Stack:** Next.js + react-globe.gl, static JSON data (no Supabase yet), Python pipeline, Claude for extraction. Profile in localStorage, no accounts.
 - **Taste model:** five axes with a weighted distance. Simple on purpose; add embeddings on tasting notes only if matching feels off.
 - **Top-match lists are varied:** at most one coffee per roaster and per origin first, so the home sheet doesn't show three near-identical coffees.
-- **Sample data uses fictional roasters only,** so nothing is ever attributed to a real business by mistake.
+- **Real data comes only from the pipeline,** so nothing is attributed to a real business unless their own listing says it. The fictional sample roasters used before the first real build are in git history; hand-made test data stays fictional.
 - **Monetisation later:** affiliate links first (clicks already carry `utm_source=coffeeglobe`), then featured pins or "who matches your coffee" analytics for roasters.
 - **Biggest risk:** extraction quality, not the globe.
 
@@ -52,8 +52,18 @@ Not yet verified:
    - `shipsTo` comes from each store's `/meta.json` (`ships_to_countries`, the countries its checkout accepts), which is more reliable than shipping-policy prose. A `*` there means "rest of world"; it's left out, so Phil & Sebastian is recorded as CA + US only.
    - `lat`/`lng` are city centres (from `/meta.json`'s city), with same-city roasters nudged about 1 km apart so their pins don't overlap.
    - Scraping these sites needs network access: sessions use the personal `coffee-globe` cloud environment, which allows exactly these hosts. Add new hosts there when adding roasters.
-   - The coffee filter in `scrape.py` needs tuning before step 3: it keeps gift sets, tea, a canister, a cupping event and a test product, and drops some real coffees with a blank product type (e.g. Monogram's Finca Deborah lots).
-3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt.
+   - The coffee filter has since been tightened (see step 3).
+3. Run `scrape.py`, then `extract.py --limit 20`. Spot-check all 20 by hand and tune the prompt. In progress on branch `feat/scrape-catalogue`:
+   - Done: the coffee filter trusts a store's product type when it has one and drops multi-coffee sets, events, classes, books, chocolate, archived listings and products with no description. Scraping the 9 stores gives 179 in-stock coffees.
+   - Done: `extract.py` uses the anthropic SDK with structured outputs (forced tool calls skip thinking on Haiku 5.5 and are rejected on Sonnet 5.5 / Opus 5.5), leaves room for thinking, and reports token usage.
+   - Next: in a session on the `coffee-globe` cloud environment (its `EXTRACT_API_KEY` variable and setup script load at session start; cloud sessions strip `ANTHROPIC_API_KEY`, so don't use that name), check out `feat/scrape-catalogue`, run `.venv/bin/python pipeline/scrape.py` (`pipeline/out/` is not committed), then `.venv/bin/python pipeline/extract.py --limit 20` and spot-check all 20.
+   - Some listings have only shipping text as a description (e.g. one Subtext lot); expect low confidence there.
+   - First 20 (all 49th Parallel) spot-checked: scores and origins sound, but the prompt guessed "washed" when no process was stated and copied acidity/texture phrases as notes. Prompt tightened for both; the cache key now includes a prompt hash so prompt changes re-extract. `--per-roaster 3` sample (27 coffees) spot-checked after the change: both fixed.
+   - Correction: 49th Parallel's process is in its tags ("Processing Method_Washed Process"), so the three "guessed washed" results in the first spot-check were right. The prompt change still stands.
+   - Detour and Subtext keep tasting notes in the product page's meta description, not in `/products.json`. `"pageSummary": true` in `roasters.json` makes `scrape.py` fetch each kept product page (robots.txt checked, 1 req/s) and add that summary. Their coffees went from no notes and confidence 0.2-0.4 to notes and 0.5-0.8.
+   - Full run done: 160 extractions, 0 failures, about 334k input and 57k output tokens on Haiku 5.5. `build_data.py` gives 9 roasters and 161 coffees. Tasting packs, sample boxes and espresso tools are now filtered out at scrape time.
+   - Known: some coffees are listed more than once (e.g. Subtext's San Antonio Ozolotepec as espresso, filter and dated lots), so they show up as separate coffees.
+   - The real build (9 roasters, 161 coffees) replaced the fictional sample in `data/`.
 4. Scale up to ~100 roasters, then `build_data.py`.
-5. Deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
+5. Before deploying, upgrade Next 15 to 16 and re-test on phone and desktop: `npm audit` flags PostCSS bundled in Next 15 (build-time only), and `npm audit fix --force` would do the major upgrade blind. Then deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
 6. Measure quiz completion, buy clicks (`cg.events.v1` in localStorage for now) and return visits, then add real analytics.

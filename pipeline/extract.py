@@ -5,7 +5,9 @@ coffee (origin, process, notes, five taste axes), and appends results to
 pipeline/out/extracted.jsonl. Results are cached by a hash of the product
 text, so re-running only pays for new or changed products.
 
-Needs ANTHROPIC_API_KEY in the environment.
+Needs an Anthropic API key: EXTRACT_API_KEY, else ANTHROPIC_API_KEY or any credential
+the anthropic SDK finds. Use EXTRACT_API_KEY in Claude Code cloud sessions, which strip
+ANTHROPIC_API_KEY and set ANTHROPIC_BASE_URL for their own use.
 Usage: python pipeline/extract.py [--model claude-haiku-5-5] [--limit 20]
 """
 from __future__ import annotations
@@ -15,15 +17,13 @@ import hashlib
 import json
 import os
 import sys
-import time
 from pathlib import Path
 
-import requests
+import anthropic
 
 HERE = Path(__file__).resolve().parent
 RAW_DIR = HERE / "out" / "raw"
 OUT_FILE = HERE / "out" / "extracted.jsonl"
-API_URL = "https://api.anthropic.com/v1/messages"
 DEFAULT_MODEL = "claude-haiku-5-5"
 
 AXES = ["acidity", "sweetness", "body", "fruitiness", "roast"]
@@ -40,37 +40,51 @@ Score each taste axis from 0 to 1 as an experienced cupper would expect the coff
 
 "Bright", "juicy", "tart" and "citric" mean higher acidity. "Jammy", "winey", "boozy", "fermented" mean high fruitiness. Espresso blends with chocolate and nut notes are usually roast 0.6-0.75 and body 0.7+.
 
-Only use what the listing supports. If the listing is not a bag of roasted coffee beans (merchandise, equipment, gift cards, subscriptions, instant coffee, tea), set is_coffee to false. Copy tasting notes in the roaster's words, lower case, at most five."""
+Only use what the listing supports. If the listing is not a bag of roasted coffee beans (merchandise, equipment, gift cards, subscriptions, instant coffee, tea), set is_coffee to false.
 
-TOOL = {
-    "name": "record_coffee",
-    "description": "Record the structured details of one coffee listing.",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "is_coffee": {"type": "boolean"},
-            "is_blend": {"type": "boolean"},
-            "origin_country": {
-                "type": ["string", "null"],
-                "description": "Main producing country in English, e.g. 'Ethiopia'. For blends, the largest component if stated, else null.",
-            },
-            "process": {"type": ["string", "null"], "enum": PROCESSES + [None]},
-            "notes": {"type": "array", "items": {"type": "string"}, "maxItems": 5},
-            **{a: {"type": "number", "minimum": 0, "maximum": 1} for a in AXES},
-            "confidence": {
-                "type": "number",
-                "minimum": 0,
-                "maximum": 1,
-                "description": "How well the listing supports these scores. Low when there are no tasting notes.",
-            },
+process: give one only when the listing names it ("washed", "natural", "honey", "anaerobic") or describes the steps unambiguously (depulped and fermented in water = washed; dried whole in the cherry = natural; pulped with mucilage left on = honey). Co-ferments, infusions, wet-hulled and other experimental methods are "other". If the listing doesn't say, use null. Don't guess from the origin or from what's typical for a blend.
+
+notes: up to five flavour or aroma notes in the roaster's words, lower case: foods, fruits, flowers, spices, drinks (e.g. "blackcurrant", "milk chocolate", "black tea", "jasmine"). Drop intensity and style words around them ("lingering floral finish" -> "floral", "chocolate truffle richness" -> "chocolate truffle", "sweet lemonade" stays). Leave out anything that describes acidity, body, sweetness, texture or finish rather than a flavour ("bright acidity", "gentle sweetness", "smooth", "creamy", "clean finish"); those go into the axis scores instead."""
+
+# Structured-output schema. Ranges (0-1) and the five-note cap aren't expressible in
+# structured outputs, so the prompt states them and clean_result() enforces them.
+SCHEMA = {
+    "type": "object",
+    "properties": {
+        "is_coffee": {"type": "boolean"},
+        "is_blend": {"type": "boolean"},
+        "origin_country": {
+            "anyOf": [{"type": "string"}, {"type": "null"}],
+            "description": "Main producing country in English, e.g. 'Ethiopia'. For blends, the largest component if stated, else null.",
         },
-        "required": ["is_coffee", "is_blend", "origin_country", "process", "notes", *AXES, "confidence"],
+        "process": {
+            "anyOf": [{"type": "string", "enum": PROCESSES}, {"type": "null"}],
+            "description": "Null unless the listing states or clearly describes the process.",
+        },
+        "notes": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "At most five flavour or aroma notes in the roaster's words; no acidity, body or texture words.",
+        },
+        **{a: {"type": "number", "description": "0 to 1"} for a in AXES},
+        "confidence": {
+            "type": "number",
+            "description": "0 to 1: how well the listing supports these scores. Low when there are no tasting notes.",
+        },
     },
+    "required": ["is_coffee", "is_blend", "origin_country", "process", "notes", *AXES, "confidence"],
+    "additionalProperties": False,
 }
+# Thinking counts toward max_tokens, so leave room for it as well as the JSON answer.
+MAX_TOKENS = 4000
+EFFORT = "medium"
+# Part of every cache key, so changing the prompt or schema re-extracts each product.
+# build_data.py keeps the last row per product, so the new rows replace the old ones.
+PROMPT_VERSION = hashlib.sha256(json.dumps([SYSTEM, SCHEMA], sort_keys=True).encode()).hexdigest()[:8]
 
 
 def product_key(roaster_id: str, product: dict) -> str:
-    text = json.dumps([roaster_id, product["title"], product["description"], product["tags"]], sort_keys=True)
+    text = json.dumps([PROMPT_VERSION, roaster_id, product["title"], product["description"], product["tags"]], sort_keys=True)
     return hashlib.sha256(text.encode()).hexdigest()[:16]
 
 
@@ -102,31 +116,28 @@ def clean_result(raw: dict) -> dict:
     return out
 
 
-def parse_response(body: dict) -> dict:
-    for block in body.get("content", []):
-        if block.get("type") == "tool_use" and block.get("name") == TOOL["name"]:
-            return clean_result(block["input"])
-    raise ValueError(f"no {TOOL['name']} call in response (stop_reason={body.get('stop_reason')})")
+def parse_response(text: str | None, stop_reason: str | None = None) -> dict:
+    """Turn the model's JSON answer into a clean result. Raises ValueError if there isn't one."""
+    if stop_reason in ("refusal", "max_tokens") or not text:
+        raise ValueError(f"no usable answer (stop_reason={stop_reason})")
+    try:
+        return clean_result(json.loads(text))
+    except json.JSONDecodeError as e:
+        raise ValueError(f"answer is not valid JSON: {e}") from e
 
 
-def call_claude(session: requests.Session, api_key: str, model: str, prompt: str, retries: int = 4) -> dict:
-    payload = {
-        "model": model,
-        "max_tokens": 600,
-        "system": SYSTEM,
-        "tools": [TOOL],
-        "tool_choice": {"type": "tool", "name": TOOL["name"]},
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    headers = {"x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"}
-    for attempt in range(retries):
-        resp = session.post(API_URL, json=payload, headers=headers, timeout=60)
-        if resp.status_code in (429, 500, 502, 503, 529) and attempt < retries - 1:
-            time.sleep(2**attempt * 2)
-            continue
-        resp.raise_for_status()
-        return parse_response(resp.json())
-    raise RuntimeError("unreachable")
+def call_claude(client: anthropic.Anthropic, model: str, prompt: str) -> tuple[dict, anthropic.types.Usage]:
+    # The SDK retries rate limits, overloads and connection errors with backoff.
+    message = client.messages.create(
+        model=model,
+        max_tokens=MAX_TOKENS,
+        system=SYSTEM,
+        output_config={"effort": EFFORT, "format": {"type": "json_schema", "schema": SCHEMA}},
+        messages=[{"role": "user", "content": prompt}],
+    )
+    # Content can start with thinking blocks; the answer is the text block.
+    text = next((b.text for b in message.content if b.type == "text"), None)
+    return parse_response(text, message.stop_reason), message.usage
 
 
 def load_cache() -> dict[str, dict]:
@@ -135,43 +146,68 @@ def load_cache() -> dict[str, dict]:
     return {row["key"]: row for line in OUT_FILE.read_text().splitlines() if line.strip() for row in [json.loads(line)]}
 
 
+def make_client() -> anthropic.Anthropic:
+    """Prefer EXTRACT_API_KEY, pinned to the public API so an inherited ANTHROPIC_BASE_URL can't redirect it."""
+    key = os.environ.get("EXTRACT_API_KEY")
+    if key:
+        return anthropic.Anthropic(api_key=key, base_url="https://api.anthropic.com", max_retries=4)
+    return anthropic.Anthropic(max_retries=4)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--roasters", default=str(HERE / "roasters.json"))
     ap.add_argument("--model", default=os.environ.get("EXTRACT_MODEL", DEFAULT_MODEL))
     ap.add_argument("--limit", type=int, default=0, help="stop after this many new extractions (0 = no limit)")
+    ap.add_argument("--per-roaster", type=int, default=0,
+                    help="at most this many new extractions per roaster, for a spot-check sample (0 = no limit)")
     args = ap.parse_args()
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        sys.exit("Set ANTHROPIC_API_KEY first.")
+    try:
+        client = make_client()
+    except anthropic.AnthropicError as e:
+        sys.exit(f"No Anthropic credentials found ({e}). Set EXTRACT_API_KEY or ANTHROPIC_API_KEY first.")
+    # The SDK only checks credentials on the first request; fail here with a clear message instead.
+    if not (client.api_key or client.auth_token):
+        sys.exit("No Anthropic API key found. Set EXTRACT_API_KEY (or ANTHROPIC_API_KEY) first.")
     names = {r["id"]: r["name"] for r in json.loads(Path(args.roasters).read_text())}
     cache = load_cache()
-    session = requests.Session()
     done = 0
+    tokens_in = tokens_out = 0
 
     with OUT_FILE.open("a") as out:
         for raw_file in sorted(RAW_DIR.glob("*.json")):
             roaster_id = raw_file.stem
+            done_here = 0
             for product in json.loads(raw_file.read_text()):
                 key = product_key(roaster_id, product)
                 if key in cache:
                     continue
+                if args.per_roaster and done_here >= args.per_roaster:
+                    break
                 if args.limit and done >= args.limit:
-                    print(f"Stopped after {done} new extractions (--limit).")
+                    print(f"Stopped after {done} new extractions (--limit). Tokens: {tokens_in:,} in, {tokens_out:,} out.")
                     return
+                prompt = build_prompt(names.get(roaster_id, roaster_id), product)
                 try:
-                    result = call_claude(session, api_key, args.model, build_prompt(names.get(roaster_id, roaster_id), product))
-                except (requests.RequestException, ValueError) as e:
+                    result, usage = call_claude(client, args.model, prompt)
+                except (anthropic.AuthenticationError, anthropic.PermissionDeniedError,
+                        anthropic.NotFoundError, anthropic.BadRequestError, anthropic.RateLimitError) as e:
+                    # Every later request would fail the same way: stop instead of burning through the list.
+                    sys.exit(f"Stopping: {type(e).__name__}: {e}")
+                except (anthropic.APIStatusError, anthropic.APIConnectionError, ValueError) as e:
                     print(f"  FAILED {roaster_id}/{product['title']}: {e}", file=sys.stderr)
                     continue
+                tokens_in += usage.input_tokens
+                tokens_out += usage.output_tokens
                 row = {"key": key, "roasterId": roaster_id, "productId": product["productId"], **result}
                 out.write(json.dumps(row, ensure_ascii=False) + "\n")
                 out.flush()
                 done += 1
+                done_here += 1
                 flag = "" if result["is_coffee"] else "  (not coffee)"
                 print(f"  {roaster_id}: {product['title']} -> {result['origin_country']}, {result['process']}{flag}")
-    print(f"Done: {done} new extractions.")
+    print(f"Done: {done} new extractions. Tokens: {tokens_in:,} in, {tokens_out:,} out.")
 
 
 if __name__ == "__main__":

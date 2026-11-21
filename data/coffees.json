@@ -1,2072 +1,3701 @@
 [
   {
-    "id": "lakeshore-lantern--el-salvador",
-    "roasterId": "lakeshore-lantern",
-    "name": "El Salvador Honey",
-    "originId": "el-salvador",
-    "process": "honey",
-    "notes": [
-      "red grape",
-      "brown sugar",
-      "nougat"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/lakeshore-lantern/el-salvador",
-    "taste": {
-      "acidity": 0.45,
-      "sweetness": 0.8,
-      "body": 0.58,
-      "fruitiness": 0.45,
-      "roast": 0.35
-    }
-  },
-  {
-    "id": "lakeshore-lantern--rwanda",
-    "roasterId": "lakeshore-lantern",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/lakeshore-lantern/rwanda",
-    "taste": {
-      "acidity": 0.69,
-      "sweetness": 0.62,
-      "body": 0.41,
-      "fruitiness": 0.5,
-      "roast": 0.26
-    }
-  },
-  {
-    "id": "lakeshore-lantern--guatemala",
-    "roasterId": "lakeshore-lantern",
-    "name": "Guatemala Washed",
+    "id": "pilot--san-jer-nimo-guatemala",
+    "roasterId": "pilot",
+    "name": "San Jerónimo – Guatemala",
     "originId": "guatemala",
     "process": "washed",
     "notes": [
-      "toffee",
-      "orange",
-      "almond"
+      "citrus",
+      "caramel"
     ],
-    "priceCents": 3200,
+    "priceCents": 2675,
     "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/lakeshore-lantern/guatemala",
-    "taste": {
-      "acidity": 0.5,
-      "sweetness": 0.67,
-      "body": 0.61,
-      "fruitiness": 0.36,
-      "roast": 0.44
-    }
-  },
-  {
-    "id": "lakeshore-lantern--papua-new-guinea",
-    "roasterId": "lakeshore-lantern",
-    "name": "Papua New Guinea Washed",
-    "originId": "papua-new-guinea",
-    "process": "washed",
-    "notes": [
-      "tropical fruit",
-      "molasses",
-      "spice"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/lakeshore-lantern/papua-new-guinea",
-    "taste": {
-      "acidity": 0.51,
-      "sweetness": 0.62,
-      "body": 0.6,
-      "fruitiness": 0.56,
-      "roast": 0.41
-    }
-  },
-  {
-    "id": "lakeshore-lantern--house",
-    "roasterId": "lakeshore-lantern",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/lakeshore-lantern/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "bronte-harbour--kenya",
-    "roasterId": "bronte-harbour",
-    "name": "Kenya Washed",
-    "originId": "kenya",
-    "process": "washed",
-    "notes": [
-      "blackcurrant",
-      "grapefruit",
-      "tomato"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/bronte-harbour/kenya",
-    "taste": {
-      "acidity": 0.98,
-      "sweetness": 0.55,
-      "body": 0.6,
-      "fruitiness": 0.78,
-      "roast": 0.17
-    }
-  },
-  {
-    "id": "bronte-harbour--peru",
-    "roasterId": "bronte-harbour",
-    "name": "Peru Washed",
-    "originId": "peru",
-    "process": "washed",
-    "notes": [
-      "cocoa",
-      "walnut",
-      "mandarin"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/bronte-harbour/peru",
-    "taste": {
-      "acidity": 0.46,
-      "sweetness": 0.6,
-      "body": 0.6,
-      "fruitiness": 0.38,
-      "roast": 0.42
-    }
-  },
-  {
-    "id": "bronte-harbour--burundi",
-    "roasterId": "bronte-harbour",
-    "name": "Burundi Natural",
-    "originId": "burundi",
-    "process": "natural",
-    "notes": [
-      "cranberry",
-      "hibiscus",
-      "cacao nib"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/bronte-harbour/burundi",
-    "taste": {
-      "acidity": 0.66,
-      "sweetness": 0.58,
-      "body": 0.5,
-      "fruitiness": 0.79,
-      "roast": 0.31
-    }
-  },
-  {
-    "id": "bronte-harbour--costa-rica",
-    "roasterId": "bronte-harbour",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/bronte-harbour/costa-rica",
-    "taste": {
-      "acidity": 0.62,
-      "sweetness": 0.86,
-      "body": 0.51,
-      "fruitiness": 0.59,
-      "roast": 0.34
-    }
-  },
-  {
-    "id": "bronte-harbour--house",
-    "roasterId": "bronte-harbour",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/bronte-harbour/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "escarpment-beans--rwanda",
-    "roasterId": "escarpment-beans",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/escarpment-beans/rwanda",
-    "taste": {
-      "acidity": 0.72,
-      "sweetness": 0.71,
-      "body": 0.44,
-      "fruitiness": 0.52,
-      "roast": 0.24
-    }
-  },
-  {
-    "id": "escarpment-beans--ethiopia",
-    "roasterId": "escarpment-beans",
-    "name": "Ethiopia Natural",
-    "originId": "ethiopia",
-    "process": "natural",
-    "notes": [
-      "blueberry",
-      "strawberry jam",
-      "cocoa"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/escarpment-beans/ethiopia",
-    "taste": {
-      "acidity": 0.58,
-      "sweetness": 0.81,
-      "body": 0.5,
-      "fruitiness": 0.92,
-      "roast": 0.17
-    }
-  },
-  {
-    "id": "escarpment-beans--panama",
-    "roasterId": "escarpment-beans",
-    "name": "Panama Washed",
-    "originId": "panama",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "peach",
-      "honeysuckle"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/escarpment-beans/panama",
-    "taste": {
-      "acidity": 0.85,
-      "sweetness": 0.75,
-      "body": 0.21,
-      "fruitiness": 0.74,
-      "roast": 0.07
-    }
-  },
-  {
-    "id": "escarpment-beans--indonesia",
-    "roasterId": "escarpment-beans",
-    "name": "Indonesia Wet-Hulled",
-    "originId": "indonesia",
-    "process": "other",
-    "notes": [
-      "cedar",
-      "dark chocolate",
-      "pipe tobacco"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/escarpment-beans/indonesia",
-    "taste": {
-      "acidity": 0.17,
-      "sweetness": 0.51,
-      "body": 0.97,
-      "fruitiness": 0.14,
-      "roast": 0.77
-    }
-  },
-  {
-    "id": "escarpment-beans--house",
-    "roasterId": "escarpment-beans",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/escarpment-beans/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "rideau-roastworks--colombia",
-    "roasterId": "rideau-roastworks",
-    "name": "Colombia Washed",
-    "originId": "colombia",
-    "process": "washed",
-    "notes": [
-      "caramel",
-      "red apple",
-      "milk chocolate"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/rideau-roastworks/colombia",
-    "taste": {
-      "acidity": 0.55,
-      "sweetness": 0.76,
-      "body": 0.52,
-      "fruitiness": 0.39,
-      "roast": 0.39
-    }
-  },
-  {
-    "id": "rideau-roastworks--burundi",
-    "roasterId": "rideau-roastworks",
-    "name": "Burundi Natural",
-    "originId": "burundi",
-    "process": "natural",
-    "notes": [
-      "cranberry",
-      "hibiscus",
-      "cacao nib"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/rideau-roastworks/burundi",
-    "taste": {
-      "acidity": 0.72,
-      "sweetness": 0.6,
-      "body": 0.46,
-      "fruitiness": 0.82,
-      "roast": 0.2
-    }
-  },
-  {
-    "id": "rideau-roastworks--el-salvador",
-    "roasterId": "rideau-roastworks",
-    "name": "El Salvador Honey",
-    "originId": "el-salvador",
-    "process": "honey",
-    "notes": [
-      "red grape",
-      "brown sugar",
-      "nougat"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/rideau-roastworks/el-salvador",
-    "taste": {
-      "acidity": 0.49,
-      "sweetness": 0.75,
-      "body": 0.62,
-      "fruitiness": 0.45,
-      "roast": 0.3
-    }
-  },
-  {
-    "id": "rideau-roastworks--yemen",
-    "roasterId": "rideau-roastworks",
-    "name": "Yemen Natural",
-    "originId": "yemen",
-    "process": "natural",
-    "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/rideau-roastworks/yemen",
-    "taste": {
-      "acidity": 0.5,
-      "sweetness": 0.71,
-      "body": 0.65,
-      "fruitiness": 0.81,
-      "roast": 0.35
-    }
-  },
-  {
-    "id": "rideau-roastworks--house",
-    "roasterId": "rideau-roastworks",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/rideau-roastworks/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "plateau-torrefacteur--rwanda",
-    "roasterId": "plateau-torrefacteur",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 2800,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/plateau-torrefacteur/rwanda",
-    "taste": {
-      "acidity": 0.66,
-      "sweetness": 0.62,
-      "body": 0.38,
-      "fruitiness": 0.53,
-      "roast": 0.25
-    }
-  },
-  {
-    "id": "plateau-torrefacteur--indonesia",
-    "roasterId": "plateau-torrefacteur",
-    "name": "Indonesia Wet-Hulled",
-    "originId": "indonesia",
-    "process": "other",
-    "notes": [
-      "cedar",
-      "dark chocolate",
-      "pipe tobacco"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/plateau-torrefacteur/indonesia",
-    "taste": {
-      "acidity": 0.15,
-      "sweetness": 0.4,
-      "body": 0.9,
-      "fruitiness": 0.13,
-      "roast": 0.82
-    }
-  },
-  {
-    "id": "plateau-torrefacteur--burundi",
-    "roasterId": "plateau-torrefacteur",
-    "name": "Burundi Natural",
-    "originId": "burundi",
-    "process": "natural",
-    "notes": [
-      "cranberry",
-      "hibiscus",
-      "cacao nib"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/plateau-torrefacteur/burundi",
-    "taste": {
-      "acidity": 0.75,
-      "sweetness": 0.6,
-      "body": 0.41,
-      "fruitiness": 0.81,
-      "roast": 0.24
-    }
-  },
-  {
-    "id": "plateau-torrefacteur--peru",
-    "roasterId": "plateau-torrefacteur",
-    "name": "Peru Washed",
-    "originId": "peru",
-    "process": "washed",
-    "notes": [
-      "cocoa",
-      "walnut",
-      "mandarin"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/plateau-torrefacteur/peru",
-    "taste": {
-      "acidity": 0.47,
-      "sweetness": 0.57,
-      "body": 0.53,
-      "fruitiness": 0.31,
-      "roast": 0.53
-    }
-  },
-  {
-    "id": "plateau-torrefacteur--house",
-    "roasterId": "plateau-torrefacteur",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/plateau-torrefacteur/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.77
-    }
-  },
-  {
-    "id": "halifax-tide--costa-rica",
-    "roasterId": "halifax-tide",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/halifax-tide/costa-rica",
-    "taste": {
-      "acidity": 0.64,
-      "sweetness": 0.89,
-      "body": 0.53,
-      "fruitiness": 0.57,
-      "roast": 0.3
-    }
-  },
-  {
-    "id": "halifax-tide--peru",
-    "roasterId": "halifax-tide",
-    "name": "Peru Washed",
-    "originId": "peru",
-    "process": "washed",
-    "notes": [
-      "cocoa",
-      "walnut",
-      "mandarin"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/halifax-tide/peru",
-    "taste": {
-      "acidity": 0.48,
-      "sweetness": 0.6,
-      "body": 0.51,
-      "fruitiness": 0.36,
-      "roast": 0.43
-    }
-  },
-  {
-    "id": "halifax-tide--mexico",
-    "roasterId": "halifax-tide",
-    "name": "Mexico Washed",
-    "originId": "mexico",
-    "process": "washed",
-    "notes": [
-      "chocolate",
-      "cinnamon",
-      "pecan"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/halifax-tide/mexico",
-    "taste": {
-      "acidity": 0.32,
-      "sweetness": 0.57,
-      "body": 0.56,
-      "fruitiness": 0.21,
-      "roast": 0.56
-    }
-  },
-  {
-    "id": "halifax-tide--indonesia",
-    "roasterId": "halifax-tide",
-    "name": "Indonesia Wet-Hulled",
-    "originId": "indonesia",
-    "process": "other",
-    "notes": [
-      "cedar",
-      "dark chocolate",
-      "pipe tobacco"
-    ],
-    "priceCents": 2800,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/halifax-tide/indonesia",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.43,
-      "body": 0.97,
-      "fruitiness": 0.19,
-      "roast": 0.75
-    }
-  },
-  {
-    "id": "halifax-tide--house",
-    "roasterId": "halifax-tide",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/halifax-tide/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "prairie-oven--papua-new-guinea",
-    "roasterId": "prairie-oven",
-    "name": "Papua New Guinea Washed",
-    "originId": "papua-new-guinea",
-    "process": "washed",
-    "notes": [
-      "tropical fruit",
-      "molasses",
-      "spice"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/prairie-oven/papua-new-guinea",
-    "taste": {
-      "acidity": 0.45,
-      "sweetness": 0.65,
-      "body": 0.68,
-      "fruitiness": 0.55,
-      "roast": 0.48
-    }
-  },
-  {
-    "id": "prairie-oven--yemen",
-    "roasterId": "prairie-oven",
-    "name": "Yemen Natural",
-    "originId": "yemen",
-    "process": "natural",
-    "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/prairie-oven/yemen",
-    "taste": {
-      "acidity": 0.61,
-      "sweetness": 0.64,
-      "body": 0.71,
-      "fruitiness": 0.8,
-      "roast": 0.37
-    }
-  },
-  {
-    "id": "prairie-oven--rwanda",
-    "roasterId": "prairie-oven",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/prairie-oven/rwanda",
-    "taste": {
-      "acidity": 0.66,
-      "sweetness": 0.66,
-      "body": 0.34,
-      "fruitiness": 0.59,
-      "roast": 0.28
-    }
-  },
-  {
-    "id": "prairie-oven--guatemala",
-    "roasterId": "prairie-oven",
-    "name": "Guatemala Washed",
-    "originId": "guatemala",
-    "process": "washed",
-    "notes": [
-      "toffee",
-      "orange",
-      "almond"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/prairie-oven/guatemala",
-    "taste": {
-      "acidity": 0.61,
-      "sweetness": 0.66,
-      "body": 0.64,
-      "fruitiness": 0.34,
-      "roast": 0.42
-    }
-  },
-  {
-    "id": "prairie-oven--house",
-    "roasterId": "prairie-oven",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/prairie-oven/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "bow-river--el-salvador",
-    "roasterId": "bow-river",
-    "name": "El Salvador Honey",
-    "originId": "el-salvador",
-    "process": "honey",
-    "notes": [
-      "red grape",
-      "brown sugar",
-      "nougat"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/bow-river/el-salvador",
-    "taste": {
-      "acidity": 0.45,
-      "sweetness": 0.83,
-      "body": 0.65,
-      "fruitiness": 0.52,
-      "roast": 0.39
-    }
-  },
-  {
-    "id": "bow-river--colombia",
-    "roasterId": "bow-river",
-    "name": "Colombia Washed",
-    "originId": "colombia",
-    "process": "washed",
-    "notes": [
-      "caramel",
-      "red apple",
-      "milk chocolate"
-    ],
-    "priceCents": 2200,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/bow-river/colombia",
-    "taste": {
-      "acidity": 0.55,
-      "sweetness": 0.75,
-      "body": 0.49,
-      "fruitiness": 0.44,
-      "roast": 0.36
-    }
-  },
-  {
-    "id": "bow-river--honduras",
-    "roasterId": "bow-river",
-    "name": "Honduras Washed",
-    "originId": "honduras",
-    "process": "washed",
-    "notes": [
-      "milk chocolate",
-      "hazelnut",
-      "plum"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/bow-river/honduras",
-    "taste": {
-      "acidity": 0.36,
-      "sweetness": 0.66,
-      "body": 0.55,
-      "fruitiness": 0.3,
-      "roast": 0.52
-    }
-  },
-  {
-    "id": "bow-river--guatemala",
-    "roasterId": "bow-river",
-    "name": "Guatemala Washed",
-    "originId": "guatemala",
-    "process": "washed",
-    "notes": [
-      "toffee",
-      "orange",
-      "almond"
-    ],
-    "priceCents": 2800,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/bow-river/guatemala",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/san-jeronimo-guatemala",
     "taste": {
       "acidity": 0.6,
-      "sweetness": 0.65,
-      "body": 0.56,
-      "fruitiness": 0.35,
-      "roast": 0.4
-    }
-  },
-  {
-    "id": "bow-river--house",
-    "roasterId": "bow-river",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/bow-river/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "granville-grind--rwanda",
-    "roasterId": "granville-grind",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 3200,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/granville-grind/rwanda",
-    "taste": {
-      "acidity": 0.72,
-      "sweetness": 0.64,
-      "body": 0.4,
-      "fruitiness": 0.55,
-      "roast": 0.3
-    }
-  },
-  {
-    "id": "granville-grind--costa-rica",
-    "roasterId": "granville-grind",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 2400,
-    "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/granville-grind/costa-rica",
-    "taste": {
-      "acidity": 0.64,
-      "sweetness": 0.81,
-      "body": 0.45,
-      "fruitiness": 0.59,
-      "roast": 0.25
-    }
-  },
-  {
-    "id": "granville-grind--brazil",
-    "roasterId": "granville-grind",
-    "name": "Brazil Natural",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "peanut butter",
-      "dark chocolate",
-      "brown sugar"
-    ],
-    "priceCents": 2600,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/granville-grind/brazil",
-    "taste": {
-      "acidity": 0.17,
-      "sweetness": 0.68,
-      "body": 0.75,
-      "fruitiness": 0.23,
-      "roast": 0.7
-    }
-  },
-  {
-    "id": "granville-grind--peru",
-    "roasterId": "granville-grind",
-    "name": "Peru Washed",
-    "originId": "peru",
-    "process": "washed",
-    "notes": [
-      "cocoa",
-      "walnut",
-      "mandarin"
-    ],
-    "priceCents": 2800,
-    "currency": "CAD",
-    "weightGrams": 250,
-    "url": "https://example.com/granville-grind/peru",
-    "taste": {
-      "acidity": 0.5,
-      "sweetness": 0.66,
-      "body": 0.52,
+      "sweetness": 0.6,
+      "body": 0.5,
       "fruitiness": 0.4,
-      "roast": 0.44
+      "roast": 0.4
     }
   },
   {
-    "id": "granville-grind--house",
-    "roasterId": "granville-grind",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
+    "id": "pilot--holiday-winter-blend",
+    "roasterId": "pilot",
+    "name": "Holiday – Winter Blend",
+    "originId": null,
+    "process": null,
     "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
+      "sugar plum",
+      "milk chocolate"
     ],
-    "priceCents": 2000,
+    "priceCents": 2675,
     "currency": "CAD",
-    "weightGrams": 340,
-    "url": "https://example.com/granville-grind/house",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/holiday-blend",
     "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "brooklyn-ember--costa-rica",
-    "roasterId": "brooklyn-ember",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 3200,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/brooklyn-ember/costa-rica",
-    "taste": {
-      "acidity": 0.58,
-      "sweetness": 0.81,
-      "body": 0.48,
-      "fruitiness": 0.63,
-      "roast": 0.24
-    }
-  },
-  {
-    "id": "brooklyn-ember--rwanda",
-    "roasterId": "brooklyn-ember",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 2200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/brooklyn-ember/rwanda",
-    "taste": {
-      "acidity": 0.72,
-      "sweetness": 0.64,
-      "body": 0.4,
-      "fruitiness": 0.53,
-      "roast": 0.31
-    }
-  },
-  {
-    "id": "brooklyn-ember--panama",
-    "roasterId": "brooklyn-ember",
-    "name": "Panama Washed",
-    "originId": "panama",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "peach",
-      "honeysuckle"
-    ],
-    "priceCents": 2800,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/brooklyn-ember/panama",
-    "taste": {
-      "acidity": 0.75,
-      "sweetness": 0.72,
-      "body": 0.3,
-      "fruitiness": 0.71,
-      "roast": 0.13
-    }
-  },
-  {
-    "id": "brooklyn-ember--guatemala",
-    "roasterId": "brooklyn-ember",
-    "name": "Guatemala Washed",
-    "originId": "guatemala",
-    "process": "washed",
-    "notes": [
-      "toffee",
-      "orange",
-      "almond"
-    ],
-    "priceCents": 2200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/brooklyn-ember/guatemala",
-    "taste": {
-      "acidity": 0.51,
-      "sweetness": 0.75,
-      "body": 0.61,
-      "fruitiness": 0.42,
-      "roast": 0.4
-    }
-  },
-  {
-    "id": "brooklyn-ember--house",
-    "roasterId": "brooklyn-ember",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/brooklyn-ember/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "pilsen-press--indonesia",
-    "roasterId": "pilsen-press",
-    "name": "Indonesia Wet-Hulled",
-    "originId": "indonesia",
-    "process": "other",
-    "notes": [
-      "cedar",
-      "dark chocolate",
-      "pipe tobacco"
-    ],
-    "priceCents": 2200,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/pilsen-press/indonesia",
-    "taste": {
-      "acidity": 0.17,
-      "sweetness": 0.49,
-      "body": 0.9,
-      "fruitiness": 0.19,
-      "roast": 0.85
-    }
-  },
-  {
-    "id": "pilsen-press--yemen",
-    "roasterId": "pilsen-press",
-    "name": "Yemen Natural",
-    "originId": "yemen",
-    "process": "natural",
-    "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
-    ],
-    "priceCents": 3200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/pilsen-press/yemen",
-    "taste": {
-      "acidity": 0.53,
-      "sweetness": 0.71,
-      "body": 0.75,
-      "fruitiness": 0.77,
-      "roast": 0.41
-    }
-  },
-  {
-    "id": "pilsen-press--kenya",
-    "roasterId": "pilsen-press",
-    "name": "Kenya Washed",
-    "originId": "kenya",
-    "process": "washed",
-    "notes": [
-      "blackcurrant",
-      "grapefruit",
-      "tomato"
-    ],
-    "priceCents": 3200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/pilsen-press/kenya",
-    "taste": {
-      "acidity": 1,
-      "sweetness": 0.52,
-      "body": 0.51,
-      "fruitiness": 0.85,
-      "roast": 0.32
-    }
-  },
-  {
-    "id": "pilsen-press--colombia",
-    "roasterId": "pilsen-press",
-    "name": "Colombia Anaerobic",
-    "originId": "colombia",
-    "process": "anaerobic",
-    "notes": [
-      "lychee",
-      "rum",
-      "passionfruit"
-    ],
-    "priceCents": 2200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/pilsen-press/colombia",
-    "taste": {
-      "acidity": 0.59,
-      "sweetness": 0.77,
-      "body": 0.52,
-      "fruitiness": 0.99,
-      "roast": 0.41
-    }
-  },
-  {
-    "id": "pilsen-press--house",
-    "roasterId": "pilsen-press",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/pilsen-press/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.82
-    }
-  },
-  {
-    "id": "rose-city-roast--ethiopia",
-    "roasterId": "rose-city-roast",
-    "name": "Ethiopia Washed",
-    "originId": "ethiopia",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "bergamot",
-      "lemon"
-    ],
-    "priceCents": 2800,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/rose-city-roast/ethiopia",
-    "taste": {
-      "acidity": 0.85,
-      "sweetness": 0.57,
-      "body": 0.24,
-      "fruitiness": 0.72,
-      "roast": 0.09
-    }
-  },
-  {
-    "id": "rose-city-roast--panama",
-    "roasterId": "rose-city-roast",
-    "name": "Panama Washed",
-    "originId": "panama",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "peach",
-      "honeysuckle"
-    ],
-    "priceCents": 2400,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/rose-city-roast/panama",
-    "taste": {
-      "acidity": 0.82,
-      "sweetness": 0.81,
-      "body": 0.23,
-      "fruitiness": 0.79,
-      "roast": 0.04
-    }
-  },
-  {
-    "id": "rose-city-roast--honduras",
-    "roasterId": "rose-city-roast",
-    "name": "Honduras Washed",
-    "originId": "honduras",
-    "process": "washed",
-    "notes": [
-      "milk chocolate",
-      "hazelnut",
-      "plum"
-    ],
-    "priceCents": 2800,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/rose-city-roast/honduras",
-    "taste": {
-      "acidity": 0.46,
-      "sweetness": 0.69,
-      "body": 0.54,
-      "fruitiness": 0.37,
-      "roast": 0.47
-    }
-  },
-  {
-    "id": "rose-city-roast--indonesia",
-    "roasterId": "rose-city-roast",
-    "name": "Indonesia Wet-Hulled",
-    "originId": "indonesia",
-    "process": "other",
-    "notes": [
-      "cedar",
-      "dark chocolate",
-      "pipe tobacco"
-    ],
-    "priceCents": 2400,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/rose-city-roast/indonesia",
-    "taste": {
-      "acidity": 0.1,
-      "sweetness": 0.49,
-      "body": 0.99,
-      "fruitiness": 0.17,
-      "roast": 0.69
-    }
-  },
-  {
-    "id": "rose-city-roast--house",
-    "roasterId": "rose-city-roast",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/rose-city-roast/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.64
-    }
-  },
-  {
-    "id": "mission-hill--kenya",
-    "roasterId": "mission-hill",
-    "name": "Kenya Washed",
-    "originId": "kenya",
-    "process": "washed",
-    "notes": [
-      "blackcurrant",
-      "grapefruit",
-      "tomato"
-    ],
-    "priceCents": 2400,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/mission-hill/kenya",
-    "taste": {
-      "acidity": 0.94,
-      "sweetness": 0.52,
-      "body": 0.61,
-      "fruitiness": 0.86,
-      "roast": 0.21
-    }
-  },
-  {
-    "id": "mission-hill--costa-rica",
-    "roasterId": "mission-hill",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 2400,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/mission-hill/costa-rica",
-    "taste": {
-      "acidity": 0.57,
-      "sweetness": 0.81,
-      "body": 0.48,
-      "fruitiness": 0.55,
-      "roast": 0.27
-    }
-  },
-  {
-    "id": "mission-hill--rwanda",
-    "roasterId": "mission-hill",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 2600,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/mission-hill/rwanda",
-    "taste": {
-      "acidity": 0.65,
-      "sweetness": 0.69,
-      "body": 0.36,
-      "fruitiness": 0.56,
-      "roast": 0.24
-    }
-  },
-  {
-    "id": "mission-hill--indonesia",
-    "roasterId": "mission-hill",
-    "name": "Indonesia Wet-Hulled",
-    "originId": "indonesia",
-    "process": "other",
-    "notes": [
-      "cedar",
-      "dark chocolate",
-      "pipe tobacco"
-    ],
-    "priceCents": 3200,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/mission-hill/indonesia",
-    "taste": {
-      "acidity": 0.1,
-      "sweetness": 0.5,
-      "body": 0.99,
-      "fruitiness": 0.11,
-      "roast": 0.85
-    }
-  },
-  {
-    "id": "mission-hill--house",
-    "roasterId": "mission-hill",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/mission-hill/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "east-side-kiln--el-salvador",
-    "roasterId": "east-side-kiln",
-    "name": "El Salvador Honey",
-    "originId": "el-salvador",
-    "process": "honey",
-    "notes": [
-      "red grape",
-      "brown sugar",
-      "nougat"
-    ],
-    "priceCents": 2800,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/east-side-kiln/el-salvador",
-    "taste": {
-      "acidity": 0.53,
-      "sweetness": 0.82,
-      "body": 0.55,
-      "fruitiness": 0.54,
-      "roast": 0.55
-    }
-  },
-  {
-    "id": "east-side-kiln--panama",
-    "roasterId": "east-side-kiln",
-    "name": "Panama Washed",
-    "originId": "panama",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "peach",
-      "honeysuckle"
-    ],
-    "priceCents": 2400,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/east-side-kiln/panama",
-    "taste": {
-      "acidity": 0.84,
-      "sweetness": 0.76,
-      "body": 0.3,
-      "fruitiness": 0.77,
-      "roast": 0.27
-    }
-  },
-  {
-    "id": "east-side-kiln--costa-rica",
-    "roasterId": "east-side-kiln",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 2200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/east-side-kiln/costa-rica",
-    "taste": {
-      "acidity": 0.55,
-      "sweetness": 0.87,
-      "body": 0.56,
-      "fruitiness": 0.59,
-      "roast": 0.44
-    }
-  },
-  {
-    "id": "east-side-kiln--rwanda",
-    "roasterId": "east-side-kiln",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 3200,
-    "currency": "USD",
-    "weightGrams": 250,
-    "url": "https://example.com/east-side-kiln/rwanda",
-    "taste": {
-      "acidity": 0.7,
-      "sweetness": 0.59,
-      "body": 0.44,
-      "fruitiness": 0.58,
-      "roast": 0.4
-    }
-  },
-  {
-    "id": "east-side-kiln--house",
-    "roasterId": "east-side-kiln",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 2000,
-    "currency": "USD",
-    "weightGrams": 340,
-    "url": "https://example.com/east-side-kiln/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.87
-    }
-  },
-  {
-    "id": "oslo-fjell--rwanda",
-    "roasterId": "oslo-fjell",
-    "name": "Rwanda Washed",
-    "originId": "rwanda",
-    "process": "washed",
-    "notes": [
-      "red apple",
-      "black tea",
-      "honey"
-    ],
-    "priceCents": 28000,
-    "currency": "NOK",
-    "weightGrams": 340,
-    "url": "https://example.com/oslo-fjell/rwanda",
-    "taste": {
-      "acidity": 0.74,
-      "sweetness": 0.69,
-      "body": 0.37,
-      "fruitiness": 0.58,
-      "roast": 0.1
-    }
-  },
-  {
-    "id": "oslo-fjell--panama",
-    "roasterId": "oslo-fjell",
-    "name": "Panama Washed",
-    "originId": "panama",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "peach",
-      "honeysuckle"
-    ],
-    "priceCents": 24000,
-    "currency": "NOK",
-    "weightGrams": 250,
-    "url": "https://example.com/oslo-fjell/panama",
-    "taste": {
-      "acidity": 0.75,
-      "sweetness": 0.8,
-      "body": 0.22,
-      "fruitiness": 0.7,
-      "roast": 0
-    }
-  },
-  {
-    "id": "oslo-fjell--yemen",
-    "roasterId": "oslo-fjell",
-    "name": "Yemen Natural",
-    "originId": "yemen",
-    "process": "natural",
-    "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
-    ],
-    "priceCents": 28000,
-    "currency": "NOK",
-    "weightGrams": 250,
-    "url": "https://example.com/oslo-fjell/yemen",
-    "taste": {
-      "acidity": 0.53,
-      "sweetness": 0.72,
-      "body": 0.72,
-      "fruitiness": 0.81,
-      "roast": 0.19
-    }
-  },
-  {
-    "id": "oslo-fjell--costa-rica",
-    "roasterId": "oslo-fjell",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 32000,
-    "currency": "NOK",
-    "weightGrams": 340,
-    "url": "https://example.com/oslo-fjell/costa-rica",
-    "taste": {
-      "acidity": 0.57,
-      "sweetness": 0.87,
-      "body": 0.52,
-      "fruitiness": 0.62,
-      "roast": 0.15
-    }
-  },
-  {
-    "id": "oslo-fjell--house",
-    "roasterId": "oslo-fjell",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 20000,
-    "currency": "NOK",
-    "weightGrams": 340,
-    "url": "https://example.com/oslo-fjell/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.5,
       "roast": 0.6
     }
   },
   {
-    "id": "shoreditch-sack--yemen",
-    "roasterId": "shoreditch-sack",
-    "name": "Yemen Natural",
-    "originId": "yemen",
+    "id": "pilot--boa-esperan-a-brazil",
+    "roasterId": "pilot",
+    "name": "Boa Esperança – Brazil",
+    "originId": "brazil",
     "process": "natural",
     "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
+      "cacao",
+      "toffee"
+    ],
+    "priceCents": 2750,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/boa-esperanca-brazil",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.7,
+      "body": 0.8,
+      "fruitiness": 0.35,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "pilot--eldorado-brazil",
+    "roasterId": "pilot",
+    "name": "Eldorado – Brazil",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "stone fruit",
+      "melon"
+    ],
+    "priceCents": 2675,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/eldorado-brazil",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.75,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "pilot--lia-jardin-costa-rica-blend",
+    "roasterId": "pilot",
+    "name": "Lia Jardin – Costa Rica Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "sugarcane",
+      "nutty"
+    ],
+    "priceCents": 2750,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/lia-jardin-costa-rica",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.2,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "pilot--sumava-villa-sarchi-costa-rica",
+    "roasterId": "pilot",
+    "name": "Sumava 'Villa Sarchi' – Costa Rica",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [],
+    "priceCents": 2750,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/sumava-villa-sarchi-costa-rica",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.7,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "pilot--kii-kenya",
+    "roasterId": "pilot",
+    "name": "Kii – Kenya",
+    "originId": "kenya",
+    "process": null,
+    "notes": [],
+    "priceCents": 2850,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://pilotcoffeeroasters.com/products/kii-kenya",
+    "taste": {
+      "acidity": 0.9,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.45,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "subtext--hermanos-constanza-guatemala-washed-bourbon-caturra",
+    "roasterId": "subtext",
+    "name": "Hermanos Constanza, Guatemala Washed Bourbon & Caturra",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "toffee",
+      "orange",
+      "red fruit"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/hermanos-constanza-guatemala-washed-bourbon-caturra",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "subtext--alirio-ortega-colombia-washed-sidra-oct-21st-2026",
+    "roasterId": "subtext",
+    "name": "Alirio Ortega, Colombia Washed Sidra (Oct. 21st, 2026)",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "haskap berry",
+      "apricot",
+      "plum"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/colombia-alirio-ortega-washed-sidra-oct-21-2026",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "subtext--san-antonio-ozolotepec-espresso-mexico-washed-field-blend-nov-5th-2026",
+    "roasterId": "subtext",
+    "name": "San Antonio Ozolotepec Espresso,  Mexico Washed Field Blend (Nov. 5th, 2026)",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "nectarine",
+      "black cherry",
+      "white fruit"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-espresso-washed-field-blend-nov-05-2026",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "subtext--alirio-ortega-colombia-washed-aji-roasted-nov-16th",
+    "roasterId": "subtext",
+    "name": "Alirio Ortega, Colombia Washed Aji Roasted: Nov. 16th",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "florals",
+      "pear",
+      "dates"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/colombia-alirio-ortega-washed-aji-1",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "subtext--fredy-orantes-guatemala-natural-pacamara",
+    "roasterId": "subtext",
+    "name": "Fredy Orantes, Guatemala Natural Pacamara",
+    "originId": "guatemala",
+    "process": "natural",
+    "notes": [
+      "bubblegum",
+      "dark plum",
+      "grape"
+    ],
+    "priceCents": 4000,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/guatemala-fredy-orantes-natural-pacamara-2",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.85,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "subtext--elias-p-rez-m-ndez-guatemala-washed-caturra",
+    "roasterId": "subtext",
+    "name": "Elias Pérez Méndez, Guatemala Washed Caturra",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "red berry",
+      "apple",
+      "cashew"
     ],
     "priceCents": 2600,
-    "currency": "GBP",
-    "weightGrams": 340,
-    "url": "https://example.com/shoreditch-sack/yemen",
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/elias-perez-mendez-guatemala-caturra",
     "taste": {
-      "acidity": 0.61,
-      "sweetness": 0.71,
-      "body": 0.68,
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "subtext--mujeres-de-axola-espresso-guatemala-washed-field-blend",
+    "roasterId": "subtext",
+    "name": "Mujeres de AXOLA Espresso, Guatemala Washed FIeld Blend",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "hazelnut",
+      "dried dates",
+      "chocolate"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/mujeres-de-axola-espresso-guatemala-washed-field-blend",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "subtext--didier-pajoy-colombia-washed-pink-bourbon-october-13th-2026",
+    "roasterId": "subtext",
+    "name": "Didier Pajoy, Colombia Washed Pink Bourbon (October 13th, 2026)",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "white cherry",
+      "yuzu",
+      "florals"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/didier-pajoy-colombia-washed-pink-bourbon-oct-13th-2026",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.5,
+      "body": 0.45,
+      "fruitiness": 0.5,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "subtext--ea-decaf-colombia-washed-field-blend",
+    "roasterId": "subtext",
+    "name": "EA Decaf, Colombia Washed Field Blend",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "almond",
+      "dark chocolate",
+      "orange zest"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/ea-decaf-colombia-washed-field-blend",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.5,
+      "body": 0.6,
+      "fruitiness": 0.35,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "subtext--san-antonio-ozolotepec-mexico-washed-field-blend-october-15th-2026",
+    "roasterId": "subtext",
+    "name": "San Antonio Ozolotepec, Mexico Washed Field Blend (October 15th, 2026)",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "nectarine",
+      "black cherry",
+      "white fruit"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/san-antonio-ozolotepec-mexico-washed-field-blend-october-15th-2026",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.7,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "subtext--mavila-peralta-peru-washed-catuai-nov-3rd-2026",
+    "roasterId": "subtext",
+    "name": "Mavila Peralta, Peru Washed Catuai (Nov. 3rd, 2026)",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "dried fruit",
+      "milk chocolate",
+      "hazelnut"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/mavila-peralta-peru-washed-catuai-nov-3-2026",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.4,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "subtext--nabor-gallardo-mexico-washed-field-blend",
+    "roasterId": "subtext",
+    "name": "Nabor Gallardo, Mexico Washed Field Blend",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "cola",
+      "clementine",
+      "ground cherry"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/mexico-nabor-gallardo-washed-field-blend",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "subtext--san-antonio-ozolotepec-espresso-mexico-washed-field-blend",
+    "roasterId": "subtext",
+    "name": "San Antonio Ozolotepec Espresso,  Mexico Washed Field Blend",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "nectarine",
+      "black cherry",
+      "white fruit"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-espresso-washed-field-blend",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.7,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "subtext--san-antonio-ozolotepec-mexico-washed-field-blend",
+    "roasterId": "subtext",
+    "name": "San Antonio Ozolotepec, Mexico Washed Field Blend",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "nectarine",
+      "black cherry",
+      "white fruit"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 250,
+    "url": "https://www.subtext.coffee/products/mexico-san-antonio-ozolotepec-washed-field-blend",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.45,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "detour--ethiopia-sedka",
+    "roasterId": "detour",
+    "name": "Ethiopia Sedka",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "orange blossom",
+      "nectarine",
+      "pink grapefruit",
+      "white tea"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/ethiopia-sedka",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.5,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "detour--burundi-bahire",
+    "roasterId": "detour",
+    "name": "Burundi Bahire",
+    "originId": "burundi",
+    "process": "washed",
+    "notes": [
+      "marshmallow",
+      "jasmine green tea",
+      "lime",
+      "wildflower honey"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/burundi-bahire",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.8,
+      "body": 0.5,
+      "fruitiness": 0.4,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "detour--india-karadykan-natural",
+    "roasterId": "detour",
+    "name": "India Karadykan Natural",
+    "originId": "india",
+    "process": "natural",
+    "notes": [
+      "papaya",
+      "graham cracker",
+      "jasmine green tea",
+      "chocolate"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/india-karadykan-natural",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.7,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "detour--guatemala-a-xola",
+    "roasterId": "detour",
+    "name": "Guatemala A'xola",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "salted caramel",
+      "golden apples",
+      "melted butter",
+      "shortbread",
+      "cacao"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/guatemala-axola-2026",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.8,
+      "body": 0.75,
+      "fruitiness": 0.4,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "detour--india-narmada-espresso",
+    "roasterId": "detour",
+    "name": "India Narmada Espresso",
+    "originId": "india",
+    "process": "washed",
+    "notes": [
+      "tamarind",
+      "golden raisin",
+      "dark chocolate",
+      "baking spice",
+      "belgian waffle"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/india-narmada-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.8,
+      "body": 0.7,
+      "fruitiness": 0.5,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "detour--colombia-decaf-el-granja-paraiso-92-red-bourbon-superbrew",
+    "roasterId": "detour",
+    "name": "Colombia Decaf El Granja Paraiso 92 Red Bourbon Superbrew",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "cranberries",
+      "honey",
+      "gingerbread",
+      "vanilla ice cream",
+      "apple crumble"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/colombia-decaf-el-granja-paraiso-red-bourbon-superbrew",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "detour--holiday-espresso",
+    "roasterId": "detour",
+    "name": "Holiday Espresso",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "dried cranberry",
+      "shortbread cookie",
+      "roasted chestnut"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/holiday-espresso-2026",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "detour--holiday-blend",
+    "roasterId": "detour",
+    "name": "Holiday Blend",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "orange marmalade",
+      "macadamia",
+      "milk chocolate",
+      "stollen",
+      "sugarplum"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/holiday-blend-2026",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "detour--guatemala-t-zun-witz-espresso",
+    "roasterId": "detour",
+    "name": "Guatemala T'zun Witz Espresso",
+    "originId": "guatemala",
+    "process": null,
+    "notes": [
+      "poached pear",
+      "red apple",
+      "toffee",
+      "lemon",
+      "shortbread"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/guatemala-tzun-witz-espresso",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "detour--uganda-rwenzori-natural-espresso",
+    "roasterId": "detour",
+    "name": "Uganda Rwenzori Natural Espresso",
+    "originId": "uganda",
+    "process": "natural",
+    "notes": [
+      "plum",
+      "dark chocolate-covered cranberries",
+      "oolong tea"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/uganda-rwenzori-natural-espresso",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "detour--brazil-valdeir-tomazini",
+    "roasterId": "detour",
+    "name": "Brazil Valdeir Tomazini",
+    "originId": "brazil",
+    "process": "other",
+    "notes": [
+      "apricot",
+      "white chocolate macadamia nut cookie",
+      "toasted marshmallow",
+      "graham cracker",
+      "chocolate"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/brazil-valdeir-tomazini",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "detour--mexico-ixhuatl-n",
+    "roasterId": "detour",
+    "name": "Mexico Ixhuatlán",
+    "originId": "mexico",
+    "process": null,
+    "notes": [
+      "baked red delicious apple",
+      "almond butter",
+      "puff pastry",
+      "dulce de leche"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/mexico-ixhuatlan",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "detour--bolivia-oro-verde",
+    "roasterId": "detour",
+    "name": "Bolivia Oro Verde",
+    "originId": "bolivia",
+    "process": "anaerobic",
+    "notes": [
+      "yellow plum",
+      "candied almonds",
+      "sultanas"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/bolivia-oro-verde",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "detour--small-talk",
+    "roasterId": "detour",
+    "name": "Small Talk",
+    "originId": "uganda",
+    "process": "washed",
+    "notes": [
+      "dried apricot",
+      "caramel",
+      "roasted almond",
+      "dark chocolate"
+    ],
+    "priceCents": 2250,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/small-talk",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.85,
+      "body": 0.5,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "detour--dark-horse-20-grand",
+    "roasterId": "detour",
+    "name": "Dark Horse - 20 Grand",
+    "originId": "costa-rica",
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "toasted nuts"
+    ],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/dark-horse-20-grand",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.6,
+      "body": 0.7,
+      "fruitiness": 0.1,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "detour--dark-horse-northern-dancer",
+    "roasterId": "detour",
+    "name": "Dark Horse - Northern Dancer",
+    "originId": "brazil",
+    "process": null,
+    "notes": [
+      "chocolate",
+      "black currant"
+    ],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/dark-horse-northern-dancer",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.4,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "detour--no-punch-backs-half-caf",
+    "roasterId": "detour",
+    "name": "No Punch Backs Half Caf",
+    "originId": "brazil",
+    "process": null,
+    "notes": [
+      "chocolate",
+      "caramel",
+      "dark chocolate",
+      "cherry"
+    ],
+    "priceCents": 2250,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/no-punch-backs-half-caf-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "detour--colombia-huila-decaf",
+    "roasterId": "detour",
+    "name": "Colombia Huila Decaf",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "red grape",
+      "salted caramel",
+      "vanilla ice cream"
+    ],
+    "priceCents": 2250,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/decaf-huila-colombia",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "detour--detour-dark",
+    "roasterId": "detour",
+    "name": "Detour Dark",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "deep chocolate",
+      "toasted nut",
+      "molasses"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/detour-dark",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.6,
+      "body": 0.85,
+      "fruitiness": 0.1,
+      "roast": 0.85
+    }
+  },
+  {
+    "id": "detour--bottleneck",
+    "roasterId": "detour",
+    "name": "Bottleneck",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dried fruit",
+      "toffee",
+      "fig"
+    ],
+    "priceCents": 2250,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://detourcoffee.com/products/bottle-neck",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "detour--punch-buggy-espresso",
+    "roasterId": "detour",
+    "name": "Punch Buggy Espresso",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "deep chocolate",
+      "nut",
+      "cherry",
+      "peanut butter cup"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/punch-buggy-espresso-1",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.75,
+      "body": 0.8,
+      "fruitiness": 0.5,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "detour--bouncy-castle-espresso",
+    "roasterId": "detour",
+    "name": "Bouncy Castle Espresso",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "citrus",
+      "floral",
+      "fruit"
+    ],
+    "priceCents": 2250,
+    "currency": "CAD",
+    "weightGrams": 315,
+    "url": "https://detourcoffee.com/products/bouncy-castle-espresso",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.5,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "bridgehead--merrymaker",
+    "roasterId": "bridgehead",
+    "name": "Merrymaker",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "cranberry",
+      "nutmeg"
+    ],
+    "priceCents": 2450,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/merrymaker",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.4,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "bridgehead--honduras",
+    "roasterId": "bridgehead",
+    "name": "Honduras",
+    "originId": "honduras",
+    "process": null,
+    "notes": [
+      "poached pear",
+      "milk chocolate"
+    ],
+    "priceCents": 2450,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/honduras",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.55,
+      "fruitiness": 0.35,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "bridgehead--logdriver-espresso",
+    "roasterId": "bridgehead",
+    "name": "Logdriver Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "caramel",
+      "cocoa"
+    ],
+    "priceCents": 1995,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/logdriver-espresso",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.8,
+      "fruitiness": 0.2,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "bridgehead--centro-house",
+    "roasterId": "bridgehead",
+    "name": "Centro House",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "plum"
+    ],
+    "priceCents": 1945,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/centro-house",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.55,
+      "body": 0.5,
+      "fruitiness": 0.3,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "bridgehead--steady-hands-decaf",
+    "roasterId": "bridgehead",
+    "name": "Steady Hands Decaf",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "cocoa",
+      "toasted nuts"
+    ],
+    "priceCents": 2150,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/steady-hands-decaf",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.5,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "bridgehead--french-roast",
+    "roasterId": "bridgehead",
+    "name": "French Roast",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "toasted walnuts",
+      "molasses"
+    ],
+    "priceCents": 1945,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/french-roast",
+    "taste": {
+      "acidity": 0.1,
+      "sweetness": 0.35,
+      "body": 0.85,
+      "fruitiness": 0.05,
+      "roast": 0.9
+    }
+  },
+  {
+    "id": "bridgehead--bytown-boom",
+    "roasterId": "bridgehead",
+    "name": "Bytown Boom",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "cacao nibs",
+      "dried cherry"
+    ],
+    "priceCents": 1945,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://www.bridgehead.ca/products/bytown-boom",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.4,
+      "body": 0.8,
+      "fruitiness": 0.45,
+      "roast": 0.85
+    }
+  },
+  {
+    "id": "phil-sebastian--snow-day",
+    "roasterId": "phil-sebastian",
+    "name": "Snow Day",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chestnut",
+      "chocolate"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 305,
+    "url": "https://philsebastian.com/products/m-m-catuai",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.2,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "phil-sebastian--alo-hybrid-washed",
+    "roasterId": "phil-sebastian",
+    "name": "Alo Hybrid Washed",
+    "originId": "ethiopia",
+    "process": "other",
+    "notes": [
+      "peach",
+      "black tea",
+      "floral",
+      "fresh fruit"
+    ],
+    "priceCents": 3925,
+    "currency": "CAD",
+    "weightGrams": 305,
+    "url": "https://philsebastian.com/products/alo-hybrid-washed",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.7,
+      "body": 0.45,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "phil-sebastian--lucky-peach-espresso",
+    "roasterId": "phil-sebastian",
+    "name": "Lucky Peach Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "floral",
+      "stone fruit",
+      "sweet citrus"
+    ],
+    "priceCents": 2550,
+    "currency": "CAD",
+    "weightGrams": 310,
+    "url": "https://philsebastian.com/products/lucky-peach-espresso",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "phil-sebastian--el-coyote-typica-red-honey",
+    "roasterId": "phil-sebastian",
+    "name": "El Coyote Typica Red Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [
+      "floral",
+      "peach"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 305,
+    "url": "https://philsebastian.com/products/el-coyote-typica-red-honey",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.5,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "phil-sebastian--doppelganger-espresso",
+    "roasterId": "phil-sebastian",
+    "name": "Doppelganger Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 310,
+    "url": "https://philsebastian.com/products/doppelganger-espresso",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.4,
+      "body": 0.7,
+      "fruitiness": 0.15,
+      "roast": 0.85
+    }
+  },
+  {
+    "id": "phil-sebastian--sure-thing",
+    "roasterId": "phil-sebastian",
+    "name": "Sure Thing",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "cocoa butter",
+      "pecan pie",
+      "fig"
+    ],
+    "priceCents": 2230,
+    "currency": "CAD",
+    "weightGrams": 386,
+    "url": "https://philsebastian.com/products/sure-thing",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.35,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "phil-sebastian--lolly-drop-espresso",
+    "roasterId": "phil-sebastian",
+    "name": "Lolly Drop Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 310,
+    "url": "https://philsebastian.com/products/lolly-drop-espresso",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.7,
+      "body": 0.4,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "phil-sebastian--lilac-dream",
+    "roasterId": "phil-sebastian",
+    "name": "Lilac Dream",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "stone fruit",
+      "florals",
+      "orange"
+    ],
+    "priceCents": 2550,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/lilac-dream",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.2,
+      "fruitiness": 0.5,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "phil-sebastian--jungle-berry",
+    "roasterId": "phil-sebastian",
+    "name": "Jungle Berry",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "berry"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/jungle-berry",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.7,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "phil-sebastian--fig-mood-espresso",
+    "roasterId": "phil-sebastian",
+    "name": "Fig Mood Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "fig",
+      "cherry",
+      "candied pecan",
+      "chocolate",
+      "cola"
+    ],
+    "priceCents": 2470,
+    "currency": "CAD",
+    "weightGrams": 310,
+    "url": "https://philsebastian.com/products/fig-mood-espresso",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.75,
+      "body": 0.65,
+      "fruitiness": 0.6,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "phil-sebastian--honey-haze-espresso",
+    "roasterId": "phil-sebastian",
+    "name": "Honey Haze Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "fruit cake",
+      "orange",
+      "honey"
+    ],
+    "priceCents": 2340,
+    "currency": "CAD",
+    "weightGrams": 310,
+    "url": "https://philsebastian.com/products/honey-haze-espresso",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.8,
+      "body": 0.5,
+      "fruitiness": 0.4,
+      "roast": 0.55
+    }
+  },
+  {
+    "id": "phil-sebastian--mystic-melon",
+    "roasterId": "phil-sebastian",
+    "name": "Mystic Melon",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "ripe fruits",
+      "perfumed",
+      "tropical"
+    ],
+    "priceCents": 2740,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/mystic-melon",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.8,
+      "fruitiness": 0.7,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "phil-sebastian--plum-runner",
+    "roasterId": "phil-sebastian",
+    "name": "Plum Runner",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "plum",
+      "maple",
+      "pecan",
+      "cola"
+    ],
+    "priceCents": 2470,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/plum-runner",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "phil-sebastian--sugar-heist",
+    "roasterId": "phil-sebastian",
+    "name": "Sugar Heist",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "almonds",
+      "fruit"
+    ],
+    "priceCents": 2340,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/sugar-heist",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.3,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "phil-sebastian--alter-ego",
+    "roasterId": "phil-sebastian",
+    "name": "Alter Ego",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark caramel",
+      "baker's chocolate",
+      "spices"
+    ],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/alter-ego-filter",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.7,
+      "body": 0.8,
+      "fruitiness": 0.1,
+      "roast": 0.9
+    }
+  },
+  {
+    "id": "phil-sebastian--sweet-habit-espresso",
+    "roasterId": "phil-sebastian",
+    "name": "Sweet Habit Espresso",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "toffee"
+    ],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 310,
+    "url": "https://philsebastian.com/products/sweet-habit-espresso",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.9,
+      "body": 0.6,
+      "fruitiness": 0.2,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "phil-sebastian--smooth-operator",
+    "roasterId": "phil-sebastian",
+    "name": "Smooth Operator",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "caramel",
+      "almond"
+    ],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 386,
+    "url": "https://philsebastian.com/products/smooth-operator",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "phil-sebastian--lights-out-decaf",
+    "roasterId": "phil-sebastian",
+    "name": "Lights Out Decaf",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "dried fruit"
+    ],
+    "priceCents": 2360,
+    "currency": "CAD",
+    "weightGrams": 302,
+    "url": "https://philsebastian.com/products/lights-out-decaf",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "monogram--gedeb-chelbesa-espresso",
+    "roasterId": "monogram",
+    "name": "Gedeb Chelbesa Espresso",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "mango",
+      "peach",
+      "iced tea"
+    ],
+    "priceCents": 2850,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/yirgacheffe-chelbesa-washed-espresso",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.5,
+      "body": 0.35,
+      "fruitiness": 0.65,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "monogram--gedeb-chelbesa",
+    "roasterId": "monogram",
+    "name": "Gedeb Chelbesa",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "mango",
+      "peach",
+      "iced tea"
+    ],
+    "priceCents": 2850,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/yirgacheffe-chelbesa-washed",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.6,
+      "body": 0.35,
+      "fruitiness": 0.65,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "monogram--miguel-moreno-espresso",
+    "roasterId": "monogram",
+    "name": "Miguel Moreno Espresso",
+    "originId": "honduras",
+    "process": "anaerobic",
+    "notes": [
+      "apricot",
+      "brown sugar",
+      "apple"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/miguel-moreno-espresso",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.75,
+      "body": 0.55,
+      "fruitiness": 0.65,
+      "roast": 0.55
+    }
+  },
+  {
+    "id": "monogram--miguel-moreno",
+    "roasterId": "monogram",
+    "name": "Miguel Moreno",
+    "originId": "honduras",
+    "process": "anaerobic",
+    "notes": [
+      "apricot",
+      "brown sugar",
+      "apple"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/miguel-moreno",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "monogram--alo-coffee",
+    "roasterId": "monogram",
+    "name": "Alo Coffee",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "peach",
+      "mandarin",
+      "pineapple"
+    ],
+    "priceCents": 4250,
+    "currency": "CAD",
+    "weightGrams": 200,
+    "url": "https://monogramcoffee.com/products/alo",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.6,
+      "body": 0.35,
+      "fruitiness": 0.75,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "monogram--finca-milan-maypop-espresso",
+    "roasterId": "monogram",
+    "name": "Finca Milan Maypop Espresso",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "rose",
+      "pineapple",
+      "mango candy"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/maypop-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.85,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "monogram--finca-milan-maypop",
+    "roasterId": "monogram",
+    "name": "Finca Milan Maypop",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "rose",
+      "pineapple",
+      "mango candy"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/maypop",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.9,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--luis-choquehuanca-espresso",
+    "roasterId": "monogram",
+    "name": "Luis Choquehuanca Espresso",
+    "originId": "bolivia",
+    "process": "washed",
+    "notes": [
+      "apple",
+      "black tea",
+      "caramel"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/luis-choquehuanca-washed-caturra-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.45,
+      "fruitiness": 0.45,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "monogram--luis-choquehuanca",
+    "roasterId": "monogram",
+    "name": "Luis Choquehuanca",
+    "originId": "bolivia",
+    "process": "washed",
+    "notes": [
+      "apple",
+      "black tea",
+      "caramel"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/luis-choquehuanca-washed-caturra",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.45,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--gedeb-lalesa-espresso",
+    "roasterId": "monogram",
+    "name": "Gedeb Lalesa Espresso",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "peach",
+      "lavender",
+      "cherry cola"
+    ],
+    "priceCents": 2850,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/yirgacheffe-lalesa-natural-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.8,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "monogram--gedeb-lalesa",
+    "roasterId": "monogram",
+    "name": "Gedeb Lalesa",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "peach",
+      "lavender",
+      "cherry cola"
+    ],
+    "priceCents": 2850,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/yirgacheffe-lalesa-natural",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.8,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--el-vergel-guava-banana-espresso",
+    "roasterId": "monogram",
+    "name": "El Vergel Guava Banana Espresso",
+    "originId": "colombia",
+    "process": "natural",
+    "notes": [
+      "guava",
+      "pineapple",
+      "chocolate"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/el-vergel-guava-banana-espresso",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "monogram--el-vergel-guava-banana",
+    "roasterId": "monogram",
+    "name": "El Vergel Guava Banana",
+    "originId": "colombia",
+    "process": "natural",
+    "notes": [
+      "guava",
+      "pineapple",
+      "chocolate"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/el-vergel-guava-banana",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
       "fruitiness": 0.75,
       "roast": 0.35
     }
   },
   {
-    "id": "shoreditch-sack--costa-rica",
-    "roasterId": "shoreditch-sack",
-    "name": "Costa Rica Honey",
-    "originId": "costa-rica",
-    "process": "honey",
-    "notes": [
-      "apricot",
-      "cane sugar",
-      "cocoa"
-    ],
-    "priceCents": 2400,
-    "currency": "GBP",
-    "weightGrams": 250,
-    "url": "https://example.com/shoreditch-sack/costa-rica",
-    "taste": {
-      "acidity": 0.64,
-      "sweetness": 0.91,
-      "body": 0.49,
-      "fruitiness": 0.57,
-      "roast": 0.27
-    }
-  },
-  {
-    "id": "shoreditch-sack--papua-new-guinea",
-    "roasterId": "shoreditch-sack",
-    "name": "Papua New Guinea Washed",
-    "originId": "papua-new-guinea",
+    "id": "monogram--tegu-aa-espresso",
+    "roasterId": "monogram",
+    "name": "Tegu AA Espresso",
+    "originId": "kenya",
     "process": "washed",
     "notes": [
-      "tropical fruit",
-      "molasses",
-      "spice"
+      "cranberry",
+      "grapefruit",
+      "peach cobbler"
     ],
-    "priceCents": 3200,
-    "currency": "GBP",
-    "weightGrams": 340,
-    "url": "https://example.com/shoreditch-sack/papua-new-guinea",
+    "priceCents": 3350,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/tegu-aa-espresso",
     "taste": {
-      "acidity": 0.46,
+      "acidity": 0.85,
       "sweetness": 0.6,
-      "body": 0.7,
-      "fruitiness": 0.51,
-      "roast": 0.49
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
     }
   },
   {
-    "id": "shoreditch-sack--mexico",
-    "roasterId": "shoreditch-sack",
-    "name": "Mexico Washed",
-    "originId": "mexico",
+    "id": "monogram--tegu-aa",
+    "roasterId": "monogram",
+    "name": "Tegu AA",
+    "originId": "kenya",
     "process": "washed",
     "notes": [
-      "chocolate",
-      "cinnamon",
-      "pecan"
+      "cranberry",
+      "grapefruit",
+      "peach cobbler"
     ],
-    "priceCents": 2200,
-    "currency": "GBP",
-    "weightGrams": 340,
-    "url": "https://example.com/shoreditch-sack/mexico",
+    "priceCents": 3350,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/tegu-aa",
     "taste": {
-      "acidity": 0.37,
-      "sweetness": 0.57,
-      "body": 0.65,
-      "fruitiness": 0.25,
-      "roast": 0.49
+      "acidity": 0.85,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.3
     }
   },
   {
-    "id": "shoreditch-sack--house",
-    "roasterId": "shoreditch-sack",
-    "name": "House Espresso",
-    "originId": "brazil",
+    "id": "monogram--nafkot-admasu-espresso",
+    "roasterId": "monogram",
+    "name": "Nafkot Admasu Espresso",
+    "originId": "ethiopia",
     "process": "natural",
     "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
+      "blueberry",
+      "black currant",
+      "brown sugar"
     ],
-    "priceCents": 2000,
-    "currency": "GBP",
-    "weightGrams": 340,
-    "url": "https://example.com/shoreditch-sack/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
-    }
-  },
-  {
-    "id": "kyoto-kissa--yemen",
-    "roasterId": "kyoto-kissa",
-    "name": "Yemen Natural",
-    "originId": "yemen",
-    "process": "natural",
-    "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
-    ],
-    "priceCents": 260000,
-    "currency": "JPY",
-    "weightGrams": 340,
-    "url": "https://example.com/kyoto-kissa/yemen",
-    "taste": {
-      "acidity": 0.54,
-      "sweetness": 0.69,
-      "body": 0.65,
-      "fruitiness": 0.78,
-      "roast": 0.28
-    }
-  },
-  {
-    "id": "kyoto-kissa--guatemala",
-    "roasterId": "kyoto-kissa",
-    "name": "Guatemala Washed",
-    "originId": "guatemala",
-    "process": "washed",
-    "notes": [
-      "toffee",
-      "orange",
-      "almond"
-    ],
-    "priceCents": 220000,
-    "currency": "JPY",
-    "weightGrams": 340,
-    "url": "https://example.com/kyoto-kissa/guatemala",
+    "priceCents": 2900,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/yirgacheffe-gedicho-natural-espresso",
     "taste": {
       "acidity": 0.6,
-      "sweetness": 0.66,
-      "body": 0.54,
-      "fruitiness": 0.43,
-      "roast": 0.37
-    }
-  },
-  {
-    "id": "kyoto-kissa--colombia",
-    "roasterId": "kyoto-kissa",
-    "name": "Colombia Anaerobic",
-    "originId": "colombia",
-    "process": "anaerobic",
-    "notes": [
-      "lychee",
-      "rum",
-      "passionfruit"
-    ],
-    "priceCents": 220000,
-    "currency": "JPY",
-    "weightGrams": 340,
-    "url": "https://example.com/kyoto-kissa/colombia",
-    "taste": {
-      "acidity": 0.66,
-      "sweetness": 0.76,
-      "body": 0.53,
-      "fruitiness": 0.94,
-      "roast": 0.17
-    }
-  },
-  {
-    "id": "kyoto-kissa--panama",
-    "roasterId": "kyoto-kissa",
-    "name": "Panama Washed",
-    "originId": "panama",
-    "process": "washed",
-    "notes": [
-      "jasmine",
-      "peach",
-      "honeysuckle"
-    ],
-    "priceCents": 280000,
-    "currency": "JPY",
-    "weightGrams": 340,
-    "url": "https://example.com/kyoto-kissa/panama",
-    "taste": {
-      "acidity": 0.75,
-      "sweetness": 0.77,
-      "body": 0.27,
-      "fruitiness": 0.71,
-      "roast": 0.11
-    }
-  },
-  {
-    "id": "kyoto-kissa--house",
-    "roasterId": "kyoto-kissa",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
-    "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
-    ],
-    "priceCents": 200000,
-    "currency": "JPY",
-    "weightGrams": 340,
-    "url": "https://example.com/kyoto-kissa/house",
-    "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.67
-    }
-  },
-  {
-    "id": "melbourne-laneway--guatemala",
-    "roasterId": "melbourne-laneway",
-    "name": "Guatemala Washed",
-    "originId": "guatemala",
-    "process": "washed",
-    "notes": [
-      "toffee",
-      "orange",
-      "almond"
-    ],
-    "priceCents": 3200,
-    "currency": "AUD",
-    "weightGrams": 250,
-    "url": "https://example.com/melbourne-laneway/guatemala",
-    "taste": {
-      "acidity": 0.6,
-      "sweetness": 0.74,
-      "body": 0.62,
-      "fruitiness": 0.45,
+      "sweetness": 0.8,
+      "body": 0.5,
+      "fruitiness": 0.85,
       "roast": 0.5
     }
   },
   {
-    "id": "melbourne-laneway--mexico",
-    "roasterId": "melbourne-laneway",
-    "name": "Mexico Washed",
+    "id": "monogram--nafkot-admasu",
+    "roasterId": "monogram",
+    "name": "Nafkot Admasu",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "blueberry",
+      "black currant",
+      "brown sugar"
+    ],
+    "priceCents": 2900,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/yirgacheffe-gedicho-natural",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.8,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--carlos-cadena-espresso",
+    "roasterId": "monogram",
+    "name": "Carlos Cadena Espresso",
     "originId": "mexico",
     "process": "washed",
     "notes": [
       "chocolate",
-      "cinnamon",
-      "pecan"
+      "dried apple",
+      "cookie butter"
     ],
-    "priceCents": 2600,
-    "currency": "AUD",
-    "weightGrams": 340,
-    "url": "https://example.com/melbourne-laneway/mexico",
+    "priceCents": 2300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/carlos-cadena-sarchimor-espresso",
     "taste": {
-      "acidity": 0.3,
-      "sweetness": 0.63,
-      "body": 0.59,
-      "fruitiness": 0.28,
-      "roast": 0.57
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.55,
+      "fruitiness": 0.4,
+      "roast": 0.5
     }
   },
   {
-    "id": "melbourne-laneway--brazil",
-    "roasterId": "melbourne-laneway",
-    "name": "Brazil Natural",
+    "id": "monogram--carlos-cadena",
+    "roasterId": "monogram",
+    "name": "Carlos Cadena",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "dried apple",
+      "cookie butter"
+    ],
+    "priceCents": 2300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/carlos-cadena-sarchimor",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.55,
+      "body": 0.5,
+      "fruitiness": 0.35,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "monogram--mwirua-gathambi-aa-espresso",
+    "roasterId": "monogram",
+    "name": "Mwirua Gathambi AA Espresso",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "blueberry",
+      "cantaloupe",
+      "strawberry"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/mwirua-gathambi-aa-espresso",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "monogram--mwirua-gathambi-aa",
+    "roasterId": "monogram",
+    "name": "Mwirua Gathambi AA",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "blueberry",
+      "cantaloupe",
+      "strawberry"
+    ],
+    "priceCents": 3300,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/mwirua-gathambi-aa",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.65,
+      "body": 0.45,
+      "fruitiness": 0.7,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--peanut-butter-jelly-time-espresso",
+    "roasterId": "monogram",
+    "name": "Peanut Butter Jelly Time Espresso",
+    "originId": null,
+    "process": "other",
+    "notes": [
+      "strawberry jam",
+      "almond butter"
+    ],
+    "priceCents": 3100,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/peanut-butter-jelly-time-espresso",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.6,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "monogram--peanut-butter-jelly-time",
+    "roasterId": "monogram",
+    "name": "Peanut Butter Jelly Time",
+    "originId": null,
+    "process": "other",
+    "notes": [
+      "strawberry jam",
+      "almond butter"
+    ],
+    "priceCents": 3100,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/peanut-butter-jelly-time-filter",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.7,
+      "body": 0.55,
+      "fruitiness": 0.7,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "monogram--reku-habtamu",
+    "roasterId": "monogram",
+    "name": "Reku Habtamu",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "peach",
+      "blueberry",
+      "earl grey"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/habtamu-fikadu-washed",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.5,
+      "body": 0.25,
+      "fruitiness": 0.6,
+      "roast": 0.2
+    }
+  },
+  {
+    "id": "monogram--reku-habtamu-espresso",
+    "roasterId": "monogram",
+    "name": "Reku Habtamu Espresso",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "peach",
+      "blueberry",
+      "earl grey"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/habtamu-fikadu-washed-espresso",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.5,
+      "body": 0.3,
+      "fruitiness": 0.6,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "monogram--la-laguneta-espresso",
+    "roasterId": "monogram",
+    "name": "La Laguneta Espresso",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "almond",
+      "caramel"
+    ],
+    "priceCents": 2050,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/la-laguneta-espresso",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "monogram--la-laguneta",
+    "roasterId": "monogram",
+    "name": "La Laguneta",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "almond",
+      "caramel"
+    ],
+    "priceCents": 2050,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/la-laguneta-2",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.2,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "monogram--paola-trujillo",
+    "roasterId": "monogram",
+    "name": "Paola Trujillo",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "mandarin",
+      "white tea",
+      "apple"
+    ],
+    "priceCents": 4350,
+    "currency": "CAD",
+    "weightGrams": 200,
+    "url": "https://monogramcoffee.com/products/paola-trujillo",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.5,
+      "body": 0.35,
+      "fruitiness": 0.6,
+      "roast": 0.2
+    }
+  },
+  {
+    "id": "monogram--granja-paraiso-92-decaf-espresso",
+    "roasterId": "monogram",
+    "name": "Granja Paraiso 92 Decaf Espresso",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "rose",
+      "peach",
+      "orange"
+    ],
+    "priceCents": 3400,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/granja-paraiso-92-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.7,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "monogram--granja-paraiso-92-decaf",
+    "roasterId": "monogram",
+    "name": "Granja Paraiso 92 Decaf",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "rose",
+      "peach",
+      "orange"
+    ],
+    "priceCents": 3400,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/granja-paraiso-93",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "monogram--daterra-pearl-espresso",
+    "roasterId": "monogram",
+    "name": "Daterra Pearl Espresso",
+    "originId": "brazil",
+    "process": "honey",
+    "notes": [
+      "peanut butter",
+      "chocolate",
+      "brown sugar"
+    ],
+    "priceCents": 2150,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/daterra-pearl-espresso",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.75,
+      "body": 0.75,
+      "fruitiness": 0.15,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "monogram--daterra-pearl",
+    "roasterId": "monogram",
+    "name": "Daterra Pearl",
+    "originId": "brazil",
+    "process": "honey",
+    "notes": [
+      "peanut butter",
+      "chocolate",
+      "brown sugar"
+    ],
+    "priceCents": 2150,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/daterra-pearl",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.75,
+      "body": 0.7,
+      "fruitiness": 0.2,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "monogram--bambito-estate-espresso",
+    "roasterId": "monogram",
+    "name": "Bambito Estate Espresso",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "orange",
+      "cane sugar",
+      "red apple"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/bambito-estate-caturra-catuai-espresso",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "monogram--bambito-estate",
+    "roasterId": "monogram",
+    "name": "Bambito Estate",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "orange",
+      "cane sugar",
+      "red apple"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/bambito-estate-caturra-catuai",
+    "taste": {
+      "acidity": 0.65,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "monogram--takesi-gesha",
+    "roasterId": "monogram",
+    "name": "Takesi Gesha",
+    "originId": "bolivia",
+    "process": "washed",
+    "notes": [
+      "nectarine",
+      "coffee flower",
+      "orange blossom"
+    ],
+    "priceCents": 7400,
+    "currency": "CAD",
+    "weightGrams": 100,
+    "url": "https://monogramcoffee.com/products/takesi-gesha",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.7,
+      "roast": 0.15
+    }
+  },
+  {
+    "id": "monogram--takesi-peaberry-gesha",
+    "roasterId": "monogram",
+    "name": "Takesi Peaberry Gesha",
+    "originId": "bolivia",
+    "process": "washed",
+    "notes": [
+      "strawberry",
+      "rose",
+      "peach"
+    ],
+    "priceCents": 7400,
+    "currency": "CAD",
+    "weightGrams": 100,
+    "url": "https://monogramcoffee.com/products/takesi-gesha-peaberry",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.35,
+      "fruitiness": 0.75,
+      "roast": 0.15
+    }
+  },
+  {
+    "id": "monogram--candy-blast-decaf-espresso",
+    "roasterId": "monogram",
+    "name": "Candy Blast Decaf Espresso",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "honeydew",
+      "watermelon",
+      "green apple"
+    ],
+    "priceCents": 3150,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/candy-blast-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.85,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "monogram--candy-blast-decaf",
+    "roasterId": "monogram",
+    "name": "Candy Blast Decaf",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "honeydew",
+      "watermelon",
+      "green apple"
+    ],
+    "priceCents": 3150,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/candy-blast",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.85,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--popayan-decaf-espresso",
+    "roasterId": "monogram",
+    "name": "Popayan Decaf Espresso",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "nougat",
+      "caramel"
+    ],
+    "priceCents": 2550,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/popayan-decaf-espresso",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "monogram--popayan-decaf",
+    "roasterId": "monogram",
+    "name": "Popayan Decaf",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "nougat",
+      "caramel"
+    ],
+    "priceCents": 2550,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/popayan-decaf-1",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.15,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "monogram--easy-mode-espresso",
+    "roasterId": "monogram",
+    "name": "Easy Mode Espresso",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "cherry danish",
+      "banana chips",
+      "brown sugar"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/easy-mode-espresso",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.7,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "monogram--easy-mode",
+    "roasterId": "monogram",
+    "name": "Easy Mode",
+    "originId": "colombia",
+    "process": "other",
+    "notes": [
+      "cherry danish",
+      "banana chips",
+      "brown sugar"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/easy-mode",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.75,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "monogram--deborah-terroir",
+    "roasterId": "monogram",
+    "name": "Deborah Terroir",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "orange blossom",
+      "black tea",
+      "nectarine"
+    ],
+    "priceCents": 4450,
+    "currency": "CAD",
+    "weightGrams": 100,
+    "url": "https://monogramcoffee.com/products/deborah-terroir-2",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.35,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "monogram--warmth-filter-blend",
+    "roasterId": "monogram",
+    "name": "Warmth Filter Blend",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "nougat"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/warmth-filter-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "monogram--warmth-espresso-blend",
+    "roasterId": "monogram",
+    "name": "Warmth Espresso Blend",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "chocolate",
+      "nougat"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://monogramcoffee.com/products/warmth-espresso-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.6,
+      "body": 0.75,
+      "fruitiness": 0.15,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "rogue-wave--guatemala-la-serrania-kimono-natural-2026",
+    "roasterId": "rogue-wave",
+    "name": "Guatemala - La Serrania Kimono | Natural (2026)",
+    "originId": "guatemala",
+    "process": "natural",
+    "notes": [
+      "white chocolate",
+      "peach",
+      "lychee",
+      "jackfruit",
+      "floral"
+    ],
+    "priceCents": 950,
+    "currency": "CAD",
+    "weightGrams": 50,
+    "url": "https://roguewavecoffee.ca/products/guatemala-la-serrania-kimono-natural-2026",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.8,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "rogue-wave--ethiopia-hanan-million-getachew-natural",
+    "roasterId": "rogue-wave",
+    "name": "Ethiopia - Hanan Million Getachew | Natural",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "tropical fruit",
+      "stone fruit",
+      "lilac"
+    ],
+    "priceCents": 800,
+    "currency": "CAD",
+    "weightGrams": 50,
+    "url": "https://roguewavecoffee.ca/products/ethiopia-hanan-million-getachew-natural",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.65,
+      "body": 0.45,
+      "fruitiness": 0.8,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "rogue-wave--colombia-las-margaritas-geisha-honey-100g-2026",
+    "roasterId": "rogue-wave",
+    "name": "Colombia - Las Margaritas Geisha | Honey -  100g (2026)",
+    "originId": "colombia",
+    "process": "honey",
+    "notes": [
+      "concord grape",
+      "pomegranate",
+      "violet",
+      "cherry"
+    ],
+    "priceCents": 3400,
+    "currency": "CAD",
+    "weightGrams": 110,
+    "url": "https://roguewavecoffee.ca/products/colombia-las-margaritas-geisha-honey-100g-2026",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "rogue-wave--colombia-granja-paraiso-92-pink-bourbon-sugarcane-ea-decaf",
+    "roasterId": "rogue-wave",
+    "name": "Colombia - Granja Paraiso 92 Pink Bourbon | Sugarcane EA Decaf",
+    "originId": "colombia",
+    "process": "anaerobic",
+    "notes": [
+      "floral",
+      "grapefruit",
+      "strawberry"
+    ],
+    "priceCents": 800,
+    "currency": "CAD",
+    "weightGrams": 50,
+    "url": "https://roguewavecoffee.ca/products/colombia-granja-paraiso-92-pink-bourbon-sugarcane-ea-decaf",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "rogue-wave--panama-carmen-palomar-estate-lot-6-geisha-natural-100g",
+    "roasterId": "rogue-wave",
+    "name": "Panama - Carmen Palomar Estate Lot 6 Geisha | Natural - 100g",
+    "originId": "panama",
+    "process": "natural",
+    "notes": [
+      "blackberry",
+      "nectarine",
+      "violet",
+      "brown sugar",
+      "cherry"
+    ],
+    "priceCents": 4200,
+    "currency": "CAD",
+    "weightGrams": 110,
+    "url": "https://roguewavecoffee.ca/products/panama-carmen-palomar-estate-lot-6-geisha-natural-100g",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.75,
+      "body": 0.65,
+      "fruitiness": 0.8,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "rogue-wave--ecuador-loma-redonda-washed",
+    "roasterId": "rogue-wave",
+    "name": "Ecuador - Loma Redonda | Washed",
+    "originId": "ecuador",
+    "process": "washed",
+    "notes": [
+      "nectarine",
+      "pineapple",
+      "home baking"
+    ],
+    "priceCents": 3200,
+    "currency": "CAD",
+    "weightGrams": 260,
+    "url": "https://roguewavecoffee.ca/products/ecuador-loma-redonda-washed",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.8,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "rogue-wave--kenya-gichuna-estate-washed",
+    "roasterId": "rogue-wave",
+    "name": "Kenya - Gichuna Estate | Washed",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "grapefruit",
+      "blackberry",
+      "dried date",
+      "grilled grapefruit"
+    ],
+    "priceCents": 700,
+    "currency": "CAD",
+    "weightGrams": 50,
+    "url": "https://roguewavecoffee.ca/products/kenya-gichuna-estate-washed",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "rogue-wave--ethiopia-gutiti-yirgacheffe-natural-2026",
+    "roasterId": "rogue-wave",
+    "name": "Ethiopia - Gutiti Yirgacheffe | Natural (2026)",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "blueberry"
+    ],
+    "priceCents": 650,
+    "currency": "CAD",
+    "weightGrams": 50,
+    "url": "https://roguewavecoffee.ca/products/ethiopia-gutiti-yirgacheffe-natural-2026",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.4,
+      "fruitiness": 0.8,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "rogue-wave--brazil-daterra-full-bloom-tree-dried-natural-2026",
+    "roasterId": "rogue-wave",
+    "name": "Brazil - Daterra Full Bloom - Tree-Dried Natural (2026)",
     "originId": "brazil",
     "process": "natural",
     "notes": [
-      "peanut butter",
       "dark chocolate",
+      "almond",
+      "roasted hazelnut",
+      "milk chocolate",
+      "caramel"
+    ],
+    "priceCents": 600,
+    "currency": "CAD",
+    "weightGrams": 50,
+    "url": "https://roguewavecoffee.ca/products/brazil-daterra-full-bloom-tree-dried-natural-2026",
+    "taste": {
+      "acidity": 0.15,
+      "sweetness": 0.85,
+      "body": 0.8,
+      "fruitiness": 0.2,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "rogue-wave--panama-carmen-palomar-estate-lot-3-geisha-washed-100g",
+    "roasterId": "rogue-wave",
+    "name": "Panama - Carmen Palomar Estate Lot 3 Geisha | Washed - 100g",
+    "originId": "panama",
+    "process": "washed",
+    "notes": [
+      "guava",
+      "peach",
+      "brown sugar",
+      "milk tea"
+    ],
+    "priceCents": 4000,
+    "currency": "CAD",
+    "weightGrams": 110,
+    "url": "https://roguewavecoffee.ca/products/panama-finca-carmen-palomar-estate-lot-3-geisha-washed-100g",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "49th-parallel--honduras-finca-liquid-mbar-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Honduras Finca Liquidámbar Filter Roast",
+    "originId": "honduras",
+    "process": "honey",
+    "notes": [
+      "apricot",
+      "brown sugar",
+      "toasted coconut",
+      "florals",
+      "milk chocolate"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 170,
+    "url": "https://49thcoffee.com/products/honduras-finca-liquidambar-filter-roast-coffee",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.55,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--winter-gold-sumatra-bener-meriah-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Winter Gold - Sumatra Bener Meriah Espresso",
+    "originId": "indonesia",
+    "process": "natural",
+    "notes": [
+      "watermelon",
+      "mango",
+      "dark chocolate",
+      "caramel",
+      "plum"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/winter-gold-sumatra-bener-meriah-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.6,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "49th-parallel--sumatra-bener-meriah-jasmine-co-ferment-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Sumatra Bener Meriah Jasmine Co-Ferment Filter Roast",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "jasmine",
+      "green tea",
+      "lemon"
+    ],
+    "priceCents": 3700,
+    "currency": "CAD",
+    "weightGrams": 170,
+    "url": "https://49thcoffee.com/products/sumatra-bener-meriah-jasmine-co-ferment-filter-roast",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.4,
+      "body": 0.4,
+      "fruitiness": 0.4,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "49th-parallel--sumatra-bener-meriah-lychee-co-ferment-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Sumatra Bener Meriah Lychee Co-Ferment Filter Roast",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "lychee",
+      "honey",
+      "rose",
+      "citrus zest",
+      "cocoa"
+    ],
+    "priceCents": 3700,
+    "currency": "CAD",
+    "weightGrams": 170,
+    "url": "https://49thcoffee.com/products/sumatra-bener-meriah-lychee-co-ferment-filter-roast-coffee",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "49th-parallel--silver-snowflake-ethiopia-dobenawicho-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Silver Snowflake - Ethiopia Dobenawicho Filter Roast",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "ripe peach",
+      "sweet lemonade",
+      "brown sugar",
+      "citrus"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/silver-snowflake-ethiopia-dobenawicho-filter-roast",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.6,
+      "body": 0.35,
+      "fruitiness": 0.55,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--holiday-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Holiday Filter Roast",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "toffee",
+      "roasted hazelnut"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://49thcoffee.com/products/holiday-filter-roast-2026",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.45,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "49th-parallel--holiday-espresso-roast",
+    "roasterId": "49th-parallel",
+    "name": "Holiday Espresso Roast",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "apple compote",
+      "brown sugar",
+      "chocolate truffle"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://49thcoffee.com/products/holiday-espresso-roast-2026",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.4,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "49th-parallel--guatemala-el-sendero-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Guatemala El Sendero Filter Roast",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "dried apricot",
+      "milk chocolate",
+      "sweet orange",
+      "caramel",
       "brown sugar"
     ],
     "priceCents": 2600,
-    "currency": "AUD",
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/guatemala-el-sendero-filter-roast-coffee",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--hawaii-kona-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Hawaii Kona Filter Roast",
+    "originId": "hawaii",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "caramel",
+      "sweet orange",
+      "toasted nuts"
+    ],
+    "priceCents": 4500,
+    "currency": "CAD",
+    "weightGrams": 170,
+    "url": "https://49thcoffee.com/products/hawaii-kona-coffee",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.75,
+      "body": 0.55,
+      "fruitiness": 0.45,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--tanzania-finagro-estate-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Tanzania Finagro Estate Espresso",
+    "originId": "tanzania",
+    "process": "washed",
+    "notes": [
+      "peach",
+      "vanilla",
+      "black tea",
+      "floral"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/tanzania-finagro-estate-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.75,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--kenya-nyeri-ndaroini-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Kenya Nyeri Ndaroini Filter Roast",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "blackcurrant",
+      "orange",
+      "black tea"
+    ],
+    "priceCents": 2800,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/kenya-nyeri-ndaroini-filter-roast-coffee",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.5,
+      "body": 0.35,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--golden-hour-ethiopian-kaffa-bitta-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Golden Hour - Ethiopian Kaffa Bitta Espresso",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "hazelnut",
+      "milk chocolate",
+      "pear"
+    ],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/golden-hour-ethiopian-kaffa-bitta-espresso",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "49th-parallel--el-salvador-cerro-las-ranas-espresso",
+    "roasterId": "49th-parallel",
+    "name": "El Salvador Cerro Las Ranas Espresso",
+    "originId": "el-salvador",
+    "process": "honey",
+    "notes": [
+      "honey",
+      "mandarin",
+      "milk chocolate",
+      "floral"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/el-salvador-cerro-las-ranas-espresso",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "49th-parallel--burundi-hafi-natural-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Burundi Hafi Natural Filter Roast",
+    "originId": "burundi",
+    "process": "natural",
+    "notes": [
+      "strawberry",
+      "honey",
+      "dried cherry",
+      "floral"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/burundi-hafi-natural-filter-roast-coffee",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.75,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--ethiopia-yirgacheffe-aricha-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Ethiopia Yirgacheffe Aricha Espresso",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "black tea",
+      "jasmine",
+      "peach"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/ethiopia-yirgacheffe-aricha-espresso",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.6,
+      "body": 0.35,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--ethiopia-guji-jigesa-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Ethiopia Guji Jigesa Filter Roast",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "jasmine",
+      "lemon",
+      "white honey",
+      "peach"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/ethiopia-guji-jigesa-filter-roasted-coffee",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.7,
+      "body": 0.3,
+      "fruitiness": 0.55,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "49th-parallel--colombia-el-recuerdo-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Colombia El Recuerdo Espresso",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "orange",
+      "red fruit",
+      "caramel",
+      "floral"
+    ],
+    "priceCents": 3000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://49thcoffee.com/products/colombia-el-recuerdo-espresso-062026",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--peru-san-ignacio-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Peru San Ignacio Espresso",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "caramel",
+      "milk chocolate",
+      "red apple"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/peru-san-ignacio-espresso",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "49th-parallel--colombia-cauca-caldono-espresso",
+    "roasterId": "49th-parallel",
+    "name": "Colombia Cauca Caldono Espresso",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "brown sugar",
+      "milk chocolate",
+      "orange"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/colombia-cauca-caldono-espresso",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.55,
+      "fruitiness": 0.4,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "49th-parallel--peru-san-ignacio-filter-roast",
+    "roasterId": "49th-parallel",
+    "name": "Peru San Ignacio Filter Roast",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "orange",
+      "milk chocolate",
+      "caramel"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 170,
+    "url": "https://49thcoffee.com/products/peru-san-ignacio-filter-roast-coffee",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.6,
+      "body": 0.45,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "49th-parallel--iced-coffee-roast",
+    "roasterId": "49th-parallel",
+    "name": "Iced Coffee Roast",
+    "originId": "rwanda",
+    "process": "washed",
+    "notes": [
+      "black cherry",
+      "caramel",
+      "chocolate"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
+    "weightGrams": 301,
+    "url": "https://49thcoffee.com/products/iced-coffee-roast",
+    "taste": {
+      "acidity": 0.45,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "49th-parallel--the-demi-espresso",
+    "roasterId": "49th-parallel",
+    "name": "The Demi Espresso",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "black cherry",
+      "orange",
+      "malt candy",
+      "chocolate",
+      "nutty"
+    ],
+    "priceCents": 2400,
+    "currency": "CAD",
     "weightGrams": 340,
-    "url": "https://example.com/melbourne-laneway/brazil",
+    "url": "https://49thcoffee.com/products/the-demi-espresso",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.55,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "pallet--guatemala-todos-santos-washed",
+    "roasterId": "pallet",
+    "name": "Guatemala - Todos Santos - Washed",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "berries",
+      "dried apricot",
+      "dark chocolate"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/guatemala-todos-santos-washed",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.75,
+      "body": 0.7,
+      "fruitiness": 0.6,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "pallet--ethiopia-gogogu-natural",
+    "roasterId": "pallet",
+    "name": "Ethiopia - Gogogu - Natural",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "floral"
+    ],
+    "priceCents": 2650,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/ethiopia-gogogu-natural",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "pallet--el-salvador-wilber-dubon-natural",
+    "roasterId": "pallet",
+    "name": "El Salvador - Wilber Dubon - Natural",
+    "originId": "el-salvador",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "clove",
+      "dried florals",
+      "sugar cane"
+    ],
+    "priceCents": 2700,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/el-salvador-wilber-dubon-natural",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.65,
+      "fruitiness": 0.6,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "pallet--costa-rica-cerro-san-luis-white-honey",
+    "roasterId": "pallet",
+    "name": "Costa Rica - Cerro San Luis - White Honey",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [],
+    "priceCents": 3600,
+    "currency": "CAD",
+    "weightGrams": null,
+    "url": "https://palletcoffeeroasters.com/products/costa-rica-cerro-san-luis-white-honey",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "pallet--honduras-carlos-mejia-anaerobic-natural",
+    "roasterId": "pallet",
+    "name": "Honduras - Carlos Mejia - Anaerobic Natural",
+    "originId": "honduras",
+    "process": "anaerobic",
+    "notes": [
+      "brown sugar",
+      "cranberry",
+      "cherry"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/honduras-carlos-mejia-anaerobic-natural",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.8,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "pallet--indonesia-wildan-mustafa-lactic-natural",
+    "roasterId": "pallet",
+    "name": "Indonesia - Wildan Mustafa - Lactic Natural",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [],
+    "priceCents": 2750,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/indonesia-wildan-mustafa-lactic-natural",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.8,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "pallet--burundi-kayanza-washed",
+    "roasterId": "pallet",
+    "name": "Burundi - Kayanza - Washed",
+    "originId": "burundi",
+    "process": "washed",
+    "notes": [],
+    "priceCents": 2600,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/burundi-kayanza-washed",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.4,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "pallet--brazil-serra-negra-natural",
+    "roasterId": "pallet",
+    "name": "Brazil -Serra Negra - Natural",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "graham cracker",
+      "toasted nuts",
+      "citrus",
+      "milk chocolate"
+    ],
+    "priceCents": 2000,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/brazil-serra-negra-natural",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.8,
+      "fruitiness": 0.35,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "pallet--papua-new-guinea-kunjin-washed",
+    "roasterId": "pallet",
+    "name": "Papua New Guinea - Kunjin - Washed",
+    "originId": "papua-new-guinea",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "citrus"
+    ],
+    "priceCents": 2100,
+    "currency": "CAD",
+    "weightGrams": 300,
+    "url": "https://palletcoffeeroasters.com/products/png-kunjin-washed",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.4,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "pallet--brazil-natalia-brito-natural",
+    "roasterId": "pallet",
+    "name": "Brazil - Natalia Brito - Natural",
+    "originId": "brazil",
+    "process": "natural",
+    "notes": [
+      "milk chocolate",
+      "ripe plum",
+      "honey"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://palletcoffeeroasters.com/products/brazil-natalia-brito-fazenda-jaguara-natural",
     "taste": {
       "acidity": 0.25,
-      "sweetness": 0.71,
-      "body": 0.76,
-      "fruitiness": 0.19,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "pallet--top-shelf-seasonal-blend-honduras-brazil",
+    "roasterId": "pallet",
+    "name": "Top Shelf - Seasonal Blend: Honduras + Brazil",
+    "originId": null,
+    "process": "natural",
+    "notes": [
+      "tropical fruit",
+      "herbal spice",
+      "chocolate",
+      "plum"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://palletcoffeeroasters.com/products/top-shelf-seasonal-blend-honduras-brazil",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.7,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "pallet--manifesto-seasonal-espresso-colombia",
+    "roasterId": "pallet",
+    "name": "Manifesto - Seasonal Espresso - Colombia",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "toffee",
+      "candy sweetness",
+      "red stone fruit",
+      "chocolate"
+    ],
+    "priceCents": 2500,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://palletcoffeeroasters.com/products/manifesto-seasonal-espresso-colombia",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.55,
+      "fruitiness": 0.55,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "pallet--colombia-swiss-water-decaf",
+    "roasterId": "pallet",
+    "name": "Colombia - Swiss Water Decaf",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "chocolate",
+      "caramel",
+      "soft fruit"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://palletcoffeeroasters.com/products/peru-swiss-water-decaf",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.35,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "pallet--early-riser-seasonal-blend-ethiopia-colombia-brazil",
+    "roasterId": "pallet",
+    "name": "Early Riser - Seasonal Blend: Ethiopia + Colombia + Brazil",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "nutty",
+      "citrus"
+    ],
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://palletcoffeeroasters.com/products/early-riser",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.3,
       "roast": 0.62
     }
   },
   {
-    "id": "melbourne-laneway--yemen",
-    "roasterId": "melbourne-laneway",
-    "name": "Yemen Natural",
-    "originId": "yemen",
+    "id": "pallet--daily-driver-seasonal-blend-brazil-ethiopia",
+    "roasterId": "pallet",
+    "name": "Daily Driver - Seasonal Blend: Brazil + Ethiopia",
+    "originId": null,
     "process": "natural",
     "notes": [
-      "dried fig",
-      "cardamom",
-      "wine"
+      "nutty",
+      "chocolate"
     ],
-    "priceCents": 2400,
-    "currency": "AUD",
-    "weightGrams": 250,
-    "url": "https://example.com/melbourne-laneway/yemen",
+    "priceCents": 2200,
+    "currency": "CAD",
+    "weightGrams": 340,
+    "url": "https://palletcoffeeroasters.com/products/daily-driver",
     "taste": {
-      "acidity": 0.57,
-      "sweetness": 0.68,
-      "body": 0.71,
-      "fruitiness": 0.79,
-      "roast": 0.31
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.7,
+      "fruitiness": 0.35,
+      "roast": 0.5
     }
   },
   {
-    "id": "melbourne-laneway--house",
-    "roasterId": "melbourne-laneway",
-    "name": "House Espresso",
-    "originId": "brazil",
-    "process": "natural",
+    "id": "pallet--benchmark-seasonal-blend-brazil-colombia",
+    "roasterId": "pallet",
+    "name": "Benchmark - Seasonal Blend: Brazil + Colombia",
+    "originId": null,
+    "process": null,
     "notes": [
-      "dark chocolate",
-      "molasses",
-      "toasted almond"
+      "chocolate",
+      "toffee",
+      "caramelized sugar"
     ],
-    "priceCents": 2000,
-    "currency": "AUD",
+    "priceCents": 2200,
+    "currency": "CAD",
     "weightGrams": 340,
-    "url": "https://example.com/melbourne-laneway/house",
+    "url": "https://palletcoffeeroasters.com/products/benchmark-blend",
     "taste": {
-      "acidity": 0.2,
-      "sweetness": 0.65,
-      "body": 0.85,
-      "fruitiness": 0.15,
-      "roast": 0.72
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.3,
+      "roast": 0.55
     }
   }
 ]

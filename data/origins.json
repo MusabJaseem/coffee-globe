@@ -94,5 +94,41 @@
     "name": "Papua New Guinea",
     "lat": -6.1,
     "lng": 145.3
+  },
+  {
+    "id": "bolivia",
+    "name": "Bolivia",
+    "lat": -15.8,
+    "lng": -67.6
+  },
+  {
+    "id": "ecuador",
+    "name": "Ecuador",
+    "lat": -4.0,
+    "lng": -79.2
+  },
+  {
+    "id": "hawaii",
+    "name": "Hawaii",
+    "lat": 19.6,
+    "lng": -155.9
+  },
+  {
+    "id": "india",
+    "name": "India",
+    "lat": 13.3,
+    "lng": 75.8
+  },
+  {
+    "id": "tanzania",
+    "name": "Tanzania",
+    "lat": -3.4,
+    "lng": 36.7
+  },
+  {
+    "id": "uganda",
+    "name": "Uganda",
+    "lat": 1.1,
+    "lng": 32.3
   }
 ]
