@@ -32,17 +32,16 @@ Started from brainstorming coffee software businesses. Two ideas were shortliste
 Done:
 - Globe, quiz, matching, roaster and origin sheets, list view, thumbs up/down, ships-to filter
 - Scraper, extraction and build pipeline
-- Tests: 9 for the taste model, 15 for the pipeline, all passing
+- Tests: 9 for the taste model, 45 for the pipeline, all passing. GitHub Actions (`.github/workflows/ci.yml`) runs typecheck, both suites and the build on every push.
 
 Verified (Nov 2026):
+- The scraper and `extract.py` against the 9 live stores and the real API; the quiz on the real catalogue lights up roasters and the buy links open roasters' own product pages
 - `npm install`, `npm run build`, typecheck and both test suites pass (Next 15.5, React 19, react-globe.gl 2.38)
 - The globe renders and the quiz works end to end in headless Chromium at phone (iPhone 13) and desktop (1440×900) sizes, with no console errors
 - Globe textures are served from `public/textures/` rather than unpkg
 
 Not yet verified:
 - Tapping a pin on a real phone (pin taps can't be driven reliably in a headless WebGL test)
-- The scraper has only run against a fixture, never a live Shopify store
-- `extract.py` has never called the real API
 - `npm audit` flags PostCSS bundled inside Next 15 (build-time only); the fix is the Next 16 upgrade, so do it deliberately rather than via `npm audit fix --force`
 
 ## Next steps
@@ -62,8 +61,14 @@ Not yet verified:
    - Correction: 49th Parallel's process is in its tags ("Processing Method_Washed Process"), so the three "guessed washed" results in the first spot-check were right. The prompt change still stands.
    - Detour and Subtext keep tasting notes in the product page's meta description, not in `/products.json`. `"pageSummary": true` in `roasters.json` makes `scrape.py` fetch each kept product page (robots.txt checked, 1 req/s) and add that summary. Their coffees went from no notes and confidence 0.2-0.4 to notes and 0.5-0.8.
    - Full run done: 160 extractions, 0 failures, about 334k input and 57k output tokens on Haiku 5.5. `build_data.py` gives 9 roasters and 161 coffees. Tasting packs, sample boxes and espresso tools are now filtered out at scrape time.
-   - Known: some coffees are listed more than once (e.g. Subtext's San Antonio Ozolotepec as espresso, filter and dated lots), so they show up as separate coffees.
+   - Repeat listings: `build_data.py` keeps one coffee per roaster and title-without-roast-date, preferring the undated listing (Subtext's dated San Antonio Ozolotepec lots). Espresso and filter versions stay separate. 159 coffees after this.
    - The real build (9 roasters, 161 coffees) replaced the fictional sample in `data/`.
-4. Scale up to ~100 roasters, then `build_data.py`.
+4. Scale up to ~100 roasters, then `build_data.py`. Tooling ready, blocked on network access:
+   - `python pipeline/add_roasters.py <store urls>` checks robots.txt and the feed, reads `/meta.json`, skips stores that don't ship to Canada, and prints `roasters.json` entries (`--write` appends them). Pins come from `pipeline/cities.json`; it reports unknown cities. It reproduces the 9 current entries.
+   - Each site must be on the `coffee-globe` environment's allowlist first (Settings, at most 20 hosts per in-session request). Neither the sandbox nor web fetches can reach a site before that, so candidates can't be checked in advance.
+   - Candidate list (unverified, from memory): 42 Canadian and 30 US roasters, below. Expect some wrong domains or non-Shopify stores; remove their hosts after the check.
+     - Canada: hatchcrafted.com, propellercoffee.com, hellodemello.com, quietlycoffee.com, matchstickcoffee.com, timbertraincoffeeroasters.com, prototypecoffee.ca, nemesis.coffee, revolvercoffee.ca, elysiancoffee.com, bowsandarrowscoffee.com, fernwoodcoffee.com, mojacoffee.com, transcendcoffee.ca, rossocoffeeroasters.com, fratellocoffee.com, sainthenri.ca, dispatchcoffee.ca, cafemyriade.com, smiletiger.ca, balzacs.com, reunionisland.ca, halecoffee.com, happygoat.ca, laughingwhalecoffee.com, samjamescoffeebar.com, crankhousecoffee.com, muskokaroastery.com, thombargen.com, osonegrocoffee.com, kickinghorsecoffee.com, jjbeancoffee.com, september.coffee, kittel.ca, zabcafe.ca, traffic.coffee, paquebotmtl.com, anchoredcoffee.ca, littlevictories.ca, lunacoffee.ca, ethicacoffee.ca, structurecoffee.ca
+     - US: onyxcoffeelab.com, seycoffee.com, blackwhiteroasters.com, passengercoffee.com, heartroasters.com, proudmarycoffee.com, vervecoffee.com, ritualcoffee.com, coavacoffee.com, littlewolf.coffee, hydrangea.coffee, flowerchild.coffee, partnerscoffee.com, equatorcoffees.com, stumptowncoffee.com, methodicalcoffee.com, madcapcoffee.com, dogwoodcoffee.com, olympiacoffee.com, rubycoffeeroasters.com, sightglasscoffee.com, georgehowellcoffee.com, tandemcoffee.com, ceremonycoffee.com, dunecoffee.com, getprodigal.com, brandywinecoffeeroasters.com, elmcoffeeroasters.com, kumacoffee.com, templecoffee.com
+   - After adding: `scrape.py`, then `extract.py --per-roaster 3` and spot-check (watch for stores that, like Detour and Subtext, need `"pageSummary": true`), then the full `extract.py` and `build_data.py`. Keep the globe under ~200 points.
 5. Before deploying, upgrade Next 15 to 16 and re-test on phone and desktop: `npm audit` flags PostCSS bundled in Next 15 (build-time only), and `npm audit fix --force` would do the major upgrade blind. Then deploy to Vercel and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
 6. Measure quiz completion, buy clicks (`cg.events.v1` in localStorage for now) and return visits, then add real analytics.
