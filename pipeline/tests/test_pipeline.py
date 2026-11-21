@@ -7,6 +7,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import build_data  # noqa: E402
+import add_roasters  # noqa: E402
 import extract  # noqa: E402
 import scrape  # noqa: E402
 
@@ -179,3 +180,38 @@ def test_dedupe_keeps_undated_listing_and_separates_espresso():
         ("r", "Kenya (AA) Washed"),
         ("other", "Kenya (AA) Washed"),
     ]
+
+
+def test_roaster_id_drops_filler_words():
+    assert add_roasters.roaster_id("Pilot Coffee Roasters", "pilotcoffeeroasters.com") == "pilot"
+    assert add_roasters.roaster_id("Phil & Sebastian Coffee Roasters", "philsebastian.com") == "phil-sebastian"
+    assert add_roasters.roaster_id("49th Parallel Coffee Roasters", "49thcoffee.com") == "49th-parallel"
+    assert add_roasters.roaster_id("Coffee Roasters", "www.hatchcrafted.com") == "hatchcrafted"
+
+
+def test_entry_from_meta_uses_city_table_and_nudges_same_city_pins():
+    cities = {"toronto|CA": [43.653, -79.383], "portland|maine|US": [43.661, -70.255], "portland|US": [45.515, -122.679]}
+    meta = {"name": "Example Coffee", "city": "Toronto", "province": "Ontario", "country": "CA",
+            "currency": "CAD", "ships_to_countries": ["CA", "US", "*"]}
+    existing = [{"id": "pilot", "city": "Toronto", "country": "CA", "url": "https://pilotcoffeeroasters.com"}]
+    entry, why = add_roasters.entry_from_meta(meta, "https://www.example.com", cities, existing)
+    assert why == ""
+    assert entry["id"] == "example" and entry["shipsTo"] == ["CA", "US"]
+    assert (entry["lat"], entry["lng"]) == (round(43.653 + add_roasters.NUDGE_DEG, 3), -79.383)
+
+    maine = {**meta, "city": "Portland", "province": "Maine", "country": "US"}
+    assert add_roasters.entry_from_meta(maine, "https://x.com", cities, [])[0]["lng"] == -70.255
+    unknown = {**meta, "city": "Nowhere"}
+    assert add_roasters.entry_from_meta(unknown, "https://x.com", cities, [])[0] is None
+    dup = add_roasters.entry_from_meta(meta, "https://pilotcoffeeroasters.com", cities, existing)
+    assert dup[0] is None and "already" in dup[1]
+
+
+def test_city_table_is_well_formed():
+    cities = json.loads((Path(__file__).resolve().parents[1] / "cities.json").read_text())
+    for key, value in cities.items():
+        if key.startswith("_"):
+            continue
+        assert key == key.lower().replace("|ca", "|CA").replace("|us", "|US"), key
+        lat, lng = value
+        assert -90 <= lat <= 90 and -180 <= lng <= 180
