@@ -1,9 +1,7 @@
 name: CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
+# Every push, on any branch. Pull requests from branches in this repo get these checks too.
+on: push
 
 permissions:
   contents: read
