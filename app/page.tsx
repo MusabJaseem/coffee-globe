@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import CoffeeRow from "@/components/CoffeeRow";
 import GlobeView from "@/components/GlobeView";
 import Quiz from "@/components/Quiz";
-import { COUNTRIES, coffees, isSampleData, originById, origins, roasterById, roasters, shipsTo } from "@/lib/data";
+import { COUNTRIES, DEFAULT_COUNTRY, coffees, countryName, isSampleData, originById, origins, roasterById, roasters, shipsTo } from "@/lib/data";
 import { applyFeedback, bestScoreByRoaster, diversify, profileFromAnswers, rankCoffees, type RankedCoffee } from "@/lib/taste";
 import type { Coffee, UserProfile } from "@/lib/types";
 
@@ -37,7 +37,7 @@ function track(event: string, data: Record<string, unknown> = {}) {
 type Panel = "home" | "roaster" | "origin" | "list";
 
 export default function Home() {
-  const [country, setCountry] = useState("CA");
+  const [country, setCountry] = useState(DEFAULT_COUNTRY);
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [quizOpen, setQuizOpen] = useState(false);
   const [panel, setPanel] = useState<Panel>("home");
@@ -47,7 +47,9 @@ export default function Home() {
 
   useEffect(() => {
     setProfile(load<UserProfile>(PROFILE_KEY));
-    setCountry(load<string>(COUNTRY_KEY) ?? "CA");
+    // A saved country no roaster ships to any more falls back to the default.
+    const saved = load<string>(COUNTRY_KEY);
+    setCountry(saved && COUNTRIES.some((c) => c.code === saved) ? saved : DEFAULT_COUNTRY);
     track("open");
   }, []);
 
@@ -196,7 +198,7 @@ export default function Home() {
         <header className="sheet-head">
           <div>
             <h2>Your top matches</h2>
-            <p className="sheet-sub">From roasters that ship to {COUNTRIES.find((c) => c.code === country)?.name}.</p>
+            <p className="sheet-sub">From roasters that ship to {countryName(country)}.</p>
           </div>
           <button className="text-btn" onClick={goHome}>
             Back to globe
@@ -246,11 +248,20 @@ export default function Home() {
         <label className="ship">
           <span>Ships to</span>
           <select value={country} onChange={(e) => changeCountry(e.target.value)}>
-            {COUNTRIES.map((c) => (
-              <option key={c.code} value={c.code}>
-                {c.name}
-              </option>
-            ))}
+            <optgroup label="Main markets">
+              {COUNTRIES.filter((c) => c.featured).map((c) => (
+                <option key={c.code} value={c.code}>
+                  {c.name} ({c.roasterCount})
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="All countries">
+              {COUNTRIES.filter((c) => !c.featured).map((c) => (
+                <option key={c.code} value={c.code}>
+                  {c.name} ({c.roasterCount})
+                </option>
+              ))}
+            </optgroup>
           </select>
         </label>
         {isSampleData && (

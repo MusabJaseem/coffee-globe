@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, THEME_COLOR } from "@/lib/site";
 import "./globals.css";
 
 // Fonts ship in @fontsource packages rather than next/font/google, so builds don't
@@ -24,14 +25,21 @@ const body = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Coffee Globe",
-  description: "A globe of specialty roasters that ship to you, lit up by how well their coffee matches your taste.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  alternates: { canonical: "/" },
+  // The share image comes from app/opengraph-image.tsx; Next adds it to both cards.
+  openGraph: { type: "website", siteName: SITE_NAME, title: SITE_NAME, description: SITE_DESCRIPTION, url: "/", locale: "en_CA" },
+  twitter: { card: "summary_large_image", title: SITE_NAME, description: SITE_DESCRIPTION },
+  appleWebApp: { title: SITE_NAME, statusBarStyle: "black-translucent" },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1B130E",
+  themeColor: THEME_COLOR,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
