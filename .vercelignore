@@ -1,0 +1,7 @@
+# Not part of the deployed site: the data pipeline (Python), tests and local files.
+# The site reads the finished JSON in data/.
+pipeline/
+tests/
+.venv/
+.github/
+*.md
