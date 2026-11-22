@@ -128,8 +128,8 @@ export default function GlobeView(props: Props) {
           width={size.w}
           height={size.h}
           backgroundColor="rgba(0,0,0,0)"
-          globeImageUrl="/textures/earth-blue-marble.jpg"
-          bumpImageUrl="/textures/earth-topology.png"
+          globeImageUrl="/textures/earth-blue-marble.webp"
+          bumpImageUrl="/textures/earth-topology.webp"
           atmosphereColor="#E9B98A"
           atmosphereAltitude={0.16}
           onGlobeReady={() => setReady(true)}
