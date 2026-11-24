@@ -46,7 +46,7 @@ NOT_A_SINGLE_COFFEE = re.compile(
     r"cupping|class|course|workshop|tasting with|event|ticket|refractometer|"
     r"test|wholesale only|with your logo|appointment|payment method|shipping carrier|archived|"
     # Several coffees, or a different one each order: no single taste profile fits.
-    r"packs?|club|calendar|surprise|we choose|shuffle|roaster'?s pick)\b"
+    r"packs?|club|calendar|surprise|we choose|shuffle|roaster'?s (pick|choice)|kits?|sets?)\b"
     r"|chocolate( bar| -)| — by ",
     re.IGNORECASE,
 )
@@ -66,6 +66,8 @@ OZ_TO_G = 28.3495
 
 
 def strip_html(raw: str | None) -> str:
+    # Drop <style> and <script> blocks first: their contents are code, not description.
+    raw = re.sub(r"<(style|script)\b[^>]*>.*?</\1\s*>", " ", raw or "", flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r"<(br|/p|/li|/h\d)[^>]*>", "\n", raw or "", flags=re.IGNORECASE)
     text = re.sub(r"<[^>]+>", " ", text)
     text = html.unescape(text)

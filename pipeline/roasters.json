@@ -11,7 +11,8 @@
     "shipsTo": [
       "CA",
       "US"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "subtext",
@@ -720,7 +721,8 @@
       "XK",
       "YT",
       "ZA"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "49th-parallel",
@@ -944,7 +946,8 @@
     "shipsTo": [
       "CA",
       "US"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "propeller",
@@ -1235,7 +1238,8 @@
     "currency": "CAD",
     "shipsTo": [
       "CA"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "hale",
@@ -1276,7 +1280,8 @@
     "shipsTo": [
       "CA",
       "US"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "muskoka",
@@ -1290,7 +1295,8 @@
     "shipsTo": [
       "CA",
       "US"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "thom-bargen",
@@ -2743,7 +2749,8 @@
       "GB",
       "JP",
       "US"
-    ]
+    ],
+    "pageSummary": true
   },
   {
     "id": "madcap",

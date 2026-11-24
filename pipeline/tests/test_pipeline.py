@@ -66,9 +66,18 @@ NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.
     ("Roaster's Pick", "Coffee/Africa,Gifts", NOTES, False),
     ("Kerehaklu Peaberry - Washed Process - 2026", "Coffee", NOTES, True),
     ("Hair Bender", "Coffee/Blends", NOTES, True),
+    ("Christmas in December / Tasting Kit", "Coffee", NOTES, False),
+    ("The Single Origin Set", "Coffee", NOTES, False),
+    ("Roaster's Choice Filter", "Coffee", NOTES, False),
+    ("Sunset Blend", "Coffee", NOTES, True),
 ])
 def test_looks_like_coffee(title, ptype, body, expected):
     assert scrape.looks_like_coffee({"title": title, "product_type": ptype, "body_html": body, "tags": []}) is expected
+
+
+def test_strip_html_drops_style_and_script_blocks():
+    raw = "<style>.a { color: red; }</style><p>Green apple, maple syrup.</p><script>var x = 1;</script>"
+    assert scrape.strip_html(raw) == "Green apple, maple syrup."
 
 
 @pytest.mark.parametrize("tags,expected", [
