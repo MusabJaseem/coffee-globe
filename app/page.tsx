@@ -6,6 +6,7 @@ import GlobeView from "@/components/GlobeView";
 import Quiz from "@/components/Quiz";
 import { COUNTRIES, DEFAULT_COUNTRY, coffees, countryName, isSampleData, originById, origins, roasterById, roasters, shipsTo } from "@/lib/data";
 import { applyFeedback, bestScoreByRoaster, diversify, profileFromAnswers, rankCoffees, type RankedCoffee } from "@/lib/taste";
+import { FEEDBACK_URL } from "@/lib/site";
 import type { Coffee, UserProfile } from "@/lib/types";
 
 const PROFILE_KEY = "cg.profile.v1";
@@ -34,7 +35,7 @@ function track(event: string, data: Record<string, unknown> = {}) {
   save(EVENTS_KEY, log.slice(-500));
 }
 
-type Panel = "home" | "roaster" | "origin" | "list";
+type Panel = "home" | "roaster" | "origin" | "list" | "about";
 
 export default function Home() {
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
@@ -116,6 +117,25 @@ export default function Home() {
     setOriginId(null);
   }
 
+  function openAbout() {
+    setPanel("about");
+    setRoasterId(null);
+    setOriginId(null);
+    track("about_open");
+  }
+
+  const footer = (
+    <p className="sheet-foot">
+      <button className="link-btn" onClick={openAbout}>
+        About
+      </button>
+      <span aria-hidden="true">·</span>
+      <a href={FEEDBACK_URL} target="_blank" rel="noopener" onClick={() => track("feedback_click")}>
+        Send feedback
+      </a>
+    </p>
+  );
+
   function changeCountry(code: string) {
     setCountry(code);
     save(COUNTRY_KEY, code);
@@ -192,6 +212,45 @@ export default function Home() {
         )}
       </>
     );
+  } else if (panel === "about") {
+    sheet = (
+      <>
+        <header className="sheet-head">
+          <div>
+            <h2>About Coffee Globe</h2>
+            <p className="sheet-sub">A map of specialty roasters that ship to you, lit up by how well their coffee suits your taste.</p>
+          </div>
+          <button className="text-btn" onClick={goHome}>
+            Close
+          </button>
+        </header>
+        <div className="about">
+          <h3>How matching works</h3>
+          <p>
+            An AI model reads each roaster’s own description and tasting notes and scores every coffee on five things:
+            acidity, sweetness, body, fruitiness and roast. Your quiz answers put you on the same scale, and the match
+            percentage is how close the two are. Treat it as a well-informed guess, not a promise: listings vary, and
+            roasters don’t review these scores. Thumbs up and down nudge your profile.
+          </p>
+          <h3>Independent</h3>
+          <p>
+            Coffee Globe isn’t affiliated with or paid by any roaster. “Buy from roaster” goes straight to the
+            roaster’s own shop; the link carries a tag so they can see the visit came from here. Prices and stock come
+            from roasters’ sites and can be out of date, so check the shop before you buy.
+          </p>
+          <h3>Your data</h3>
+          <p>
+            Your taste profile, your country and a log of what you tap stay in this browser. There are no accounts, and
+            nothing is sent to us.
+          </p>
+          <h3>Feedback</h3>
+          <p>
+            A match that’s way off, a roaster we should add, or something broken? Roasters: want your listing changed
+            or removed? <a href={FEEDBACK_URL} target="_blank" rel="noopener" onClick={() => track("feedback_click")}>Send feedback</a>.
+          </p>
+        </div>
+      </>
+    );
   } else if (panel === "list" && ranked) {
     sheet = (
       <>
@@ -223,10 +282,16 @@ export default function Home() {
         <button className="primary" onClick={() => setPanel("list")}>
           See all your matches
         </button>
+        {footer}
       </>
     );
   } else {
-    sheet = <QuizPrompt onStart={() => setQuizOpen(true)} roasterCount={visibleRoasters.length} />;
+    sheet = (
+      <>
+        <QuizPrompt onStart={() => setQuizOpen(true)} roasterCount={visibleRoasters.length} />
+        {footer}
+      </>
+    );
   }
 
   return (

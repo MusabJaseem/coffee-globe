@@ -1,0 +1,18 @@
+name: A match seems wrong
+description: A coffee's match, tasting notes or origin don't fit what it actually tastes like.
+labels: [data]
+body:
+  - type: input
+    id: coffee
+    attributes:
+      label: Which coffee?
+      description: Name and roaster, or paste the roaster's link.
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's off?
+      description: E.g. "listed as fruity but it's a dark chocolatey roast", or the origin is wrong.
+    validations:
+      required: true

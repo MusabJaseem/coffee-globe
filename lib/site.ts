@@ -16,3 +16,11 @@ export const SITE_NAME = "Coffee Globe";
 export const SITE_DESCRIPTION =
   "A globe of specialty roasters that ship to you, lit up by how well their coffee matches your taste.";
 export const THEME_COLOR = "#1B130E";
+
+/**
+ * Where "Send feedback" goes. GitHub issue forms on the public repo for now (wrong match,
+ * suggest a roaster, roaster requests). Set NEXT_PUBLIC_FEEDBACK_URL to use a form service
+ * instead, e.g. if people without a GitHub account need a way in.
+ */
+export const FEEDBACK_URL =
+  process.env.NEXT_PUBLIC_FEEDBACK_URL || "https://github.com/MusabJaseem/coffee-globe/issues/new/choose";
