@@ -39,7 +39,7 @@
   "lat": 36.7,
   "lng": 103.4,
   "size": 2.6,
-  "origin": false
+  "origin": true
  },
  {
   "name": "India",

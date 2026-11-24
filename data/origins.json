@@ -130,5 +130,17 @@
     "name": "Uganda",
     "lat": 1.1,
     "lng": 32.3
+  },
+  {
+    "id": "china",
+    "name": "China",
+    "lat": 22.8,
+    "lng": 100.9
+  },
+  {
+    "id": "nicaragua",
+    "name": "Nicaragua",
+    "lat": 13.1,
+    "lng": -85.9
   }
 ]
