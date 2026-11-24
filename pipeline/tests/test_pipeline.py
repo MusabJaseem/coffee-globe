@@ -187,20 +187,29 @@ def test_roaster_id_drops_filler_words():
     assert add_roasters.roaster_id("Phil & Sebastian Coffee Roasters", "philsebastian.com") == "phil-sebastian"
     assert add_roasters.roaster_id("49th Parallel Coffee Roasters", "49thcoffee.com") == "49th-parallel"
     assert add_roasters.roaster_id("Coffee Roasters", "www.hatchcrafted.com") == "hatchcrafted"
+    assert add_roasters.roaster_id("Balzac's Coffee Roasters", "balzacs.com") == "balzacs"
+
+
+def test_clean_city_fixes_caps_and_known_typos():
+    assert add_roasters.clean_city(" TORONTO ") == "Toronto"
+    assert add_roasters.clean_city("MIinneapolis") == "Minneapolis"
+    assert add_roasters.clean_city("Montréal") == "Montréal"
 
 
 def test_entry_from_meta_uses_city_table_and_nudges_same_city_pins():
     cities = {"toronto|CA": [43.653, -79.383], "portland|maine|US": [43.661, -70.255], "portland|US": [45.515, -122.679]}
     meta = {"name": "Example Coffee", "city": "Toronto", "province": "Ontario", "country": "CA",
             "currency": "CAD", "ships_to_countries": ["CA", "US", "*"]}
-    existing = [{"id": "pilot", "city": "Toronto", "country": "CA", "url": "https://pilotcoffeeroasters.com"}]
+    existing = [{"id": "pilot", "city": "Toronto", "country": "CA", "lat": 43.653, "lng": -79.383, "url": "https://pilotcoffeeroasters.com"}]
     entry, why = add_roasters.entry_from_meta(meta, "https://www.example.com", cities, existing)
     assert why == ""
     assert entry["id"] == "example" and entry["shipsTo"] == ["CA", "US"]
     assert (entry["lat"], entry["lng"]) == (round(43.653 + add_roasters.NUDGE_DEG, 3), -79.383)
 
     maine = {**meta, "city": "Portland", "province": "Maine", "country": "US"}
-    assert add_roasters.entry_from_meta(maine, "https://x.com", cities, [])[0]["lng"] == -70.255
+    oregon_pin = [{"id": "heart", "city": "Portland", "country": "US", "lat": 45.515, "lng": -122.679, "url": "https://heartroasters.com"}]
+    entry_me = add_roasters.entry_from_meta(maine, "https://x.com", cities, oregon_pin)[0]
+    assert (entry_me["lat"], entry_me["lng"]) == (43.661, -70.255)  # not nudged by the Oregon pin
     unknown = {**meta, "city": "Nowhere"}
     assert add_roasters.entry_from_meta(unknown, "https://x.com", cities, [])[0] is None
     dup = add_roasters.entry_from_meta(meta, "https://pilotcoffeeroasters.com", cities, existing)
