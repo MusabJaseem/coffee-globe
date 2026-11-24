@@ -73,7 +73,7 @@ Not yet verified:
    - Next: more roasters (the allowlist cap is the constraint) and a weekly refresh, since stock changes fast.
 5. ~~Upgrade Next 15 to 16.~~ Done (16.4.5): audit clean, and the quiz flow re-tested in headless Chromium at phone and desktop sizes with no errors. Next 16 rewrote `tsconfig.json` (`jsx: react-jsx`) and `next-env.d.ts` on first build. Still worth tapping pins on a real phone before launch. Then deploy to Vercel (checklist below) and launch on r/Coffee and r/espresso, plus a short video of the globe lighting up.
 6. Measure quiz completion, buy clicks (`cg.events.v1` in localStorage for now) and return visits, then add real analytics.
-   - When analytics goes in, update the About panel's "Your data" paragraph in `app/page.tsx` (it says nothing is sent to us). Same for the "Independent" paragraph once affiliate links start.
+   - Vercel Web Analytics is wired in (`<Analytics />` in `app/layout.tsx`); enable it in the Vercel project's Analytics tab. Page views work on the free plan. `track()` in `app/page.tsx` also sends `quiz_complete`, `buy_click` (coffee, roaster, score) and `feedback_click`; custom events may need a paid Vercel plan. Quiz answers are never sent. The About panel's "Your data" paragraph says this; update it if what's sent changes, and update "Independent" once affiliate links start.
    - Feedback goes to GitHub issue forms (`.github/ISSUE_TEMPLATE/`): wrong match, suggest a roaster, roaster requests (fix or remove a listing). Reporters need a GitHub account; set `NEXT_PUBLIC_FEEDBACK_URL` to switch to a form service.
 
 ## Deploying to Vercel

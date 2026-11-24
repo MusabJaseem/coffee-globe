@@ -6,6 +6,7 @@ import GlobeView from "@/components/GlobeView";
 import Quiz from "@/components/Quiz";
 import { COUNTRIES, DEFAULT_COUNTRY, coffees, countryName, isSampleData, originById, origins, roasterById, roasters, shipsTo } from "@/lib/data";
 import { applyFeedback, bestScoreByRoaster, diversify, profileFromAnswers, rankCoffees, type RankedCoffee } from "@/lib/taste";
+import { track as sendEvent } from "@vercel/analytics";
 import { FEEDBACK_URL } from "@/lib/site";
 import type { Coffee, UserProfile } from "@/lib/types";
 
@@ -28,11 +29,25 @@ function save(key: string, value: unknown) {
     /* storage unavailable: the session still works, it just won't be remembered */
   }
 }
-/** Minimal event log until real analytics exist. Read it with localStorage in devtools. */
+/**
+ * Local event log (read it with localStorage in devtools), plus the success signals sent
+ * anonymously to Vercel Web Analytics. Quiz answers and taste profiles are never sent.
+ */
+const SENT_EVENTS = new Set(["quiz_complete", "buy_click", "feedback_click"]);
 function track(event: string, data: Record<string, unknown> = {}) {
   const log = load<unknown[]>(EVENTS_KEY) ?? [];
   log.push({ event, at: new Date().toISOString(), ...data });
   save(EVENTS_KEY, log.slice(-500));
+  if (SENT_EVENTS.has(event)) {
+    // Only plain ids and numbers; drops anything else (e.g. quiz answers).
+    const props: Record<string, string | number> = {};
+    for (const [k, v] of Object.entries(data)) if (typeof v === "string" || typeof v === "number") props[k] = v;
+    try {
+      sendEvent(event, props);
+    } catch {
+      /* analytics is best-effort */
+    }
+  }
 }
 
 type Panel = "home" | "roaster" | "origin" | "list" | "about";
@@ -240,8 +255,9 @@ export default function Home() {
           </p>
           <h3>Your data</h3>
           <p>
-            Your taste profile, your country and a log of what you tap stay in this browser. There are no accounts, and
-            nothing is sent to us.
+            Your taste profile, quiz answers and country stay in this browser; there are no accounts. We count visits
+            and a few anonymous events (quiz finished, which coffee’s buy link was tapped) with Vercel Web Analytics,
+            which uses no cookies and doesn’t identify you.
           </p>
           <h3>Feedback</h3>
           <p>
