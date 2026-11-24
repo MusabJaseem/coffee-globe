@@ -53,9 +53,43 @@ NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.
     ("This is a Test (Roast)", "Coffee", NOTES, False),
     ("Kenya - Maganjo | Washed - Archived", "Coffee", NOTES, False),
     ("Finca Deborah Enigma", "", "", False),                   # nothing for extraction to read
+    ("15e anniversaire, Norman Canales", "Café", NOTES, True),  # French type
+    ("2026 Banko Gotiti", "Coffees", NOTES, True),              # plural type
+    ("Coffee Mug", "Coffee", NOTES, False),                      # title still checked when typed
+    ("La Marzocco Linea PB - 2 Group", "Espresso Machine", NOTES, False),
+    ("Fellow - Aiden Precision Coffee Maker (120V)", "Drip Coffee Makers", NOTES, False),
+    ("MHW-3BOMBER - Stirring Stick | 22mm Walnut", "Espresso", NOTES, False),
+    ("DAK *Steeped Ready To Brew 6 Packs*", "Whole Bean", NOTES, False),
+    ("Transcend Discovery Starter Pack", "Coffee", NOTES, False),
+    ("Roaster's Club", "Coffee", NOTES, False),
+    ("Roaster's Surprise: We choose your coffee!", "Coffee", NOTES, False),
+    ("Roaster's Pick", "Coffee/Africa,Gifts", NOTES, False),
+    ("Kerehaklu Peaberry - Washed Process - 2026", "Coffee", NOTES, True),
+    ("Hair Bender", "Coffee/Blends", NOTES, True),
 ])
 def test_looks_like_coffee(title, ptype, body, expected):
     assert scrape.looks_like_coffee({"title": title, "product_type": ptype, "body_html": body, "tags": []}) is expected
+
+
+@pytest.mark.parametrize("tags,expected", [
+    (["__with:hario-v60-02-ceramic-coffee-dripper", "Single Origin"], True),  # paired gear in tags
+    (["Reserve Lot", "Reserve Subscription"], True),                          # offer in tags
+])
+def test_tags_dont_reject_typed_coffee(tags, expected):
+    p = {"title": "Honduras Job Neel Caceres", "product_type": "Beans", "body_html": NOTES, "tags": tags}
+    assert scrape.looks_like_coffee(p) is expected
+
+
+def test_untyped_products_still_checked_against_tags():
+    p = {"title": "Kettle Bundle Deal", "product_type": "", "body_html": NOTES, "tags": ["equipment"]}
+    assert scrape.looks_like_coffee(p) is False
+
+
+def test_store_coffee_types():
+    p = {"title": "Luis Anibal - Pink Bourbon Washed", "product_type": "Retail SO", "body_html": NOTES, "tags": []}
+    assert scrape.looks_like_coffee(p) is False
+    assert scrape.looks_like_coffee(p, ["Retail SO", "Retail YR"]) is True
+    assert scrape.looks_like_coffee({**p, "product_type": "Wholesale SO"}, ["Retail SO", "Retail YR"]) is False
 
 
 def test_normalise_picks_smallest_bag_and_cleans_html():

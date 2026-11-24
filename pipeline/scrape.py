@@ -34,7 +34,8 @@ USER_AGENT = "CoffeeGlobeBot/0.1 (catalogue indexer; one request per second)"
 NON_COFFEE = re.compile(
     r"\b(mug|cup|tumbler|grinder|kettle|dripper|filter papers?|scale|gift ?card|"
     r"t-?shirt|hoodie|tote|hat|merch|subscription|sample ?pack|capsules?|pods?|"
-    r"cold brew can|instant|equipment|brewer|aeropress|chemex|v60|loose leaf|matcha|tools?|dosing ring|wdt)\b",
+    r"cold brew can|instant|equipment|brewer|aeropress|chemex|v60|loose leaf|matcha|tools?|dosing ring|wdt|"
+    r"server|pour splitter|stirring stick|coffee maker|espresso machine|steeped|ready to brew|drip bags?)\b",
     re.IGNORECASE,
 )
 # Titles that aren't a single bag of beans: multi-coffee sets (one taste profile can't
@@ -43,16 +44,18 @@ NOT_A_SINGLE_COFFEE = re.compile(
     r"\b(gift (set|box|class)|stocking stuffer|advent|bundle|duo|trio|sampler|tasting (set|pack)|sample box|"
     r"favourites pack|holiday .*\bset|candle|sticker|canister|cold brew|nitro|cascara|"
     r"cupping|class|course|workshop|tasting with|event|ticket|refractometer|"
-    r"test|wholesale only|with your logo|appointment|payment method|shipping carrier|archived)\b"
+    r"test|wholesale only|with your logo|appointment|payment method|shipping carrier|archived|"
+    # Several coffees, or a different one each order: no single taste profile fits.
+    r"packs?|club|calendar|surprise|we choose|shuffle|roaster'?s pick)\b"
     r"|chocolate( bar| -)| — by ",
     re.IGNORECASE,
 )
 # When a store sets product_type, trust it: coffee types pass, anything else (tea, books,
 # water, classes, bundles...) doesn't, however much its description talks about coffee.
-COFFEE_TYPE = re.compile(r"\b(coffee|espresso|filter|decaf|whole bean|beans?|soe|sof|single origin|blend)\b", re.IGNORECASE)
+COFFEE_TYPE = re.compile(r"\b(coffees?|caf[eé]s?|espresso|filter|decaf|whole bean|beans?|soe|sof|single origin|blends?)\b", re.IGNORECASE)
 NON_COFFEE_TYPE = re.compile(
     r"\b(tea|matcha|bundle|cold brew|instant|capsules?|subscription|gift|brewers?|tools|"
-    r"storage|merch(andise)?|equipment|accessor(y|ies))\b",
+    r"storage|merch(andise)?|equipment|accessor(y|ies)|machines?|makers?)\b",
     re.IGNORECASE,
 )
 COFFEE_HINT = re.compile(r"\b(coffee|espresso|beans?|single origin|blend|roast)\b", re.IGNORECASE)
@@ -87,20 +90,30 @@ def parse_grams(text: str | None) -> int | None:
     return round(n * 453.592)
 
 
-def looks_like_coffee(product: dict) -> bool:
+def looks_like_coffee(product: dict, coffee_types: list[str] | None = None) -> bool:
+    """coffee_types: a store's own product types for coffee (roasters.json "coffeeTypes"),
+    for stores that use codes like "Retail SO" instead of a word the regexes know."""
     tags = product.get("tags") or []
     if isinstance(tags, str):
         tags = [t.strip() for t in tags.split(",")]
     title = product.get("title", "")
     ptype = (product.get("product_type") or "").strip()
-    haystack = " ".join([title, ptype, " ".join(tags)])
-    if NON_COFFEE.search(haystack) or NOT_A_SINGLE_COFFEE.search(title):
+    if NOT_A_SINGLE_COFFEE.search(title):
         return False
     body = strip_html(product.get("body_html"))
     if len(body) < MIN_DESCRIPTION_CHARS:
         return False
     if ptype:
+        # Trust the store's type, and check only the title for non-coffee words: tags often
+        # name related products ("__with:hario-v60") or offers ("Reserve Subscription").
+        if NON_COFFEE.search(f"{title} {ptype}") and not (coffee_types and ptype in coffee_types):
+            return False
+        if coffee_types and ptype in coffee_types:
+            return True
         return bool(COFFEE_TYPE.search(ptype)) and not NON_COFFEE_TYPE.search(ptype)
+    haystack = " ".join([title, " ".join(tags)])
+    if NON_COFFEE.search(haystack):
+        return False
     if COFFEE_HINT.search(haystack):
         return True
     # Untyped products: fall back to the description mentioning tasting notes or origin.
@@ -208,7 +221,7 @@ def scrape_roaster(roaster: dict, session: requests.Session, delay: float) -> li
         print(f"  skip {roaster['id']}: robots.txt disallows /products.json", file=sys.stderr)
         return []
     raw = fetch_products(base, session, delay)
-    kept = [n for p in raw if looks_like_coffee(p) and (n := normalise(p, base))]
+    kept = [n for p in raw if looks_like_coffee(p, roaster.get("coffeeTypes")) and (n := normalise(p, base))]
     print(f"  {roaster['id']}: {len(raw)} products, {len(kept)} coffees in stock")
     if roaster.get("pageSummary"):
         kept = add_page_summaries(kept, robots, session, delay)
