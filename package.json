@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "tsx --test tests/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:countries": "tsx scripts/build-countries.ts"
   },
   "dependencies": {
     "@fontsource/bricolage-grotesque": "^5.3.0",
@@ -20,12 +21,17 @@
     "three": ">=0.160.0 <1"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
     "@types/node": "^22.0.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@types/three": ">=0.160.0 <1",
+    "@types/topojson-client": "^3.1.5",
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "world-atlas": "^2.0.2"
   },
   "engines": {
     "node": ">=20.9.0"

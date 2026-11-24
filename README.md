@@ -38,3 +38,5 @@ Every coffee and every user is a point on five axes: acidity, sweetness, body, f
 Click-throughs, quiz completions and ratings are logged to `localStorage` under `cg.events.v1` until real analytics are added.
 
 See `CLAUDE.md` for scope and project rules, and `NOTES.md` for background, decisions and next steps.
+
+Country labels and outlines come from [Natural Earth](https://www.naturalearthdata.com/) (public domain), via the `world-atlas` package. Regenerate them with `npm run build:countries`.
