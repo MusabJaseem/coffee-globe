@@ -46,6 +46,36 @@ button, select { font: inherit; color: inherit; }
 @media (min-width: 1024px) {
   .globe-wrap { right: 444px; }
 }
+/* Country names on the globe (GlobeView). Never block taps on pins. */
+.country-label {
+  color: rgba(255, 246, 232, 0.78);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.25s;
+}
+/* Which country is under the centre of the view; updated from GlobeView without re-rendering. */
+.looking-at {
+  position: absolute;
+  left: 50%;
+  /* Under the top bar: at the bottom it would sit on the phone's bottom sheet. */
+  top: calc(max(14px, env(safe-area-inset-top)) + 50px);
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 0;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(27, 19, 14, 0.72);
+  color: var(--husk);
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.looking-at span { color: var(--steam); font-weight: 600; }
 .globe-loading {
   display: grid;
   place-items: center;
