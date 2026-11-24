@@ -34,13 +34,23 @@ NUDGE_DEG = 0.009  # about 1 km of latitude
 FILLER = re.compile(r"\b(the|coffee|roasters?|roastery|roasting|roast|co|company|cafe|café|inc|ltd)\b", re.IGNORECASE)
 
 
+# Misspellings seen in stores' meta.json, mapped to the real city name.
+CITY_FIXES = {"miinneapolis": "Minneapolis"}
+
+
+def clean_city(city: str) -> str:
+    city = city.strip()
+    city = CITY_FIXES.get(city.lower(), city)
+    return city.title() if city.isupper() else city
+
+
 def slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
 def roaster_id(name: str, host: str) -> str:
     """Short id from the store name, falling back to the domain if nothing is left."""
-    rid = slug(FILLER.sub(" ", name.replace("&", " ")))
+    rid = slug(FILLER.sub(" ", name.replace("&", " ").replace("'", "").replace("’", "")))
     return rid or slug(host.removeprefix("www.").split(".")[0])
 
 
@@ -56,18 +66,20 @@ def city_coords(cities: dict, city: str, province: str, country: str) -> tuple[f
 def entry_from_meta(meta: dict, base_url: str, cities: dict, existing: list[dict]) -> tuple[dict | None, str]:
     """A roasters.json entry from a store's meta.json, or None and the reason it was skipped."""
     host = urlparse(base_url).netloc
-    city, country = (meta.get("city") or "").strip(), (meta.get("country") or "").strip()
+    city, country = clean_city(meta.get("city") or ""), (meta.get("country") or "").strip()
     coords = city_coords(cities, city, meta.get("province") or "", country)
     if not coords:
         return None, f"city '{city}, {meta.get('province')}, {country}' not in cities.json"
     rid = roaster_id(meta.get("name") or "", host)
     if any(r["id"] == rid or urlparse(r["url"]).netloc == host for r in existing):
         return None, f"already in roasters.json as '{rid}'"
-    same_city = sum(1 for r in existing if r.get("city", "").lower() == city.lower() and r.get("country") == country)
     lat, lng = coords
+    # Nudge by the number of pins already at this spot (not by city name: Portland, Oregon
+    # and Portland, Maine share one).
+    same_city = sum(1 for r in existing if abs(r.get("lat", 0) - lat) < 0.1 and abs(r.get("lng", 0) - lng) < 0.1)
     return {
         "id": rid,
-        "name": meta.get("name") or rid,
+        "name": (meta.get("name") or "").strip() or rid,
         "city": city,
         "country": country,
         "lat": round(lat + NUDGE_DEG * same_city, 3),

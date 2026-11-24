@@ -1,0 +1,24 @@
+name: I'm a roaster
+description: Change or remove your listing, or tell us about something we got wrong.
+labels: [roaster]
+body:
+  - type: input
+    id: roaster
+    attributes:
+      label: Roaster name and website
+    validations:
+      required: true
+  - type: dropdown
+    id: request
+    attributes:
+      label: What would you like?
+      options:
+        - Fix something in our listing
+        - Remove us from Coffee Globe
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details

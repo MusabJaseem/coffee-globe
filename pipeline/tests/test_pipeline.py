@@ -53,9 +53,52 @@ NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.
     ("This is a Test (Roast)", "Coffee", NOTES, False),
     ("Kenya - Maganjo | Washed - Archived", "Coffee", NOTES, False),
     ("Finca Deborah Enigma", "", "", False),                   # nothing for extraction to read
+    ("15e anniversaire, Norman Canales", "Café", NOTES, True),  # French type
+    ("2026 Banko Gotiti", "Coffees", NOTES, True),              # plural type
+    ("Coffee Mug", "Coffee", NOTES, False),                      # title still checked when typed
+    ("La Marzocco Linea PB - 2 Group", "Espresso Machine", NOTES, False),
+    ("Fellow - Aiden Precision Coffee Maker (120V)", "Drip Coffee Makers", NOTES, False),
+    ("MHW-3BOMBER - Stirring Stick | 22mm Walnut", "Espresso", NOTES, False),
+    ("DAK *Steeped Ready To Brew 6 Packs*", "Whole Bean", NOTES, False),
+    ("Transcend Discovery Starter Pack", "Coffee", NOTES, False),
+    ("Roaster's Club", "Coffee", NOTES, False),
+    ("Roaster's Surprise: We choose your coffee!", "Coffee", NOTES, False),
+    ("Roaster's Pick", "Coffee/Africa,Gifts", NOTES, False),
+    ("Kerehaklu Peaberry - Washed Process - 2026", "Coffee", NOTES, True),
+    ("Hair Bender", "Coffee/Blends", NOTES, True),
+    ("Christmas in December / Tasting Kit", "Coffee", NOTES, False),
+    ("The Single Origin Set", "Coffee", NOTES, False),
+    ("Roaster's Choice Filter", "Coffee", NOTES, False),
+    ("Sunset Blend", "Coffee", NOTES, True),
 ])
 def test_looks_like_coffee(title, ptype, body, expected):
     assert scrape.looks_like_coffee({"title": title, "product_type": ptype, "body_html": body, "tags": []}) is expected
+
+
+def test_strip_html_drops_style_and_script_blocks():
+    raw = "<style>.a { color: red; }</style><p>Green apple, maple syrup.</p><script>var x = 1;</script>"
+    assert scrape.strip_html(raw) == "Green apple, maple syrup."
+
+
+@pytest.mark.parametrize("tags,expected", [
+    (["__with:hario-v60-02-ceramic-coffee-dripper", "Single Origin"], True),  # paired gear in tags
+    (["Reserve Lot", "Reserve Subscription"], True),                          # offer in tags
+])
+def test_tags_dont_reject_typed_coffee(tags, expected):
+    p = {"title": "Honduras Job Neel Caceres", "product_type": "Beans", "body_html": NOTES, "tags": tags}
+    assert scrape.looks_like_coffee(p) is expected
+
+
+def test_untyped_products_still_checked_against_tags():
+    p = {"title": "Kettle Bundle Deal", "product_type": "", "body_html": NOTES, "tags": ["equipment"]}
+    assert scrape.looks_like_coffee(p) is False
+
+
+def test_store_coffee_types():
+    p = {"title": "Luis Anibal - Pink Bourbon Washed", "product_type": "Retail SO", "body_html": NOTES, "tags": []}
+    assert scrape.looks_like_coffee(p) is False
+    assert scrape.looks_like_coffee(p, ["Retail SO", "Retail YR"]) is True
+    assert scrape.looks_like_coffee({**p, "product_type": "Wholesale SO"}, ["Retail SO", "Retail YR"]) is False
 
 
 def test_normalise_picks_smallest_bag_and_cleans_html():
@@ -187,20 +230,29 @@ def test_roaster_id_drops_filler_words():
     assert add_roasters.roaster_id("Phil & Sebastian Coffee Roasters", "philsebastian.com") == "phil-sebastian"
     assert add_roasters.roaster_id("49th Parallel Coffee Roasters", "49thcoffee.com") == "49th-parallel"
     assert add_roasters.roaster_id("Coffee Roasters", "www.hatchcrafted.com") == "hatchcrafted"
+    assert add_roasters.roaster_id("Balzac's Coffee Roasters", "balzacs.com") == "balzacs"
+
+
+def test_clean_city_fixes_caps_and_known_typos():
+    assert add_roasters.clean_city(" TORONTO ") == "Toronto"
+    assert add_roasters.clean_city("MIinneapolis") == "Minneapolis"
+    assert add_roasters.clean_city("Montréal") == "Montréal"
 
 
 def test_entry_from_meta_uses_city_table_and_nudges_same_city_pins():
     cities = {"toronto|CA": [43.653, -79.383], "portland|maine|US": [43.661, -70.255], "portland|US": [45.515, -122.679]}
     meta = {"name": "Example Coffee", "city": "Toronto", "province": "Ontario", "country": "CA",
             "currency": "CAD", "ships_to_countries": ["CA", "US", "*"]}
-    existing = [{"id": "pilot", "city": "Toronto", "country": "CA", "url": "https://pilotcoffeeroasters.com"}]
+    existing = [{"id": "pilot", "city": "Toronto", "country": "CA", "lat": 43.653, "lng": -79.383, "url": "https://pilotcoffeeroasters.com"}]
     entry, why = add_roasters.entry_from_meta(meta, "https://www.example.com", cities, existing)
     assert why == ""
     assert entry["id"] == "example" and entry["shipsTo"] == ["CA", "US"]
     assert (entry["lat"], entry["lng"]) == (round(43.653 + add_roasters.NUDGE_DEG, 3), -79.383)
 
     maine = {**meta, "city": "Portland", "province": "Maine", "country": "US"}
-    assert add_roasters.entry_from_meta(maine, "https://x.com", cities, [])[0]["lng"] == -70.255
+    oregon_pin = [{"id": "heart", "city": "Portland", "country": "US", "lat": 45.515, "lng": -122.679, "url": "https://heartroasters.com"}]
+    entry_me = add_roasters.entry_from_meta(maine, "https://x.com", cities, oregon_pin)[0]
+    assert (entry_me["lat"], entry_me["lng"]) == (43.661, -70.255)  # not nudged by the Oregon pin
     unknown = {**meta, "city": "Nowhere"}
     assert add_roasters.entry_from_meta(unknown, "https://x.com", cities, [])[0] is None
     dup = add_roasters.entry_from_meta(meta, "https://pilotcoffeeroasters.com", cities, existing)

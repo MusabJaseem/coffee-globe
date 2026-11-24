@@ -39,7 +39,8 @@ button, select { font: inherit; color: inherit; }
 
 /* ---------- Globe ---------- */
 /* Phones: keep the globe above the bottom sheet. Desktop: beside the side sheet. */
-.globe-wrap { position: absolute; inset: 0 0 36vh 0; }
+/* Its own stacking layer, so country labels and "Looking at" stay under the top bar and sheet. */
+.globe-wrap { position: absolute; inset: 0 0 36vh 0; z-index: 0; }
 @media (min-width: 760px) {
   .globe-wrap { inset: 0; }
 }
@@ -98,6 +99,7 @@ button, select { font: inherit; color: inherit; }
 /* ---------- Top bar ---------- */
 .topbar {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -148,6 +150,7 @@ button, select { font: inherit; color: inherit; }
 /* ---------- Bottom sheet ---------- */
 .sheet {
   position: absolute;
+  z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;
@@ -228,6 +231,36 @@ button, select { font: inherit; color: inherit; }
   white-space: nowrap;
 }
 .text-btn.more { margin-top: 6px; }
+
+/* "About · Send feedback" under the home sheet */
+.sheet-foot {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 0;
+  font-size: 13px;
+  color: var(--husk);
+}
+.sheet-foot a,
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 2px 0;
+  font: inherit;
+  color: #6f5c4b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* About panel */
+.about h3 {
+  margin: 18px 0 4px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 16px;
+}
+.about p { margin: 0; color: #4d3d30; line-height: 1.5; max-width: 52ch; }
+.about a { color: var(--cherry-deep); font-weight: 600; }
 
 /* ---------- Coffee rows ---------- */
 .coffees { list-style: none; margin: 14px 0 0; padding: 0; }

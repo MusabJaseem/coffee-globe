@@ -6,6 +6,8 @@ import GlobeView from "@/components/GlobeView";
 import Quiz from "@/components/Quiz";
 import { COUNTRIES, DEFAULT_COUNTRY, coffees, countryName, isSampleData, originById, origins, roasterById, roasters, shipsTo } from "@/lib/data";
 import { applyFeedback, bestScoreByRoaster, diversify, profileFromAnswers, rankCoffees, type RankedCoffee } from "@/lib/taste";
+import { track as sendEvent } from "@vercel/analytics";
+import { FEEDBACK_URL } from "@/lib/site";
 import type { Coffee, UserProfile } from "@/lib/types";
 
 const PROFILE_KEY = "cg.profile.v1";
@@ -27,14 +29,28 @@ function save(key: string, value: unknown) {
     /* storage unavailable: the session still works, it just won't be remembered */
   }
 }
-/** Minimal event log until real analytics exist. Read it with localStorage in devtools. */
+/**
+ * Local event log (read it with localStorage in devtools), plus the success signals sent
+ * anonymously to Vercel Web Analytics. Quiz answers and taste profiles are never sent.
+ */
+const SENT_EVENTS = new Set(["quiz_complete", "buy_click", "feedback_click"]);
 function track(event: string, data: Record<string, unknown> = {}) {
   const log = load<unknown[]>(EVENTS_KEY) ?? [];
   log.push({ event, at: new Date().toISOString(), ...data });
   save(EVENTS_KEY, log.slice(-500));
+  if (SENT_EVENTS.has(event)) {
+    // Only plain ids and numbers; drops anything else (e.g. quiz answers).
+    const props: Record<string, string | number> = {};
+    for (const [k, v] of Object.entries(data)) if (typeof v === "string" || typeof v === "number") props[k] = v;
+    try {
+      sendEvent(event, props);
+    } catch {
+      /* analytics is best-effort */
+    }
+  }
 }
 
-type Panel = "home" | "roaster" | "origin" | "list";
+type Panel = "home" | "roaster" | "origin" | "list" | "about";
 
 export default function Home() {
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
@@ -116,6 +132,25 @@ export default function Home() {
     setOriginId(null);
   }
 
+  function openAbout() {
+    setPanel("about");
+    setRoasterId(null);
+    setOriginId(null);
+    track("about_open");
+  }
+
+  const footer = (
+    <p className="sheet-foot">
+      <button className="link-btn" onClick={openAbout}>
+        About
+      </button>
+      <span aria-hidden="true">·</span>
+      <a href={FEEDBACK_URL} target="_blank" rel="noopener" onClick={() => track("feedback_click")}>
+        Send feedback
+      </a>
+    </p>
+  );
+
   function changeCountry(code: string) {
     setCountry(code);
     save(COUNTRY_KEY, code);
@@ -192,6 +227,46 @@ export default function Home() {
         )}
       </>
     );
+  } else if (panel === "about") {
+    sheet = (
+      <>
+        <header className="sheet-head">
+          <div>
+            <h2>About Coffee Globe</h2>
+            <p className="sheet-sub">A map of specialty roasters that ship to you, lit up by how well their coffee suits your taste.</p>
+          </div>
+          <button className="text-btn" onClick={goHome}>
+            Close
+          </button>
+        </header>
+        <div className="about">
+          <h3>How matching works</h3>
+          <p>
+            An AI model reads each roaster’s own description and tasting notes and scores every coffee on five things:
+            acidity, sweetness, body, fruitiness and roast. Your quiz answers put you on the same scale, and the match
+            percentage is how close the two are. Treat it as a well-informed guess, not a promise: listings vary, and
+            roasters don’t review these scores. Thumbs up and down nudge your profile.
+          </p>
+          <h3>Independent</h3>
+          <p>
+            Coffee Globe isn’t affiliated with or paid by any roaster. “Buy from roaster” goes straight to the
+            roaster’s own shop; the link carries a tag so they can see the visit came from here. Prices and stock come
+            from roasters’ sites and can be out of date, so check the shop before you buy.
+          </p>
+          <h3>Your data</h3>
+          <p>
+            Your taste profile, quiz answers and country stay in this browser; there are no accounts. We count visits
+            and a few anonymous events (quiz finished, which coffee’s buy link was tapped) with Vercel Web Analytics,
+            which uses no cookies and doesn’t identify you.
+          </p>
+          <h3>Feedback</h3>
+          <p>
+            A match that’s way off, a roaster we should add, or something broken? Roasters: want your listing changed
+            or removed? <a href={FEEDBACK_URL} target="_blank" rel="noopener" onClick={() => track("feedback_click")}>Send feedback</a>.
+          </p>
+        </div>
+      </>
+    );
   } else if (panel === "list" && ranked) {
     sheet = (
       <>
@@ -223,10 +298,16 @@ export default function Home() {
         <button className="primary" onClick={() => setPanel("list")}>
           See all your matches
         </button>
+        {footer}
       </>
     );
   } else {
-    sheet = <QuizPrompt onStart={() => setQuizOpen(true)} roasterCount={visibleRoasters.length} />;
+    sheet = (
+      <>
+        <QuizPrompt onStart={() => setQuizOpen(true)} roasterCount={visibleRoasters.length} />
+        {footer}
+      </>
+    );
   }
 
   return (
