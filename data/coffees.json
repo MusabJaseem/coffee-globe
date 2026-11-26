@@ -16989,5 +16989,2418 @@
       "fruitiness": 0.65,
       "roast": 0.35
     }
+  },
+  {
+    "id": "kicking-horse--cliff-hanger-espresso",
+    "roasterId": "kicking-horse",
+    "name": "CLIFF HANGER ESPRESSO",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "cocoa"
+    ],
+    "priceCents": 4399,
+    "currency": "USD",
+    "weightGrams": 1000,
+    "url": "https://kickinghorsecoffee.com/products/cliff-hanger-coffee",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.5,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.55
+    }
+  },
+  {
+    "id": "kicking-horse--smart-ass",
+    "roasterId": "kicking-horse",
+    "name": "SMART ASS",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate"
+    ],
+    "priceCents": 1699,
+    "currency": "USD",
+    "weightGrams": 284,
+    "url": "https://kickinghorsecoffee.com/products/smart-ass-coffee",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.2,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "elm--finca-la-bolsa-guatemala",
+    "roasterId": "elm",
+    "name": "Finca La Bolsa, Guatemala",
+    "originId": "guatemala",
+    "process": null,
+    "notes": [
+      "grenadine",
+      "dried apricot",
+      "floral",
+      "ruby oolong tea"
+    ],
+    "priceCents": 16500,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://elmcoffeeroasters.com/products/colombia-la-argentina-copy",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "elm--danche-habtamu-fikadu",
+    "roasterId": "elm",
+    "name": "Danche Habtamu Fikadu",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [],
+    "priceCents": 2650,
+    "currency": "USD",
+    "weightGrams": 283,
+    "url": "https://elmcoffeeroasters.com/products/danche-habtamu-fikadu-ethiopia",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.5,
+      "body": 0.4,
+      "fruitiness": 0.4,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "elm--nelson-fabio-cordoba-tabi",
+    "roasterId": "elm",
+    "name": "Nelson Fabio Cordoba - Tabi",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "tropical fruit",
+      "plum",
+      "floral",
+      "green tea"
+    ],
+    "priceCents": 2600,
+    "currency": "USD",
+    "weightGrams": 283,
+    "url": "https://elmcoffeeroasters.com/products/nelson-fabio-cordoba-tabi",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.75,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "elm--9-swans-seasonal-coffee",
+    "roasterId": "elm",
+    "name": "9 Swans Seasonal Coffee",
+    "originId": null,
+    "process": null,
+    "notes": [],
+    "priceCents": 2300,
+    "currency": "USD",
+    "weightGrams": 283,
+    "url": "https://elmcoffeeroasters.com/products/9-swans-seasonal-coffee-2",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.65,
+      "body": 0.6,
+      "fruitiness": 0.3,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "temple--festivity-blend",
+    "roasterId": "temple",
+    "name": "Festivity Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "praline",
+      "warm spice",
+      "cranberry",
+      "toasted nuts"
+    ],
+    "priceCents": 2750,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/festivity-blend-5",
+    "taste": {
+      "acidity": 0.65,
+      "sweetness": 0.65,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "temple--ethiopia-reko",
+    "roasterId": "temple",
+    "name": "Ethiopia Reko",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "peach",
+      "raspberry",
+      "jasmine"
+    ],
+    "priceCents": 3050,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/ethiopia-reko-5",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.7,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "temple--india-gundikhan",
+    "roasterId": "temple",
+    "name": "India Gundikhan",
+    "originId": "india",
+    "process": null,
+    "notes": [
+      "blood orange",
+      "clove",
+      "honey wine"
+    ],
+    "priceCents": 3150,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/india-gundikhan",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "temple--el-salvador-el-caracol",
+    "roasterId": "temple",
+    "name": "El Salvador El Caracol",
+    "originId": "el-salvador",
+    "process": null,
+    "notes": [
+      "ripe plum",
+      "bartlett pear"
+    ],
+    "priceCents": 3050,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/el-salvador-el-caracol",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.75,
+      "body": 0.75,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "temple--mexico-buenavista-loxicha",
+    "roasterId": "temple",
+    "name": "Mexico Buenavista Loxicha",
+    "originId": "mexico",
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "honey graham",
+      "nutmeg"
+    ],
+    "priceCents": 2750,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/mexico-buenavista-loxicha",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.6,
+      "body": 0.75,
+      "fruitiness": 0.2,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "temple--guatemala-pulcal",
+    "roasterId": "temple",
+    "name": "Guatemala Pulcal",
+    "originId": "guatemala",
+    "process": null,
+    "notes": [
+      "brown sugar",
+      "almond butter",
+      "dried apricot"
+    ],
+    "priceCents": 2900,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/guatemala-pulcal-2",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "temple--costa-rica-sonora-estate-single-origin-espresso",
+    "roasterId": "temple",
+    "name": "Costa Rica Sonora Estate Single Origin Espresso",
+    "originId": "costa-rica",
+    "process": null,
+    "notes": [
+      "blackberry jam",
+      "spiced rum",
+      "lemon curd"
+    ],
+    "priceCents": 3000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/costa-rica-sonora-estate-single-origin-espresso-1",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.8,
+      "body": 0.75,
+      "fruitiness": 0.7,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "temple--lotus-blend",
+    "roasterId": "temple",
+    "name": "Lotus Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "milk chocolate",
+      "toasted almond",
+      "stone fruit"
+    ],
+    "priceCents": 2700,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/lotus-blend",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.75,
+      "fruitiness": 0.45,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "temple--decaf-espresso-blend",
+    "roasterId": "temple",
+    "name": "Decaf Espresso Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "milk chocolate",
+      "pecan",
+      "honey"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/decaf-espresso-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.6,
+      "body": 0.55,
+      "fruitiness": 0.1,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "temple--dark-roast-blend-grocery",
+    "roasterId": "temple",
+    "name": "Dark Roast Blend - Grocery",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "bittersweet baker's chocolate",
+      "nutmeg",
+      "brown sugar"
+    ],
+    "priceCents": 2955,
+    "currency": "USD",
+    "weightGrams": 1021,
+    "url": "https://templecoffee.com/products/riqueza-dark-blend-grocery",
+    "taste": {
+      "acidity": 0.15,
+      "sweetness": 0.6,
+      "body": 0.85,
+      "fruitiness": 0.1,
+      "roast": 0.9
+    }
+  },
+  {
+    "id": "temple--caldera-dark-blend",
+    "roasterId": "temple",
+    "name": "Caldera Dark Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "baker's chocolate",
+      "nutmeg",
+      "brown sugar"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/caldera-dark-blend",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.7,
+      "body": 0.8,
+      "fruitiness": 0.1,
+      "roast": 0.85
+    }
+  },
+  {
+    "id": "temple--three-pillars-blend-grocery",
+    "roasterId": "temple",
+    "name": "Three Pillars Blend - Grocery",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "caramel",
+      "citrus"
+    ],
+    "priceCents": 1578,
+    "currency": "USD",
+    "weightGrams": 794,
+    "url": "https://templecoffee.com/products/three-pillars-blend-grocery",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.25,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "temple--dharma-espresso-blend-grocery",
+    "roasterId": "temple",
+    "name": "Dharma Espresso Blend - Grocery",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dried cherry",
+      "cocoa",
+      "baking spices"
+    ],
+    "priceCents": 1736,
+    "currency": "USD",
+    "weightGrams": 794,
+    "url": "https://templecoffee.com/products/dharma-espresso-blend-grocery",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.75,
+      "fruitiness": 0.5,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "temple--decaf-espresso-blend-grocery",
+    "roasterId": "temple",
+    "name": "Decaf Espresso Blend - Grocery",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "milk chocolate",
+      "pecan",
+      "honey"
+    ],
+    "priceCents": 2955,
+    "currency": "USD",
+    "weightGrams": 1021,
+    "url": "https://templecoffee.com/products/decaf-espresso-blend-grocery",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.6,
+      "body": 0.55,
+      "fruitiness": 0.1,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "temple--dharma-espresso-blend",
+    "roasterId": "temple",
+    "name": "Dharma Espresso Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dried cherry",
+      "cocoa",
+      "baking spices"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/dharma-espresso-blend",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.55,
+      "body": 0.75,
+      "fruitiness": 0.5,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "temple--three-pillars-blend",
+    "roasterId": "temple",
+    "name": "Three Pillars Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "caramel",
+      "citrus"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://templecoffee.com/products/three-pillars-blend",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.6,
+      "body": 0.55,
+      "fruitiness": 0.3,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "partners--mexico-ozolotepec",
+    "roasterId": "partners",
+    "name": "Mexico - Ozolotepec",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "red apple",
+      "plum",
+      "raisin",
+      "milk chocolate",
+      "honey"
+    ],
+    "priceCents": 2700,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/mexico-ozolotepec",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "partners--miracle",
+    "roasterId": "partners",
+    "name": "Miracle",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "sweet orange",
+      "honey",
+      "ginger",
+      "cinnamon",
+      "malbec"
+    ],
+    "priceCents": 2500,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/miracle",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "partners--santa-elisa-gesha",
+    "roasterId": "partners",
+    "name": "Santa Elisa Gesha",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "clementine",
+      "meyer lemon",
+      "peach tea",
+      "raw sugar",
+      "honeysuckle"
+    ],
+    "priceCents": 3600,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/santa-elisa-gesha",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.6,
+      "body": 0.3,
+      "fruitiness": 0.6,
+      "roast": 0.2
+    }
+  },
+  {
+    "id": "partners--honduras-san-francisco",
+    "roasterId": "partners",
+    "name": "Honduras - San Francisco",
+    "originId": "honduras",
+    "process": "natural",
+    "notes": [
+      "strawberry",
+      "raspberry",
+      "rhubarb preserves",
+      "candied lemon",
+      "dark chocolate"
+    ],
+    "priceCents": 2700,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/honduras-san-francisco",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.75,
+      "body": 0.75,
+      "fruitiness": 0.85,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "partners--colombia-el-fald-n",
+    "roasterId": "partners",
+    "name": "Colombia - El Faldón",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "peach",
+      "orange",
+      "mango",
+      "pineapple",
+      "strawberry"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/colombia-el-faldon",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.65,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "partners--brazil-mundo-novo",
+    "roasterId": "partners",
+    "name": "Brazil - Mundo Novo",
+    "originId": "brazil",
+    "process": null,
+    "notes": [
+      "milk chocolate",
+      "hazelnut",
+      "almond",
+      "caramel",
+      "pear"
+    ],
+    "priceCents": 2500,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/brazil-mundo-novo",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.6,
+      "body": 0.8,
+      "fruitiness": 0.35,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "partners--ethiopia-suke-quto",
+    "roasterId": "partners",
+    "name": "Ethiopia - Suke Quto",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "yellow peach",
+      "apricot",
+      "lime",
+      "bergamot",
+      "orange blossom"
+    ],
+    "priceCents": 2600,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/ethiopia-suke-quto",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.7,
+      "body": 0.45,
+      "fruitiness": 0.6,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "partners--elevate",
+    "roasterId": "partners",
+    "name": "Elevate",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "red apple",
+      "caramel",
+      "pecan pie"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/elevate",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "partners--colombia-el-ramo",
+    "roasterId": "partners",
+    "name": "Colombia - El Ramo",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "peach",
+      "fresh cream",
+      "vanilla",
+      "chocolate"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/colombia-el-ramo",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "partners--flatiron",
+    "roasterId": "partners",
+    "name": "Flatiron",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "praline",
+      "dates"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/flatiron",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.6,
+      "body": 0.75,
+      "fruitiness": 0.35,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "partners--bedford-organic",
+    "roasterId": "partners",
+    "name": "Bedford - Organic",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "ripe stone fruit",
+      "citrus",
+      "marmalade",
+      "pomegranate",
+      "brown sugar"
+    ],
+    "priceCents": 2300,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/bedford",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.65,
+      "body": 0.75,
+      "fruitiness": 0.6,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "partners--jumpstart",
+    "roasterId": "partners",
+    "name": "Jumpstart",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "caramel",
+      "jordan almond",
+      "poached pear"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/jumpstart",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.75,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "partners--manhattan",
+    "roasterId": "partners",
+    "name": "Manhattan",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "marzipan",
+      "molasses",
+      "caramel",
+      "maple syrup"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/manhattan",
+    "taste": {
+      "acidity": 0.15,
+      "sweetness": 0.7,
+      "body": 0.85,
+      "fruitiness": 0.1,
+      "roast": 0.8
+    }
+  },
+  {
+    "id": "partners--brooklyn",
+    "roasterId": "partners",
+    "name": "Brooklyn",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "cocoa",
+      "toffee",
+      "dried fruit"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/brooklyn",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.45,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "partners--ghost-town-decaf",
+    "roasterId": "partners",
+    "name": "Ghost Town - Decaf",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "malt",
+      "white chocolate",
+      "golden raisin"
+    ],
+    "priceCents": 2500,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://partnerscoffee.com/products/ghost-town-peru",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "methodical--ethiopia-anderacha",
+    "roasterId": "methodical",
+    "name": "Ethiopia, Anderacha",
+    "originId": "ethiopia",
+    "process": "other",
+    "notes": [
+      "stone fruit",
+      "black tea",
+      "chocolate"
+    ],
+    "priceCents": 3135,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/ethiopia-anderacha",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "methodical--indonesia-sulawesi-toraja",
+    "roasterId": "methodical",
+    "name": "Indonesia, Sulawesi Toraja",
+    "originId": "indonesia",
+    "process": "other",
+    "notes": [
+      "earth",
+      "spice",
+      "tobacco"
+    ],
+    "priceCents": 2499,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/indonesia-sulawesi-toraja",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.4,
+      "body": 0.8,
+      "fruitiness": 0.2,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "methodical--christmas-vacation",
+    "roasterId": "methodical",
+    "name": "Christmas Vacation",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "cherries",
+      "berries"
+    ],
+    "priceCents": 2472,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/christmas-vacation",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.7,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "methodical--guatemala-ixlama",
+    "roasterId": "methodical",
+    "name": "Guatemala, Ixlama",
+    "originId": "guatemala",
+    "process": null,
+    "notes": [
+      "apple",
+      "chocolate",
+      "caramel"
+    ],
+    "priceCents": 2190,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/guatemala-ixlama",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "methodical--ethiopia-layo-teraga",
+    "roasterId": "methodical",
+    "name": "Ethiopia, Layo Teraga",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "floral"
+    ],
+    "priceCents": 2911,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/ethiopia-layo-teraga",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.35,
+      "fruitiness": 0.6,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "methodical--costa-rica-la-guaca",
+    "roasterId": "methodical",
+    "name": "Costa Rica, La Guaca",
+    "originId": "costa-rica",
+    "process": "honey",
+    "notes": [],
+    "priceCents": 2650,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/costa-rica-la-guaca",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--colombia-nogales-low-caff",
+    "roasterId": "methodical",
+    "name": "Colombia, Nogales Low-Caff",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "strawberry",
+      "apple",
+      "chamomile",
+      "herbaceous"
+    ],
+    "priceCents": 3600,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/colombia-nogales-low-caff",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.4,
+      "body": 0.35,
+      "fruitiness": 0.7,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "methodical--per-fidel-huancas",
+    "roasterId": "methodical",
+    "name": "Perú, Fidel Huancas",
+    "originId": "peru",
+    "process": "washed",
+    "notes": [
+      "pear",
+      "cashew",
+      "warm spice"
+    ],
+    "priceCents": 3080,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/peru-fidel-huancas",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--colombia-andr-s-cardona",
+    "roasterId": "methodical",
+    "name": "Colombia, Andrés Cardona",
+    "originId": "colombia",
+    "process": "natural",
+    "notes": [],
+    "priceCents": 3600,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/colombia-andres-cardona",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--honduras-walter-bautista",
+    "roasterId": "methodical",
+    "name": "Honduras, Walter Bautista",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "stone fruit",
+      "berry",
+      "chamomile",
+      "black tea"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/honduras-walter-bautista",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "methodical--oscuro",
+    "roasterId": "methodical",
+    "name": "Oscuro",
+    "originId": null,
+    "process": null,
+    "notes": [],
+    "priceCents": 1848,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/oscuro",
+    "taste": {
+      "acidity": 0.15,
+      "sweetness": 0.6,
+      "body": 0.7,
+      "fruitiness": 0.15,
+      "roast": 0.9
+    }
+  },
+  {
+    "id": "methodical--ethiopia-bombe-abore",
+    "roasterId": "methodical",
+    "name": "Ethiopia, Bombe Abore",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "fruity",
+      "jammy",
+      "floral"
+    ],
+    "priceCents": 2746,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/ethiopia-bombe-abore",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.8,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--colombia-willow",
+    "roasterId": "methodical",
+    "name": "Colombia, Willow",
+    "originId": "colombia",
+    "process": "natural",
+    "notes": [
+      "dark chocolate",
+      "cacao nibs",
+      "fruity"
+    ],
+    "priceCents": 2621,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/colombia-willow",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.75,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--ethiopia-origins-natural",
+    "roasterId": "methodical",
+    "name": "Ethiopia, Origins - Natural",
+    "originId": "ethiopia",
+    "process": "natural",
+    "notes": [
+      "fruity",
+      "floral"
+    ],
+    "priceCents": 2472,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/ethiopia-origins-natural",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.4,
+      "fruitiness": 0.7,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "methodical--ethiopia-origins-washed",
+    "roasterId": "methodical",
+    "name": "Ethiopia, Origins - Washed",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "fruity",
+      "floral"
+    ],
+    "priceCents": 2472,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/ethiopia-origins-washed",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.5,
+      "body": 0.3,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "methodical--repose-decaf",
+    "roasterId": "methodical",
+    "name": "Repose Decaf",
+    "originId": null,
+    "process": "other",
+    "notes": [
+      "strawberry"
+    ],
+    "priceCents": 3080,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/repose-decaf",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.9,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--momento-coffee",
+    "roasterId": "methodical",
+    "name": "Momento Coffee",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "almond butter"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/momento-coffee",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.5,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "methodical--colombia-landmark",
+    "roasterId": "methodical",
+    "name": "Colombia, Landmark",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "caramel",
+      "warm baking spices"
+    ],
+    "priceCents": 2236,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/colombia-landmark",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.25,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--bicycle-film-festival-blend",
+    "roasterId": "methodical",
+    "name": "Bicycle Film Festival Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "berries",
+      "brown sugar"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/bicycle-film-festival-blend",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "methodical--design-better-coffee",
+    "roasterId": "methodical",
+    "name": "Design Better Coffee",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "brown sugar",
+      "red berries"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/design-better-coffee",
+    "taste": {
+      "acidity": 0.55,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.45,
+      "roast": 0.55
+    }
+  },
+  {
+    "id": "methodical--dadville-coffee",
+    "roasterId": "methodical",
+    "name": "Dadville Coffee",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "graham",
+      "brown sugar"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/dadville-coffee",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.15,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "methodical--imaginary-collective",
+    "roasterId": "methodical",
+    "name": "Imaginary Collective",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "berries"
+    ],
+    "priceCents": 1800,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/imaginary-collective",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.5,
+      "body": 0.85,
+      "fruitiness": 0.6,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "methodical--brazil-signature-series",
+    "roasterId": "methodical",
+    "name": "Brazil, Signature Series",
+    "originId": "brazil",
+    "process": null,
+    "notes": [
+      "chocolate",
+      "nutty"
+    ],
+    "priceCents": 1883,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/brazil-dulce-signature",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.5,
+      "body": 0.55,
+      "fruitiness": 0.1,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "methodical--costa-rica-la-pastora",
+    "roasterId": "methodical",
+    "name": "Costa Rica, La Pastora",
+    "originId": "costa-rica",
+    "process": "washed",
+    "notes": [
+      "gingersnap",
+      "almond",
+      "plum"
+    ],
+    "priceCents": 2132,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/costa-rica-la-pastora",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.45,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--belly-warmer",
+    "roasterId": "methodical",
+    "name": "Belly Warmer",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "nutty",
+      "chocolate"
+    ],
+    "priceCents": 1928,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/belly-warmer",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.5,
+      "body": 0.6,
+      "fruitiness": 0.1,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "methodical--pink-lady",
+    "roasterId": "methodical",
+    "name": "Pink Lady",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "berries",
+      "orange"
+    ],
+    "priceCents": 2228,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/pink-lady-1",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "methodical--sunset-decaf",
+    "roasterId": "methodical",
+    "name": "Sunset Decaf",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "citrus"
+    ],
+    "priceCents": 2266,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://methodicalcoffee.com/products/colombia-cuaca-decaf-1",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ruby--honduras-rigoberto-rodriguez",
+    "roasterId": "ruby",
+    "name": "Honduras Rigoberto Rodriguez",
+    "originId": "honduras",
+    "process": "honey",
+    "notes": [
+      "fudge",
+      "cherry",
+      "caramel",
+      "plum"
+    ],
+    "priceCents": 2300,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/honduras-rigoberto-rodriguez-1",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.75,
+      "body": 0.55,
+      "fruitiness": 0.6,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "ruby--organic-ethiopia-halo-hartume",
+    "roasterId": "ruby",
+    "name": "Organic Ethiopia Halo Hartume",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "apricot",
+      "guava",
+      "honey",
+      "chamomile"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/ethiopia-halo-hartume-1",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.7,
+      "body": 0.35,
+      "fruitiness": 0.7,
+      "roast": 0.2
+    }
+  },
+  {
+    "id": "ruby--bagel-blend",
+    "roasterId": "ruby",
+    "name": "Bagel Blend",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "cherry",
+      "almond",
+      "caramel",
+      "milk chocolate"
+    ],
+    "priceCents": 5670,
+    "currency": "USD",
+    "weightGrams": 2268,
+    "url": "https://rubycoffeeroasters.com/products/bagel-blend",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ruby--cheers-holiday-blend",
+    "roasterId": "ruby",
+    "name": "Cheers Holiday Blend",
+    "originId": "guatemala",
+    "process": null,
+    "notes": [
+      "mulled wine",
+      "dried fruit",
+      "warm spices",
+      "sweet orange"
+    ],
+    "priceCents": 2000,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/cheers-holiday-blend",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.55,
+      "fruitiness": 0.75,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "ruby--organic-guatemala-genaro-juarez",
+    "roasterId": "ruby",
+    "name": "Organic Guatemala Genaro Juarez",
+    "originId": "guatemala",
+    "process": "washed",
+    "notes": [
+      "dark chocolate",
+      "cocoa nib",
+      "dried fig",
+      "maple nut"
+    ],
+    "priceCents": 1900,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/guatemala-genaro-juarez",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ruby--el-salvador-natamaya-sl-28-natural",
+    "roasterId": "ruby",
+    "name": "El Salvador Natamaya SL-28 Natural",
+    "originId": "el-salvador",
+    "process": "natural",
+    "notes": [
+      "concord grape",
+      "candied grapefruit",
+      "cherry cordial",
+      "cola"
+    ],
+    "priceCents": 2150,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/el-salvador-natamaya-sl-28-natural",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.85,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ruby--rising-star-mill-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Rising Star Mill Seasonal Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "hazelnut",
+      "black tea",
+      "spices"
+    ],
+    "priceCents": 1945,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/rising-star-mill-seasonal-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.15,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ruby--kenya-murang-a-gondo-ab",
+    "roasterId": "ruby",
+    "name": "Kenya Murang'a Gondo AB",
+    "originId": "kenya",
+    "process": "washed",
+    "notes": [
+      "black currant",
+      "orange marmalade",
+      "dried apricot",
+      "butterscotch"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/kenya-muranga-gondo-ab",
+    "taste": {
+      "acidity": 0.85,
+      "sweetness": 0.65,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "ruby--costa-rica-cerro-la-cruz-el-mango",
+    "roasterId": "ruby",
+    "name": "Costa Rica Cerro La Cruz El Mango",
+    "originId": "costa-rica",
+    "process": "washed",
+    "notes": [
+      "red grape",
+      "pear",
+      "dark chocolate",
+      "pecan pie"
+    ],
+    "priceCents": 1825,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/costa-rica-cerro-la-cruz-mango",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.6,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "ruby--mexico-san-pedro-yosotatu",
+    "roasterId": "ruby",
+    "name": "Mexico San Pedro Yosotatu",
+    "originId": "mexico",
+    "process": "washed",
+    "notes": [
+      "milk chocolate",
+      "hazelnut",
+      "raisin",
+      "brown sugar"
+    ],
+    "priceCents": 2300,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/mexico-san-pedro-yosotatu",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.45,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ruby--ethiopia-musa-abalulesa",
+    "roasterId": "ruby",
+    "name": "Ethiopia Musa Abalulesa",
+    "originId": "ethiopia",
+    "process": "washed",
+    "notes": [
+      "melon",
+      "dried apricot",
+      "vanilla bean",
+      "rooibos tea"
+    ],
+    "priceCents": 2100,
+    "currency": "USD",
+    "weightGrams": 227,
+    "url": "https://rubycoffeeroasters.com/products/ethiopia-musa-abalulesa",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.6,
+      "body": 0.45,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ruby--colombia-los-guacharos-pink-bourbon",
+    "roasterId": "ruby",
+    "name": "Colombia Los Guacharos Pink Bourbon",
+    "originId": "colombia",
+    "process": "washed",
+    "notes": [
+      "red grape",
+      "dried fig",
+      "turbinado sugar",
+      "strawberry jam"
+    ],
+    "priceCents": 2400,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/colombia-los-guacharos-pink-bourbon",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.75,
+      "body": 0.6,
+      "fruitiness": 0.75,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ruby--lake-bloom",
+    "roasterId": "ruby",
+    "name": "Lake & Bloom",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "fig",
+      "cherry",
+      "almond",
+      "dark chocolate"
+    ],
+    "priceCents": 990,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/lake-bloom",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.5,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "ruby--hewn-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Hewn Seasonal Blend",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "fudge",
+      "raisin",
+      "praline",
+      "cocoa powder"
+    ],
+    "priceCents": 1210,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/hewn-portage-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.75,
+      "body": 0.7,
+      "fruitiness": 0.4,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "ruby--slow-season-organic-august",
+    "roasterId": "ruby",
+    "name": "Slow Season Organic August",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "honey",
+      "berries",
+      "orange zest",
+      "milk chocolate"
+    ],
+    "priceCents": 1045,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/slow-season-organic-august",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.55,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "ruby--slow-season-creamery",
+    "roasterId": "ruby",
+    "name": "Slow Season Creamery",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "fig",
+      "cherry",
+      "almond",
+      "dark chocolate"
+    ],
+    "priceCents": 990,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/slow-season",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.5,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "ruby--blue-collar-creamery-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Blue Collar Creamery Seasonal Blend",
+    "originId": null,
+    "process": null,
+    "notes": [],
+    "priceCents": 1210,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/blue-collar-creamery-seasonal-blend-wholesale",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.3,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ruby--thru-axle-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Thru Axle Seasonal Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "caramel",
+      "chocolate"
+    ],
+    "priceCents": 1210,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/thru-axle-seasonal-blend",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.7,
+      "body": 0.85,
+      "fruitiness": 0.15,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ruby--spa-coop-creamery",
+    "roasterId": "ruby",
+    "name": "SPA Coop Creamery",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "cherry",
+      "chocolate",
+      "dried fruit"
+    ],
+    "priceCents": 1100,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/spa-coop-creamery-wholesale",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.6,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "ruby--quick-release-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Quick Release Seasonal Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate",
+      "cherry"
+    ],
+    "priceCents": 1210,
+    "currency": "USD",
+    "weightGrams": 340,
+    "url": "https://rubycoffeeroasters.com/products/quick-release-seasonal-blend",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ruby--decaf-flume-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Decaf Flume Seasonal Blend",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "maple",
+      "nutmeg",
+      "baked apple",
+      "cocoa powder"
+    ],
+    "priceCents": 1640,
+    "currency": "USD",
+    "weightGrams": 227,
+    "url": "https://rubycoffeeroasters.com/products/decaf-flume-seasonal-blend",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.4,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "ruby--portage-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Portage Seasonal Blend",
+    "originId": "brazil",
+    "process": "washed",
+    "notes": [
+      "fudge",
+      "raisin",
+      "praline",
+      "cocoa powder"
+    ],
+    "priceCents": 1580,
+    "currency": "USD",
+    "weightGrams": 227,
+    "url": "https://rubycoffeeroasters.com/products/portage-seasonal-blend",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.8,
+      "body": 0.7,
+      "fruitiness": 0.35,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "ruby--creamery-seasonal-blend",
+    "roasterId": "ruby",
+    "name": "Creamery Seasonal Blend",
+    "originId": null,
+    "process": "washed",
+    "notes": [
+      "fig",
+      "cherry",
+      "almond",
+      "dark chocolate"
+    ],
+    "priceCents": 1580,
+    "currency": "USD",
+    "weightGrams": 227,
+    "url": "https://rubycoffeeroasters.com/products/creamery-seasonal-blend",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ceremony--uganda-sironko-honey",
+    "roasterId": "ceremony",
+    "name": "Uganda Sironko Honey",
+    "originId": "uganda",
+    "process": "honey",
+    "notes": [
+      "stone fruit",
+      "candied orange",
+      "cola",
+      "dark chocolate",
+      "lemon candy"
+    ],
+    "priceCents": 2700,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/uganda-sironko-honey",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.7,
+      "body": 0.55,
+      "fruitiness": 0.6,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ceremony--holiday-annuals-2026",
+    "roasterId": "ceremony",
+    "name": "Holiday Annuals 2026",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "cranberry",
+      "poached pear",
+      "baking spice",
+      "apple",
+      "oatmeal cookie"
+    ],
+    "priceCents": 2300,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/holiday-annuals-2026",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "ceremony--colombia-jos-mart-nez-pink-bourbon",
+    "roasterId": "ceremony",
+    "name": "Colombia José Martínez Pink Bourbon",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "pink lady apple",
+      "magnolia",
+      "tropical",
+      "grapefruit",
+      "vanilla"
+    ],
+    "priceCents": 3300,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/colombia-jose-martinez",
+    "taste": {
+      "acidity": 0.75,
+      "sweetness": 0.6,
+      "body": 0.5,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "ceremony--india-kerehaklu-estate",
+    "roasterId": "ceremony",
+    "name": "India Kerehaklu Estate",
+    "originId": "india",
+    "process": null,
+    "notes": [
+      "chocolate",
+      "hazelnut",
+      "milk chocolate",
+      "baking spice",
+      "tamarind"
+    ],
+    "priceCents": 2800,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/india-kerehaklu-estate",
+    "taste": {
+      "acidity": 0.35,
+      "sweetness": 0.6,
+      "body": 0.6,
+      "fruitiness": 0.35,
+      "roast": 0.4
+    }
+  },
+  {
+    "id": "ceremony--colombia-transformation-chiroso",
+    "roasterId": "ceremony",
+    "name": "Colombia Transformation Chiroso",
+    "originId": "colombia",
+    "process": null,
+    "notes": [
+      "honeysuckle",
+      "tamarind",
+      "tropical fruit",
+      "wildflower honey",
+      "lemon tonic"
+    ],
+    "priceCents": 3000,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/colombia-transformation-chiroso",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "ceremony--ethiopia-keramo",
+    "roasterId": "ceremony",
+    "name": "Ethiopia Keramo",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "lemongrass",
+      "black tea",
+      "turbinado sugar",
+      "honeysuckle",
+      "tamarind"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/ethiopia-keramo-1",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.25
+    }
+  },
+  {
+    "id": "ceremony--mexico-las-tejedoras",
+    "roasterId": "ceremony",
+    "name": "Mexico Las Tejedoras",
+    "originId": "mexico",
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "butterscotch",
+      "candied orange peel",
+      "hazelnut",
+      "milk chocolate"
+    ],
+    "priceCents": 2300,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/mexico-las-tejedoras",
+    "taste": {
+      "acidity": 0.4,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.35,
+      "roast": 0.45
+    }
+  },
+  {
+    "id": "ceremony--ethiopia-laayyoo",
+    "roasterId": "ceremony",
+    "name": "Ethiopia Laayyoo",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "blueberry",
+      "peach"
+    ],
+    "priceCents": 2950,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/ethiopia-laayyoo-1",
+    "taste": {
+      "acidity": 0.6,
+      "sweetness": 0.5,
+      "body": 0.5,
+      "fruitiness": 0.7,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "ceremony--ethiopia-othosololo",
+    "roasterId": "ceremony",
+    "name": "Ethiopia Othosololo",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "grapefruit",
+      "pomelo",
+      "tropical",
+      "cane sugar",
+      "vanilla"
+    ],
+    "priceCents": 3200,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/ethiopia-othosololo",
+    "taste": {
+      "acidity": 0.8,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.6,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "ceremony--ethiopia-yirgacheffe-chelbesa",
+    "roasterId": "ceremony",
+    "name": "Ethiopia Yirgacheffe Chelbesa",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "shortbread",
+      "orange blossom",
+      "sweet tea",
+      "lemon candy",
+      "mandarin orange"
+    ],
+    "priceCents": 2600,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/ethiopia-yirgacheffe-chelbesa",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.6,
+      "body": 0.4,
+      "fruitiness": 0.5,
+      "roast": 0.3
+    }
+  },
+  {
+    "id": "ceremony--decaf-ea-ethiopia",
+    "roasterId": "ceremony",
+    "name": "Decaf EA Ethiopia",
+    "originId": "ethiopia",
+    "process": null,
+    "notes": [
+      "candy bar",
+      "sweet cherry",
+      "baked goods"
+    ],
+    "priceCents": 2250,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/decaf-colombia",
+    "taste": {
+      "acidity": 0.5,
+      "sweetness": 0.7,
+      "body": 0.6,
+      "fruitiness": 0.5,
+      "roast": 0.35
+    }
+  },
+  {
+    "id": "ceremony--climate-project",
+    "roasterId": "ceremony",
+    "name": "Climate Project",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "brownie batter",
+      "roasted almond"
+    ],
+    "priceCents": 2250,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/climate-project",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.8,
+      "body": 0.7,
+      "fruitiness": 0.1,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "ceremony--synthesis",
+    "roasterId": "ceremony",
+    "name": "Synthesis",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "caramel",
+      "dried cherry",
+      "butterfinger candy bar"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/synthesis",
+    "taste": {
+      "acidity": 0.2,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.4,
+      "roast": 0.6
+    }
+  },
+  {
+    "id": "ceremony--thesis",
+    "roasterId": "ceremony",
+    "name": "Thesis",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "chocolate chip cookie",
+      "brown sugar",
+      "milk chocolate",
+      "baked goods"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/thesis",
+    "taste": {
+      "acidity": 0.3,
+      "sweetness": 0.8,
+      "body": 0.6,
+      "fruitiness": 0.15,
+      "roast": 0.5
+    }
+  },
+  {
+    "id": "ceremony--antithesis",
+    "roasterId": "ceremony",
+    "name": "Antithesis",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "dark chocolate",
+      "molasses",
+      "nuts"
+    ],
+    "priceCents": 2200,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/antithesis",
+    "taste": {
+      "acidity": 0.15,
+      "sweetness": 0.6,
+      "body": 0.7,
+      "fruitiness": 0.1,
+      "roast": 0.7
+    }
+  },
+  {
+    "id": "ceremony--mass-appeal",
+    "roasterId": "ceremony",
+    "name": "Mass Appeal",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "milk chocolate",
+      "sugar cookie",
+      "baked goods",
+      "nuts",
+      "spice"
+    ],
+    "priceCents": 2250,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/mass-appeal",
+    "taste": {
+      "acidity": 0.25,
+      "sweetness": 0.7,
+      "body": 0.7,
+      "fruitiness": 0.15,
+      "roast": 0.65
+    }
+  },
+  {
+    "id": "ceremony--destroyer",
+    "roasterId": "ceremony",
+    "name": "Destroyer",
+    "originId": null,
+    "process": null,
+    "notes": [
+      "orange creamsicle",
+      "peach",
+      "lemon icing",
+      "caramel",
+      "baked goods"
+    ],
+    "priceCents": 2250,
+    "currency": "USD",
+    "weightGrams": 363,
+    "url": "https://ceremonycoffee.com/products/destroyer",
+    "taste": {
+      "acidity": 0.7,
+      "sweetness": 0.7,
+      "body": 0.5,
+      "fruitiness": 0.55,
+      "roast": 0.45
+    }
   }
 ]
