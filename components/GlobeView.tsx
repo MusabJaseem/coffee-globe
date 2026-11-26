@@ -102,7 +102,7 @@ export default function GlobeView(props: Props) {
       const key = `${c.x.toFixed(2)},${c.y.toFixed(2)},${c.z.toFixed(2)},${wrap.clientWidth}x${wrap.clientHeight}`;
       if (key === lastKey) return;
       lastKey = key;
-      layoutCountryLabels(g, wrap, lookingRef.current?.parentElement ?? null);
+      layoutCountryLabels(g, wrap, lookingRef.current?.closest(".globe-hud") ?? null);
     };
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
@@ -184,9 +184,21 @@ export default function GlobeView(props: Props) {
 
   return (
     <div ref={wrapRef} className="globe-wrap">
-      <p className="looking-at" aria-live="polite">
-        Looking at <span ref={lookingRef}>…</span>
-      </p>
+      <div className="globe-hud">
+        <p className="looking-at" aria-live="polite">
+          Looking at <span ref={lookingRef}>…</span>
+        </p>
+        <p className="legend">
+          <span>
+            <i style={{ background: bestScores ? CHERRY : HUSK }} />
+            {bestScores ? "Roasters · redder is a better match" : "Roasters"}
+          </span>
+          <span>
+            <i style={{ background: LEAF }} />
+            Where the coffee is grown
+          </span>
+        </p>
+      </div>
       {size.w > 0 && (
         <GlobeCanvas
           globeRef={globeRef}
