@@ -32,12 +32,9 @@ interface Props {
   onSelectOrigin: (id: string) => void;
 }
 
-/** Map a 0–100 match score to a warm ramp: husk (poor) → cherry (great). */
-function matchColor(score: number | null): string {
-  if (score == null) return HUSK;
-  const t = Math.min(1, Math.max(0, (score - 50) / 45));
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * t);
-  return `rgb(${mix(201, 210)}, ${mix(180, 58)}, ${mix(151, 63)})`;
+/** One red for every roaster once there's a profile: height and the glowing rings show how good the match is. */
+function roasterColor(score: number | null): string {
+  return score == null ? HUSK : CHERRY;
 }
 
 export default function GlobeView(props: Props) {
@@ -191,7 +188,7 @@ export default function GlobeView(props: Props) {
         <p className="legend">
           <span>
             <i style={{ background: bestScores ? CHERRY : HUSK }} />
-            {bestScores ? "Roasters (redder = better match)" : "Roasters"}
+            {bestScores ? "Roasters (taller = better match)" : "Roasters"}
           </span>
           <span>
             <i style={{ background: LEAF }} />
@@ -216,7 +213,7 @@ export default function GlobeView(props: Props) {
           pointColor={(d: object) => {
             const p = d as Pin;
             if (p.kind === "origin") return p.id === selectedOriginId ? "#B7D07A" : LEAF;
-            return p.id === selectedRoasterId ? "#FFF3E0" : matchColor(p.score);
+            return p.id === selectedRoasterId ? "#FFF3E0" : roasterColor(p.score);
           }}
           pointAltitude={(d: object) => {
             const p = d as Pin;
