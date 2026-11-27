@@ -191,11 +191,11 @@ export default function GlobeView(props: Props) {
         <p className="legend">
           <span>
             <i style={{ background: bestScores ? CHERRY : HUSK }} />
-            {bestScores ? "Roasters · redder is a better match" : "Roasters"}
+            {bestScores ? "Roasters (redder = better match)" : "Roasters"}
           </span>
           <span>
             <i style={{ background: LEAF }} />
-            Where the coffee is grown
+            Coffee origins
           </span>
         </p>
       </div>
