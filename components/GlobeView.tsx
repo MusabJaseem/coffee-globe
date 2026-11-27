@@ -32,12 +32,9 @@ interface Props {
   onSelectOrigin: (id: string) => void;
 }
 
-/** Map a 0–100 match score to a warm ramp: husk (poor) → cherry (great). */
-function matchColor(score: number | null): string {
-  if (score == null) return HUSK;
-  const t = Math.min(1, Math.max(0, (score - 50) / 45));
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * t);
-  return `rgb(${mix(201, 210)}, ${mix(180, 58)}, ${mix(151, 63)})`;
+/** One red for every roaster once there's a profile; the glowing rings mark the five best matches. */
+function roasterColor(score: number | null): string {
+  return score == null ? HUSK : CHERRY;
 }
 
 export default function GlobeView(props: Props) {
@@ -147,10 +144,11 @@ export default function GlobeView(props: Props) {
   const rings = useMemo(() => {
     if (!bestScores) return [];
     return roasters
-      .map((r) => ({ lat: r.lat, lng: r.lng, score: bestScores.get(r.id) ?? 0 }))
+      .map((r) => ({ id: r.id, lat: r.lat, lng: r.lng, score: bestScores.get(r.id) ?? 0 }))
       .sort((a, b) => b.score - a.score)
       .slice(0, 5);
   }, [roasters, bestScores]);
+  const topRoasterIds = useMemo(() => new Set(rings.map((r) => r.id)), [rings]);
 
   // Arcs from the selected origin to every visible roaster selling it.
   const arcs = useMemo(() => {
@@ -191,11 +189,11 @@ export default function GlobeView(props: Props) {
         <p className="legend">
           <span>
             <i style={{ background: bestScores ? CHERRY : HUSK }} />
-            {bestScores ? "Roasters · redder is a better match" : "Roasters"}
+            {bestScores ? "Roasters (glowing = best matches)" : "Roasters"}
           </span>
           <span>
             <i style={{ background: LEAF }} />
-            Where the coffee is grown
+            Coffee origins
           </span>
         </p>
       </div>
@@ -216,12 +214,14 @@ export default function GlobeView(props: Props) {
           pointColor={(d: object) => {
             const p = d as Pin;
             if (p.kind === "origin") return p.id === selectedOriginId ? "#B7D07A" : LEAF;
-            return p.id === selectedRoasterId ? "#FFF3E0" : matchColor(p.score);
+            return p.id === selectedRoasterId ? "#FFF3E0" : roasterColor(p.score);
           }}
           pointAltitude={(d: object) => {
             const p = d as Pin;
             if (p.kind === "origin") return 0.02;
-            return p.score == null ? 0.03 : 0.02 + (p.score / 100) ** 3 * 0.22;
+            // Every roaster pin is the same height; the top five glow (rings). With reduced
+            // motion there are no rings, so those five stand a little taller instead.
+            return reduceMotion && topRoasterIds.has(p.id) ? 0.09 : 0.035;
           }}
           pointRadius={(d: object) => ((d as Pin).kind === "origin" ? 0.55 : 0.4)}
           pointResolution={8}
