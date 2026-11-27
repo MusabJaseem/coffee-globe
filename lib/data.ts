@@ -1,7 +1,6 @@
 import coffeesJson from "@/data/coffees.json";
 import originsJson from "@/data/origins.json";
 import roastersJson from "@/data/roasters.json";
-import countryNamesJson from "./country-names.json";
 import type { Coffee, Origin, Roaster } from "./types";
 
 export const roasters = roastersJson as Roaster[];
@@ -13,9 +12,6 @@ export const originById = new Map(origins.map((o) => [o.id, o]));
 
 export const isSampleData = roasters.some((r) => r.sample);
 
-export function shipsTo(roaster: Roaster, country: string): boolean {
-  return roaster.shipsTo.includes(country);
-}
 
 export function formatPrice(c: Coffee): string | null {
   if (c.priceCents == null || !c.currency) return null;
@@ -23,43 +19,32 @@ export function formatPrice(c: Coffee): string | null {
   return c.weightGrams ? `${price} for ${c.weightGrams} g` : price;
 }
 
-export type CountryOption = { code: string; name: string; roasterCount: number; featured: boolean };
-
-// Shown at the top of the "Ships to" menu, in this order, when at least one roaster ships there.
-const FEATURED = ["CA", "US", "GB", "AU", "NZ", "IE", "DE", "FR", "NL", "JP", "KR", "SG", "HK"];
-export const DEFAULT_COUNTRY = "CA";
-
-// A fixed table rather than Intl.DisplayNames at runtime: browsers and Node word some
-// names differently, which breaks hydration of the prerendered menu. Generated once from
-// Node's Intl.DisplayNames, with "Hong Kong" and "Macao" shortened.
-const NAMES = countryNamesJson as Record<string, string>;
-export function countryName(code: string): string {
-  return NAMES[code] ?? code;
-}
-
 /**
- * Every country at least one roaster ships to: the featured markets first, then the rest
- * alphabetically. Built from the data, so new roasters add their countries automatically.
+ * The "Ships to" menu: Canada and the US, where every roaster on the globe ships to at least
+ * one of them, plus "Elsewhere" for people just browsing, which shows every roaster with no
+ * shipping filter (see the note in app/page.tsx).
  */
-function buildCountries(): CountryOption[] {
-  const counts = new Map<string, number>();
-  for (const r of roasters) {
-    for (const code of new Set(r.shipsTo)) {
-      if (/^[A-Z]{2}$/.test(code)) counts.set(code, (counts.get(code) ?? 0) + 1);
-    }
-  }
-  const option = (code: string): CountryOption => ({
-    code,
-    name: countryName(code),
-    roasterCount: counts.get(code) ?? 0,
-    featured: FEATURED.includes(code),
-  });
-  const featured = FEATURED.filter((c) => counts.has(c)).map(option);
-  const rest = [...counts.keys()]
-    .filter((c) => !FEATURED.includes(c))
-    .map(option)
-    .sort((a, b) => a.name.localeCompare(b.name, "en"));
-  return [...featured, ...rest];
+export const ELSEWHERE = "ELSEWHERE";
+export const DEFAULT_COUNTRY = "CA";
+export type CountryOption = { code: string; name: string; roasterCount: number };
+
+export function shipsTo(roaster: Roaster, country: string): boolean {
+  return country === ELSEWHERE || roaster.shipsTo.includes(country);
 }
 
-export const COUNTRIES: CountryOption[] = buildCountries();
+export const COUNTRIES: CountryOption[] = [
+  { code: "CA", name: "Canada" },
+  { code: "US", name: "United States" },
+  { code: ELSEWHERE, name: "Elsewhere" },
+].map((c) => ({ ...c, roasterCount: roasters.filter((r) => shipsTo(r, c.code)).length }));
+
+export function countryName(code: string): string {
+  return COUNTRIES.find((c) => c.code === code)?.name ?? code;
+}
+
+/** A saved choice from an older menu (any ISO code) becomes "Elsewhere"; junk becomes the default. */
+export function restoreCountry(saved: string | null): string {
+  if (saved && COUNTRIES.some((c) => c.code === saved)) return saved;
+  if (saved && /^[A-Z]{2}$/.test(saved)) return ELSEWHERE;
+  return DEFAULT_COUNTRY;
+}

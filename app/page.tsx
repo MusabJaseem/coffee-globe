@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import CoffeeRow from "@/components/CoffeeRow";
 import GlobeView from "@/components/GlobeView";
 import Quiz from "@/components/Quiz";
-import { COUNTRIES, DEFAULT_COUNTRY, coffees, countryName, isSampleData, originById, origins, roasterById, roasters, shipsTo } from "@/lib/data";
+import { COUNTRIES, DEFAULT_COUNTRY, ELSEWHERE, coffees, countryName, isSampleData, originById, origins, restoreCountry, roasterById, roasters, shipsTo } from "@/lib/data";
 import { applyFeedback, bestScoreByRoaster, diversify, profileFromAnswers, rankCoffees, type RankedCoffee } from "@/lib/taste";
 import { track as sendEvent } from "@vercel/analytics";
 import { FEEDBACK_URL } from "@/lib/site";
@@ -63,9 +63,7 @@ export default function Home() {
 
   useEffect(() => {
     setProfile(load<UserProfile>(PROFILE_KEY));
-    // A saved country no roaster ships to any more falls back to the default.
-    const saved = load<string>(COUNTRY_KEY);
-    setCountry(saved && COUNTRIES.some((c) => c.code === saved) ? saved : DEFAULT_COUNTRY);
+    setCountry(restoreCountry(load<string>(COUNTRY_KEY)));
     track("open");
   }, []);
 
@@ -273,7 +271,9 @@ export default function Home() {
         <header className="sheet-head">
           <div>
             <h2>Your top matches</h2>
-            <p className="sheet-sub">From roasters that ship to {countryName(country)}.</p>
+            <p className="sheet-sub">
+              {country === ELSEWHERE ? "From every roaster on the globe." : `From roasters that ship to ${countryName(country)}.`}
+            </p>
           </div>
           <button className="text-btn" onClick={goHome}>
             Back to globe
@@ -329,20 +329,11 @@ export default function Home() {
         <label className="ship">
           <span>Ships to</span>
           <select value={country} onChange={(e) => changeCountry(e.target.value)}>
-            <optgroup label="Main markets">
-              {COUNTRIES.filter((c) => c.featured).map((c) => (
-                <option key={c.code} value={c.code}>
-                  {c.name} ({c.roasterCount})
-                </option>
-              ))}
-            </optgroup>
-            <optgroup label="All countries">
-              {COUNTRIES.filter((c) => !c.featured).map((c) => (
-                <option key={c.code} value={c.code}>
-                  {c.name} ({c.roasterCount})
-                </option>
-              ))}
-            </optgroup>
+            {COUNTRIES.map((c) => (
+              <option key={c.code} value={c.code}>
+                {c.name} ({c.roasterCount})
+              </option>
+            ))}
           </select>
         </label>
         {isSampleData && (
@@ -351,6 +342,12 @@ export default function Home() {
       </nav>
 
       <section className={`sheet${panel === "list" ? " tall" : ""}`} aria-live="polite">
+        {country === ELSEWHERE && panel !== "about" && (
+          <p className="ship-note">
+            Just browsing: these roasters are in Canada and the US. Some ship internationally; check the shop for
+            shipping costs.
+          </p>
+        )}
         {sheet}
       </section>
 

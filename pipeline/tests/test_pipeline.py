@@ -70,6 +70,8 @@ NOTES = "<p>Tasting notes: stone fruit, honey and black tea. Washed, 1,900 masl.
     ("The Single Origin Set", "Coffee", NOTES, False),
     ("Roaster's Choice Filter", "Coffee", NOTES, False),
     ("Sunset Blend", "Coffee", NOTES, True),
+    ("Kenya Murang'a Gondo AB - Wholesale Grocery", "Coffee", NOTES, False),
+    ("Dharma Espresso Blend - Private Label", "Coffee", NOTES, False),
 ])
 def test_looks_like_coffee(title, ptype, body, expected):
     assert scrape.looks_like_coffee({"title": title, "product_type": ptype, "body_html": body, "tags": []}) is expected

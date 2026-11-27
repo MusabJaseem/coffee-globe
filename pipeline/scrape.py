@@ -44,7 +44,7 @@ NOT_A_SINGLE_COFFEE = re.compile(
     r"\b(gift (set|box|class)|stocking stuffer|advent|bundle|duo|trio|sampler|tasting (set|pack)|sample box|"
     r"favourites pack|holiday .*\bset|candle|sticker|canister|cold brew|nitro|cascara|"
     r"cupping|class|course|workshop|tasting with|event|ticket|refractometer|"
-    r"test|wholesale only|with your logo|appointment|payment method|shipping carrier|archived|"
+    r"test|wholesale|private label|with your logo|appointment|payment method|shipping carrier|archived|"
     # Several coffees, or a different one each order: no single taste profile fits.
     r"packs?|club|calendar|surprise|we choose|shuffle|roaster'?s (pick|choice)|kits?|sets?)\b"
     r"|chocolate( bar| -)| — by ",

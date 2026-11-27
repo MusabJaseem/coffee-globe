@@ -5,11 +5,11 @@ reads the store's public /meta.json (name, city, currency, ships_to_countries) a
 builds a roasters.json entry. Pins go at the city centre from pipeline/cities.json,
 nudged about 1 km for each roaster already in that city so pins don't overlap.
 
-Stores that don't ship to the target country (default CA) are skipped, as are cities
+Stores that ship to neither Canada nor the US (--ships-to) are skipped, as are cities
 missing from cities.json (add them and re-run). Prints the entries; --write appends
 them. Each site's host must be on the environment's network allowlist.
 
-Usage: python pipeline/add_roasters.py https://example.com [...] [--write] [--ships-to CA]
+Usage: python pipeline/add_roasters.py https://example.com [...] [--write] [--ships-to CA,US]
 """
 from __future__ import annotations
 
@@ -112,7 +112,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("urls", nargs="+")
     ap.add_argument("--write", action="store_true", help="append the new entries to roasters.json")
-    ap.add_argument("--ships-to", default="CA", help="skip stores that don't ship here")
+    ap.add_argument("--ships-to", default="CA,US", help="skip stores that ship to none of these (comma-separated)")
     ap.add_argument("--delay", type=float, default=1.0)
     args = ap.parse_args()
 
@@ -127,8 +127,9 @@ def main() -> None:
             meta, base, problem = check_store(url, session, args.delay)
         except (requests.RequestException, ValueError) as e:
             meta, base, problem = None, url, f"request failed: {e}"
-        if meta and args.ships_to not in (meta.get("ships_to_countries") or []):
-            meta, problem = None, f"doesn't ship to {args.ships_to}"
+        wanted = {c.strip() for c in args.ships_to.split(",") if c.strip()}
+        if meta and not wanted & set(meta.get("ships_to_countries") or []):
+            meta, problem = None, f"doesn't ship to {' or '.join(sorted(wanted))}"
         if meta:
             entry, problem = entry_from_meta(meta, base, cities, existing + added)
             if entry:

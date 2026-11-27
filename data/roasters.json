@@ -3190,5 +3190,89 @@
       "ZM",
       "ZW"
     ]
+  },
+  {
+    "id": "kicking-horse",
+    "name": "Kicking Horse Coffee",
+    "city": "Invermere",
+    "country": "CA",
+    "lat": 50.507,
+    "lng": -116.031,
+    "url": "https://kickinghorsecoffee.com",
+    "shipsTo": [
+      "US"
+    ]
+  },
+  {
+    "id": "elm",
+    "name": "Elm Coffee Roasters",
+    "city": "Seattle",
+    "country": "US",
+    "lat": 47.615,
+    "lng": -122.332,
+    "url": "https://elmcoffeeroasters.com",
+    "shipsTo": [
+      "US"
+    ]
+  },
+  {
+    "id": "temple",
+    "name": "Temple Coffee Roasters",
+    "city": "Sacramento",
+    "country": "US",
+    "lat": 38.582,
+    "lng": -121.494,
+    "url": "https://templecoffee.com",
+    "shipsTo": [
+      "US"
+    ]
+  },
+  {
+    "id": "partners",
+    "name": "Partners Coffee",
+    "city": "Brooklyn",
+    "country": "US",
+    "lat": 40.687,
+    "lng": -73.944,
+    "url": "https://partnerscoffee.com",
+    "shipsTo": [
+      "US"
+    ]
+  },
+  {
+    "id": "methodical",
+    "name": "Methodical Coffee",
+    "city": "Travelers Rest",
+    "country": "US",
+    "lat": 34.968,
+    "lng": -82.443,
+    "url": "https://methodicalcoffee.com",
+    "shipsTo": [
+      "US"
+    ]
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby Coffee Roasters",
+    "city": "Nelsonville",
+    "country": "US",
+    "lat": 44.494,
+    "lng": -89.312,
+    "url": "https://rubycoffeeroasters.com",
+    "shipsTo": [
+      "US"
+    ]
+  },
+  {
+    "id": "ceremony",
+    "name": "Ceremony Coffee Roasters",
+    "city": "Annapolis",
+    "country": "US",
+    "lat": 38.978,
+    "lng": -76.492,
+    "url": "https://ceremonycoffee.com",
+    "shipsTo": [
+      "US"
+    ]
   }
 ]

@@ -12,7 +12,7 @@ A mobile-first web app: a satellite globe of specialty roasters that ship to you
 Success signal: quiz completion and click-through to roaster sites.
 
 ## Scope
-In: ~100 roasters (Canada first, plus US roasters that ship to Canada), ~1,000 coffees scraped from Shopify `/products.json`, taste quiz, globe with roaster and origin pins, origin-to-roaster arcs, "ships to me" filter, ranked list view, thumbs up/down to refine the profile.
+In: ~100 roasters in Canada and the US that ship to Canada or the US, ~1,000 coffees scraped from Shopify `/products.json`, taste quiz, globe with roaster and origin pins, origin-to-roaster arcs, "ships to me" filter, ranked list view, thumbs up/down to refine the profile.
 
 Out (for now): accounts (profile lives in localStorage), checkout, reviews, brew logging, roaster portal, native apps, Supabase (data is static JSON in `data/` until the catalogue outgrows it).
 
