@@ -5,7 +5,7 @@ A mobile-first web app: a satellite globe of specialty roasters that ship to you
 ## Core loop (the MVP is done when this works end to end)
 1. Open the app and see a globe of roasters that ship to your country (default: Canada).
 2. Take a 60-second taste quiz (7 questions).
-3. Roaster pins turn red and grow by best match score; the top 5 glow.
+3. Roaster pins turn red, and the 5 best-matched roasters glow.
 4. Tap a pin to see that roaster's top 3 coffees for you.
 5. Click through to buy on the roaster's own site.
 

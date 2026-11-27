@@ -32,7 +32,7 @@ interface Props {
   onSelectOrigin: (id: string) => void;
 }
 
-/** One red for every roaster once there's a profile: height and the glowing rings show how good the match is. */
+/** One red for every roaster once there's a profile; the glowing rings mark the five best matches. */
 function roasterColor(score: number | null): string {
   return score == null ? HUSK : CHERRY;
 }
@@ -144,10 +144,11 @@ export default function GlobeView(props: Props) {
   const rings = useMemo(() => {
     if (!bestScores) return [];
     return roasters
-      .map((r) => ({ lat: r.lat, lng: r.lng, score: bestScores.get(r.id) ?? 0 }))
+      .map((r) => ({ id: r.id, lat: r.lat, lng: r.lng, score: bestScores.get(r.id) ?? 0 }))
       .sort((a, b) => b.score - a.score)
       .slice(0, 5);
   }, [roasters, bestScores]);
+  const topRoasterIds = useMemo(() => new Set(rings.map((r) => r.id)), [rings]);
 
   // Arcs from the selected origin to every visible roaster selling it.
   const arcs = useMemo(() => {
@@ -188,7 +189,7 @@ export default function GlobeView(props: Props) {
         <p className="legend">
           <span>
             <i style={{ background: bestScores ? CHERRY : HUSK }} />
-            {bestScores ? "Roasters (taller = better match)" : "Roasters"}
+            {bestScores ? "Roasters (glowing = best matches)" : "Roasters"}
           </span>
           <span>
             <i style={{ background: LEAF }} />
@@ -218,7 +219,9 @@ export default function GlobeView(props: Props) {
           pointAltitude={(d: object) => {
             const p = d as Pin;
             if (p.kind === "origin") return 0.02;
-            return p.score == null ? 0.03 : 0.02 + (p.score / 100) ** 3 * 0.22;
+            // Every roaster pin is the same height; the top five glow (rings). With reduced
+            // motion there are no rings, so those five stand a little taller instead.
+            return reduceMotion && topRoasterIds.has(p.id) ? 0.09 : 0.035;
           }}
           pointRadius={(d: object) => ((d as Pin).kind === "origin" ? 0.55 : 0.4)}
           pointResolution={8}

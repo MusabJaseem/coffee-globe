@@ -288,7 +288,7 @@ export default function Home() {
         <header className="sheet-head">
           <div>
             <h2>Matched to your taste</h2>
-            <p className="sheet-sub">Taller pins are your closest matches. Tap one, or a green coffee origin.</p>
+            <p className="sheet-sub">Glowing pins are your closest matches. Tap any roaster, or a green coffee origin.</p>
           </div>
           <button className="text-btn" onClick={() => setQuizOpen(true)}>
             Retake quiz
